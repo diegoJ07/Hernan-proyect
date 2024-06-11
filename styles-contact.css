@@ -1,0 +1,128 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    position: fixed; /* Para que el header se mantenga en la parte superior */
+    top: 0; /* Lo posiciona en la parte superior del viewport */
+    left: 0; /* Lo posiciona en la parte izquierda del viewport */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+nav {
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Para colocar los elementos en una fila */
+    gap: 20px; /* Espacio entre los elementos */
+    width: 80vw; /* Ajusta este valor según sea necesario */
+}
+
+.form-section {
+    border: 2px solid #000;
+    color: #000;
+    font-size: 24px;
+    padding: 20px;
+    width: 50%; /* Ajusta el ancho según sea necesario */
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-section {
+    border: 2px solid #000;
+    color: #000;
+    font-size: 24px;
+    padding: 20px;
+    width: 50%; /* Ajusta el ancho según sea necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio entre los hijos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Añadir espacio entre los grupos */
+}
+
+.textarea-group {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #ffffff; /* Color del borde */
+    background-color: black; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    padding: 10px;
+    border: 2px solid #ffffff; /* Color del borde */
+    background-color: black; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    font-size: 16px;
+    width: 100%;  /* Asegura que los inputs y textarea ocupen todo el ancho */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+    resize: none !important;
+    flex-grow: 1; /* Permite que el textarea se expanda */
+    height: 20vh;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #f20202; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 16px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.submit-btn:hover {
+    background-color: #d00202; /* Color de fondo al pasar el mouse */
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 20px; /* Añadir espacio encima de los iconos sociales */
+    justify-content: center; /* Centrar los iconos dentro de la sección */
+}
+
+.social-icons a {
+    margin-right: 10px; /* Añadir espacio entre los iconos */
+}
+
+.instagram img, .linkedin img {
+    width: 50px;
+    height: 50px;
+}
+
+.ubicacion {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.ubicacion i {
+    margin-right: 10px; /* Añade espacio entre el icono y el texto */
+}
