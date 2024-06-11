@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0; /* Inicialmente ocultos */
+    transform: translateY(50px); /* Efecto de desplazamiento */
+    transition: opacity 0.9s ease-out, transform 0.6s ease-out;
+}
+
+.item img {
+    width: 300px; /* Ajustar el tamaño según sea necesario */
+    height: 300px; /* Ajustar el tamaño según sea necesario */
+    border: 5px solid black; /* Ajustar el borde según sea necesario */
+}
+
+.item p {
+    margin: 0;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+
+/* Estilos para el carousel */
+.carousel-inner {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan en una línea */
+}
+
+.carousel-item {
+    width: 100%; /* Ajusta el ancho del item del carousel */
+    transition: transform .1s ease; /* Agrega transición para el deslizamiento */
+}
+
+/* Ajusta el tamaño de las imágenes dentro de cada carousel-item */
+.carousel-item img {
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 auto; 
+    display: block; 
+    max-height: 300px; 
+}
+
+
