@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
-    <link rel="stylesheet" href="styles-contact.css" />
+    <link rel="stylesheet" href="./styles/styles-contact.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,8 +15,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="icon" href="./source/logo.png" type="image/png" />
   </head>
-  <body>
+  <body class="contact-information-body">
+    <video autoplay muted loop id="bg-video" preload="auto">
+      <source src="./source/videos/body.mp4" type="video/mp4" />
+    </video>
     <header>
       <nav
         class="navbar bg-dark border-bottom border-body navbar navbar-expand-lg bg-body-tertiary"
@@ -36,7 +40,7 @@
           </button>
           <a class="navbar-brand" href="index.html">
             <img
-              src="./source/logo.jpg"
+              src="./source/facultades/ng.png"
               alt="Logo"
               width="30"
               height="24"
@@ -47,6 +51,11 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html"
                   >Who we are</a
                 >
               </li>
@@ -68,50 +77,74 @@
         </div>
       </nav>
     </header>
+    <div class="title-container">
+      <h1 class="contact-h1">Contact Information</h1>
+    </div>
     <div class="container">
-      <form class="form-section">
-        <div class="form-group">
-          <label for="nombre">nombre</label>
-          <input type="text" id="nombre" name="nombre" required />
-        </div>
-        <div class="form-group">
-          <label for="email">email</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="mensaje">mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Enviar</button>
-      </form>
-      <div class="info-section">
-        <h3>Our Offices</h3>
-        <h4>Buenos Aires</h4>
-        <div class="ubicacion">
-          <i class="fa-solid fa-map-pin" style="color: #f20202"></i>
-          <p>Av. del Libertador 5690, suite 1 - CABA</p>
-        </div>
-        <h4>Miami</h4>
-        <div class="ubicacion">
-          <i class="fa-solid fa-map-pin" style="color: #f20202"></i>
-          <p>1000 fifth st suite 200, Miami Beach - Florida</p>
-        </div>
-        <div class="social-icons">
-          <div class="instagram">
-            <a
-              href="https://www.instagram.com/ng_globalpartners/"
-              target="_blank"
-              ><img src="./source/instagram.png" alt=""
-            /></a>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="offices-container">
+            <h3 class="text-h3">Our Offices</h3>
+            <h4 class="text-h4">Buenos Aires</h4>
+            <div class="ubicacion">
+              <i class="fa-solid fa-map-pin" style="color: #f20202"></i>
+              <p>Av. del Libertador 5690, suite 1 - CABA</p>
+            </div>
+            <h4 class="text-h4">Miami</h4>
+            <div class="ubicacion">
+              <i class="fa-solid fa-map-pin" style="color: #f20202"></i>
+              <p>1000 fifth st suite 200, Miami Beach - Florida</p>
+            </div>
           </div>
-          <div class="linkedin">
-            <a href="#" target="_blank"
-              ><img src="./source/linkedin.png" alt=""
-            /></a>
+          <div class="form-container">
+            <h4>Contact Me</h4>
+            <div class="form-group">
+              <label for="nombre">nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-section">
+            <div class="social-icons">
+              <div class="instagram">
+                <a
+                  href="https://www.instagram.com/ng_globalpartners/"
+                  target="_blank"
+                  ><img src="./source/instagram.png" alt=""
+                /></a>
+              </div>
+              <div class="linkedin">
+                <a href="#" target="_blank"
+                  ><img src="./source/linkedin.png" alt=""
+                /></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <footer class="contact-footer bg-dark" data-bs-theme="dark">
+      <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+      <p>
+        <a href="/privacidad">Política de Privacidad</a> |
+        <a href="/terminos">Términos y Condiciones</a>
+      </p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

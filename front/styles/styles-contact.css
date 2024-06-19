@@ -1,0 +1,299 @@
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contact-information-body {
+  background-color: #ececec;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.navbar {
+  height: 80px;
+  padding: 0 15px;
+  background-color: #333;
+}
+
+.navbar-brand {
+  position: relative;
+}
+.navbar-brand img {
+  width: 150px;
+  height: 150px;
+  margin-left: 15px;
+}
+
+.navbar-nav {
+  margin-left: 25vh;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #056347;
+  color: #ccc;
+}
+
+.title-container {
+  position: relative;
+  z-index: 1;
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0;
+  animation: slideInLeft 2s ease-out;
+}
+
+.contact-h1 {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 15vh;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: backwards;
+}
+
+.container {
+  margin-top: 0;
+  padding: 20px;
+}
+
+.offices-container {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 10vh;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #fff;
+}
+
+.form-container h4,
+.offices-container h4 {
+  color: #ffffff;
+}
+
+textarea {
+  padding: 8px;
+  width: 100%;
+  height: 90px;
+  resize: none !important;
+}
+
+.info-section {
+  margin-top: 10vh;
+  background-image: url("../source/imagenes/imagen7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.instagram img,
+.linkedin img {
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.text-h3 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.text-h4 {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.ubicacion {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.ubicacion i {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.ubicacion p {
+  color: #fff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+.form-container label {
+  text-align: center;
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 8px;
+  width: 100%;
+  border: 2px solid #ffffff;
+  background-color: black;
+  color: #ffffff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin: auto;
+}
+
+.submit-btn:hover {
+  background-color: #d00202;
+}
+
+@media (max-width: 768px) {
+  .contact-information-body {
+    background-color: #6e6969;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-h1 {
+    font-size: 8vh;
+  }
+
+  .container {
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .item {
+    flex-direction: column;
+  }
+
+  .item img {
+    max-width: 100%;
+  }
+
+  .offices-container {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 10vh;
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #fff;
+  }
+
+  #bg-video {
+    display: none;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-brand img {
+    position: static;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+  }
+
+  .navbar-nav {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px;
+    display: block;
+  }
+}
