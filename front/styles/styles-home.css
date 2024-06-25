@@ -5,6 +5,8 @@
   padding: 0;
   overflow-x: hidden;
 }
+
+/*RECORDAR QUE EN STYLES-COMPLETO.CSS NO ESTA HOME-H1,SE UNIFICO*/
 .home-h1 {
   padding: 50px 20px;
   text-align: center;
@@ -24,6 +26,19 @@
   position: relative;
   overflow: hidden;
 }
+
+h6 {
+  text-decoration: underline;
+  text-decoration-color: orange; /* Color del subrayado */
+  text-underline-offset: 8px; /* Ajusta el offset del subrayado según sea necesario */
+}
+
+.column-divider {
+  border-left: 3px solid orange; /* Grosor y color de la línea */
+  height: 100%; /* Asegura que la línea se extienda a la altura completa de la columna */
+  padding-left: 15px; /* Espacio a la izquierda de la línea para separación */
+}
+
 video {
   position: absolute;
   top: 0;

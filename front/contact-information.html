@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario</title>
-    <link rel="stylesheet" href="./styles/styles-contact.css" />
+    <link rel="stylesheet" href="./styles/styles-completo.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,55 +17,65 @@
     />
     <link rel="icon" href="./source/logo.png" type="image/png" />
   </head>
-  <body class="contact-information-body">
-    <video autoplay muted loop id="bg-video" preload="auto">
-      <source src="./source/videos/body.mp4" type="video/mp4" />
-    </video>
+  <body class="body-home">
     <header>
-      <nav
-        class="navbar bg-dark border-bottom border-body navbar navbar-expand-lg bg-body-tertiary"
-        data-bs-theme="dark"
-      >
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+          <a class="navbar-brandd" href="index.html">Ng Global Partners</a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03"
+            data-bs-target="#navbarNavDarkDropdown"
+            aria-controls="navbarNavDarkDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
-            <img
-              src="./source/facultades/ng.png"
-              alt="Logo"
-              width="30"
-              height="24"
-              class="d-inline-block align-text-top"
-            />
-          </a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button
+                  class="btn"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
+                  About Us
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="home.html">About us</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./home.html#overview"
+                      >Overview</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./home.html#our-principles"
+                      >Our Principles</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./home.html#our-people"
+                      >Our People</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./home.html#strategic-partners"
+                      >Strategic Partners</a
+                    >
+                  </li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html"
-                  >Who we are</a
-                >
+                <a class="nav-link" href="./services.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="our-projects.html">Our projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="management-team.html"
-                  >Management team</a
-                >
+                <a class="nav-link" href="./our-projects.html">Our Projects</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact-information.html"
@@ -78,7 +88,7 @@
       </nav>
     </header>
     <div class="title-container">
-      <h1 class="contact-h1">Contact Information</h1>
+      <h1 class="h1-home">Contact Information</h1>
     </div>
     <div class="container">
       <div class="row">
@@ -95,29 +105,6 @@
               <i class="fa-solid fa-map-pin" style="color: #f20202"></i>
               <p>1000 fifth st suite 200, Miami Beach - Florida</p>
             </div>
-          </div>
-          <div class="form-container">
-            <h4>Contact Me</h4>
-            <form autocomplete="off" netlify>
-              <div class="form-group">
-                <label>Nombre</label>
-                <input type="text" id="nombre" name="nombre" required />
-              </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label>Mensaje</label>
-                <textarea
-                  id="mensaje"
-                  name="message"
-                  rows="4"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Enviar</button>
-            </form>
           </div>
         </div>
         <div class="col-md-6">
@@ -140,7 +127,7 @@
         </div>
       </div>
     </div>
-    <footer class="contact-footer bg-dark" data-bs-theme="dark">
+    <footer class="footerr" data-bs-theme="dark">
       <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
       <p>
         <a href="/privacidad">Política de Privacidad</a> |

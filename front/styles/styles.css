@@ -8,45 +8,68 @@
     transform: translateX(0);
   }
 }
-.index-body {
-  background-color: #ececec;
+.body-home {
+  background-color: #ffffff;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
-#bg-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-}
-.title-container {
-  position: relative;
-  z-index: 1;
-  padding: 50px 20px;
-  text-align: center;
-  margin-top: 20px;
-  animation: slideInLeft 2s ease-out;
-}
-.index-h1 {
+
+.h1-home {
+  margin-top: 15px;
   font-family: Arial;
   font-weight: 700;
-  font-size: 15vh;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 10vh;
+  color: #000;
   animation: backwards;
 }
+
+.h2-home {
+  text-align: center;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 5vh;
+  color: #000;
+}
+
+.h3-home {
+  text-align: left;
+  margin-left: 10px;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 3vh;
+  color: #000;
+}
+
+.Overview,
+.our-people,
+.strategic-partners p {
+  margin: 0 10px 0 10px;
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   margin-top: 50px;
 }
+
+/* Estilos CSS */
+.service-item {
+  padding-bottom: 15px; /* Espacio para separación */
+  position: relative; /* Posición relativa para poder posicionar el subrayado */
+}
+
+.service-item strong {
+  display: inline-block; /* Hace que el strong sea un bloque en línea */
+}
+
+.service-item .underline-orange {
+  position: absolute;
+  top: 4vh; /* Ajusta este valor según necesites */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Grosor del subrayado */
+  background-color: #f59126; /* Color naranja como ejemplo */
+}
+
 .navbar {
   height: 80px;
   padding: 0 15px;
@@ -72,35 +95,7 @@
   background-color: #056347;
   color: #ccc;
 }
-.item {
-  display: flex;
-  align-items: center;
-  background-color: #f7f7f7;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.9s ease-out, transform 1s ease-out;
-  border: 2px solid #000;
-  border-radius: 15px;
-  padding: 20px;
-}
-.item img {
-  width: 300px;
-  max-width: 300px;
-  border-radius: 10px;
-}
-.item p {
-  margin: 5px;
-  font-size: 24px;
-  font-style: italic;
-}
-.item.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-}
+
 .index-footer {
   color: #fff;
   text-align: center;
@@ -115,24 +110,8 @@
     padding: 0;
     overflow-x: hidden;
   }
-  .index-h1 {
+  h1 {
     font-size: 10vh;
-  }
-  .container {
-    gap: 20px;
-    margin-top: 20px;
-  }
-  .item {
-    flex-direction: column;
-  }
-  .item img {
-    max-width: 100%;
-  }
-  .item p {
-    font-size: 16px;
-  }
-  #bg-video {
-    display: none;
   }
   .navbar {
     height: auto;

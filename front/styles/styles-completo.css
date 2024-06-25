@@ -1,0 +1,250 @@
+.body-home {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.h1-home {
+  margin-top: 15px;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 10vh;
+  color: #000;
+  animation: backwards;
+}
+
+.h2-home {
+  text-align: center;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 5vh;
+  color: #000;
+}
+
+.h3-home {
+  text-align: left;
+  margin-left: 10px;
+  font-family: Arial;
+  font-weight: 700;
+  font-size: 3vh;
+  color: #000;
+}
+
+.sect {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+h6 {
+  text-decoration: underline;
+  text-decoration-color: orange; /* Color del subrayado */
+  text-underline-offset: 8px; /* Ajusta el offset del subrayado según sea necesario */
+}
+
+.column-divider {
+  border-left: 3px solid orange; /* Grosor y color de la línea */
+  height: 100%; /* Asegura que la línea se extienda a la altura completa de la columna */
+  padding-left: 15px; /* Espacio a la izquierda de la línea para separación */
+}
+
+.Overview,
+.our-people,
+.strategic-partners p {
+  margin: 0 10px 0 10px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.service-item {
+  padding-bottom: 15px; /* Espacio para separación */
+  position: relative; /* Posición relativa para poder posicionar el subrayado */
+}
+
+.service-item strong {
+  display: inline-block; /* Hace que el strong sea un bloque en línea */
+}
+
+.service-item .underline-orange {
+  position: absolute;
+  top: 4vh; /* Ajusta este valor según necesites */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Grosor del subrayado */
+  background-color: #f59126; /* Color naranja como ejemplo */
+}
+
+.custom-navbar {
+  background-color: #4caf50; /* Color personalizado */
+}
+
+.navbar {
+  height: 80px;
+  padding: 0 15px;
+  background-color: #000;
+}
+.navbar-brandd {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.navbar-brand img {
+  width: 150px;
+  height: 150px;
+  margin-left: 15px;
+}
+.navbar-nav {
+  margin-left: 25vh;
+}
+.navbar-nav .nav-link {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.navbar-nav .nav-link:hover {
+  background-color: #056347;
+  color: #ccc;
+}
+
+.btn {
+  background-color: #000;
+  color: #ffffff !important;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.offices-container {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 10vh;
+  margin-bottom: 20px;
+}
+
+.info-section {
+  margin-top: 7vh;
+  background-image: url("../source/imagenes/imagen7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.instagram img,
+.linkedin img {
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.text-h3 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.text-h4 {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #000;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.ubicacion {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.ubicacion i {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.ubicacion p {
+  color: #fff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footerr {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .body-home {
+    background-color: #6e6969;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .h1-home {
+    font-size: 10vh;
+  }
+  .navbar {
+    height: auto;
+    padding: 10px;
+  }
+  .navbar-brand img {
+    position: static;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+  }
+  .navbar-nav {
+    margin-left: 0;
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px;
+    display: block;
+  }
+}
