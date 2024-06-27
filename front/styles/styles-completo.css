@@ -1,22 +1,140 @@
+nav {
+  background-color: #000;
+  height: 80px;
+  width: 100%;
+  position: relative;
+  z-index: 1000; /* Asegura que el nav esté por encima del contenido */
+}
+
+.enlace {
+  position: absolute;
+  padding: 20px 50px;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+li a.active, li a:hover {
+  background-color: #ececee;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #ffffff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+
+#check {
+  display: none;
+}
+
+.submenu {
+  position: absolute;
+  background-color: #000;
+  min-width: 160px; /* Asegúrate de que tenga un ancho mínimo suficiente */
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  z-index: 1000;
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+nav ul li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu li {
+  padding: 10px 0; /* Espaciado entre los enlaces */
+}
+
+.submenu a {
+  padding: 10px 15px; /* Espaciado interno de los enlaces */
+  display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+  color: #fff; /* Color de texto blanco */
+  white-space: nowrap; /* Evita que el texto se corte y se salga del recuadro */
+}
+
+.submenu a:hover {
+  background-color: #333;
+}
+
+
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal para dar margen */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
+/* Estilos específicos de la página */
 .body-home {
   background-color: #ffffff;
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .h1-home {
   margin-top: 15px;
-  font-family: Arial;
   font-weight: 700;
   font-size: 10vh;
   color: #000;
-  animation: backwards;
+}
+
+.h1-index {
+  margin-top: 15px;
+  margin-left: 250px;
+  font-weight: 700;
+  font-size: 60px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .h2-home {
   text-align: center;
-  font-family: Arial;
   font-weight: 700;
   font-size: 5vh;
   color: #000;
@@ -25,7 +143,6 @@
 .h3-home {
   text-align: left;
   margin-left: 10px;
-  font-family: Arial;
   font-weight: 700;
   font-size: 3vh;
   color: #000;
@@ -36,28 +153,50 @@
   min-height: 500px;
   position: relative;
   overflow: hidden;
+  padding: 60px 0;
 }
 
 h6 {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
   text-decoration: underline;
-  text-decoration-color: orange; /* Color del subrayado */
-  text-underline-offset: 8px; /* Ajusta el offset del subrayado según sea necesario */
+  text-decoration-color: orange;
+  text-underline-offset: 8px;
+}
+
+.about-us h4 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  color: #000;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .column-divider {
-  border-left: 3px solid orange; /* Grosor y color de la línea */
-  height: 100%; /* Asegura que la línea se extienda a la altura completa de la columna */
-  padding-left: 15px; /* Espacio a la izquierda de la línea para separación */
+  border-left: 3px solid orange;
+  height: 100%;
+  padding-left: 15px;
 }
 
 .Overview,
 .our-people,
 .strategic-partners p {
-  margin: 0 10px 0 10px;
+  margin: 0 10px;
 }
 
-.container {
+.col-md-4 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 18px;
   margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.col-md-4 strong {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 30px;
 }
 
 video {
@@ -65,70 +204,30 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
 }
 
 .service-item {
-  padding-bottom: 15px; /* Espacio para separación */
-  position: relative; /* Posición relativa para poder posicionar el subrayado */
+  padding-bottom: 15px;
+  position: relative;
 }
 
 .service-item strong {
-  display: inline-block; /* Hace que el strong sea un bloque en línea */
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 .service-item .underline-orange {
-  position: absolute;
-  top: 4vh; /* Ajusta este valor según necesites */
-  left: 0;
+  display: block;
+  margin-top: 5px;
   width: 100%;
-  height: 2px; /* Grosor del subrayado */
-  background-color: #f59126; /* Color naranja como ejemplo */
+  height: 2px;
+  background-color: #f59126;
 }
 
-.custom-navbar {
-  background-color: #4caf50; /* Color personalizado */
-}
-
-.navbar {
-  height: 80px;
-  padding: 0 15px;
-  background-color: #000;
-}
-.navbar-brandd {
-  position: relative;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 20px;
-}
-.navbar-brand img {
-  width: 150px;
-  height: 150px;
-  margin-left: 15px;
-}
-.navbar-nav {
-  margin-left: 25vh;
-}
-.navbar-nav .nav-link {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-}
-.navbar-nav .nav-link:hover {
-  background-color: #056347;
-  color: #ccc;
-}
-
-.btn {
-  background-color: #000;
-  color: #ffffff !important;
-}
-
-.btn:hover {
-  background-color: #ccc;
-}
 
 .offices-container {
   background-color: transparent;
@@ -216,35 +315,82 @@ video {
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-  .body-home {
-    background-color: #6e6969;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+@media (max-width: 770px) {
+  .h1-index {
+    margin-top: 15px;
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    padding: 0 20px;
   }
-  .h1-home {
-    font-size: 10vh;
+
+  .about-us h4 {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    color: #000;
+    margin-top: 25px;
+    margin-bottom: 30px;
   }
-  .navbar {
-    height: auto;
-    padding: 10px;
-  }
-  .navbar-brand img {
-    position: static;
+
+  .checkbtn {
     display: block;
-    margin: 0 auto;
-    width: 150px;
-    height: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1100; /* Asegura que el botón de hamburguesa esté por encima del contenido */
   }
-  .navbar-nav {
-    margin-left: 0;
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    top: 80px;
+    left: -100%;
     text-align: center;
+    transition: all 0.5s;
+    z-index: 1000; /* Asegura que el menú esté por encima del contenido */
   }
-  .navbar-nav .nav-link {
-    margin-left: 0;
-    padding: 10px;
+
+  nav ul li {
     display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    position: relative;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  nav ul li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .h1-home {
+    margin-top: 100px; /* Ajuste para que el título no tape el menú */
+  }
+
+  /* Centrar el submenu */
+  .submenu {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Ajustar el ancho para que se vea centrado */
+  }
+
+  .submenu li {
+    text-align: center; /* Centrar los elementos del submenu */
   }
 }

@@ -1,18 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".item");
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+  const speed = 200; // Ajusta la velocidad de la animación
 
-  function checkPosition() {
-    const windowHeight = window.innerHeight;
-    items.forEach((item) => {
-      const positionFromTop = item.getBoundingClientRect().top;
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
 
-      if (positionFromTop - windowHeight <= -100) {
-        item.classList.add("show");
-        item.classList.remove("hidden");
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target;
       }
-    });
-  }
+    };
 
-  window.addEventListener("scroll", checkPosition);
-  checkPosition();
+    updateCount();
+  });
 });
