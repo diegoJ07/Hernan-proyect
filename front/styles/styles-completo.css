@@ -356,12 +356,6 @@ video {
   transform: rotate(45deg);
 }
 
-.body-contact {
-  height: 100%;
-  margin: 0;
-  overflow: hidden; /* Evitar scroll */
-}
-
 .offices-container {
   background-color: transparent;
   color: #000;
@@ -608,9 +602,5 @@ video {
 
   .footer-section h6 {
     font-size: 18px;
-  }
-
-  .body-contact {
-    overflow-y: auto;
   }
 }
