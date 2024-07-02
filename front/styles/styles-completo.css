@@ -12,15 +12,14 @@ nav {
   background-color: #000;
   height: 81px;
   width: 100%;
-  position: fixed; /* Cambiar a posición fija */
-  top: 0; /* Anclar en la parte superior */
-  left: 0; /* Anclar en el lado izquierdo */
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   padding: 0 20px;
 }
-
 
 .enlace {
   display: flex;
@@ -38,7 +37,7 @@ nav {
 .nav-links {
   display: flex;
   align-items: center;
-  margin-left: 20px; /* Espacio entre el texto y los enlaces */
+  margin-left: auto; /* Empuja los enlaces a la derecha */
 }
 
 nav ul {
@@ -47,6 +46,7 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-left: auto; /* Empuja los enlaces a la derecha */
 }
 
 nav ul li {
@@ -98,7 +98,7 @@ li a.active, li a:hover {
   z-index: 1000;
   text-align: left;
   display: flex;
-  flex-direction: column; /* Asegura que los elementos hijos estén alineados verticalmente */
+  flex-direction: column;
 }
 
 nav ul li:hover .submenu {
@@ -107,20 +107,21 @@ nav ul li:hover .submenu {
 }
 
 .submenu li {
-  margin: 0; /* Remueve cualquier margen entre los elementos */
+  margin: 0;
 }
 
 .submenu a {
-  padding: 5px 10px; /* Reduce el padding para minimizar el espacio entre elementos */
+  padding: 5px 10px;
   display: block;
   color: #fff;
   white-space: nowrap;
-  line-height: 1.2; /* Reduce la altura de la línea para acercar los elementos */
+  line-height: 1.2;
 }
 
 .submenu a:hover {
   background-color: #333;
 }
+
 
 .card {
   margin: 0 auto;
@@ -214,6 +215,15 @@ body {
   font-size: 5vh;
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
+}
+
+.slogan {
+  font-size: 25px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .people {
