@@ -339,16 +339,26 @@ h6 {
   margin-bottom: 10px;
 }
 
-.strategic-partners .partner-content {
+
+.partner-section .partner-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Alinea verticalmente los elementos */
 }
 
-.strategic-partners .partner-image {
-  width: 150px; /* Puedes ajustar el ancho según tus necesidades */
-  margin-right: 20px;
-  object-fit: cover; /* Para asegurarte de que la imagen se ajuste bien */
+.partner-content {
+  margin-top: 25px;
 }
+
+.partner-section .partner-image {
+  flex: 0 0 auto; /* Establece la imagen con tamaño fijo */
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.partner-section p {
+  flex: 1; /* El texto ocupa todo el espacio restante */
+}
+
+
 
 video {
   position: absolute;

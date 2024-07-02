@@ -45,39 +45,76 @@
             src="./source/imagenes/logoo.jpg"
             alt="logo"
             class="logo"
-          /><strong>NG Global Partners</strong>
+          /><strong data-en="NG Global Partners" data-es="NG Global Partners"
+            >NG Global Partners</strong
+          >
         </a>
         <ul>
           <li>
-            <a href="./home.html"><strong>About Us</strong></a>
+            <a href="./home.html"
+              ><strong data-en="About Us" data-es="Acerca de Nosotros"
+                >About Us</strong
+              ></a
+            >
             <ul class="submenu">
               <li>
-                <a href="./home.html#overview"><strong>Overview</strong></a>
-              </li>
-              <li>
-                <a href="./home.html#our-principles"
-                  ><strong>Our Values</strong></a
+                <a href="./home.html#overview"
+                  ><strong data-en="Overview" data-es="Visión General"
+                    >Overview</strong
+                  ></a
                 >
               </li>
               <li>
-                <a href="./home.html#our-people"><strong>Our People</strong></a>
+                <a href="./home.html#our-principles"
+                  ><strong data-en="Our Values" data-es="Nuestros Valores"
+                    >Our Values</strong
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="./home.html#our-people"
+                  ><strong data-en="Our People" data-es="Nuestro Equipo"
+                    >Our People</strong
+                  ></a
+                >
               </li>
               <li>
                 <a href="./home.html#strategic-partners"
-                  ><strong>Strategic Partners</strong></a
+                  ><strong
+                    data-en="Strategic Partners"
+                    data-es="Socios Estratégicos"
+                    >Strategic Partners</strong
+                  ></a
                 >
               </li>
             </ul>
           </li>
           <li>
-            <a href="./index.html#services"><strong>Services</strong></a>
+            <a href="./index.html#services"
+              ><strong data-en="Services" data-es="Servicios"
+                >Services</strong
+              ></a
+            >
           </li>
           <li>
-            <a href="./our-projects.html"><strong>Our Projects</strong></a>
+            <a href="./our-projects.html"
+              ><strong data-en="Our Projects" data-es="Nuestros Proyectos"
+                >Our Projects</strong
+              ></a
+            >
           </li>
           <li>
-            <a href="contact-information.html"><strong>Contact</strong></a>
+            <a href="contact-information.html"
+              ><strong data-en="Contact" data-es="Contacto">Contact</strong></a
+            >
           </li>
+          <button
+            id="toggle-language"
+            class="btn btn-primary"
+            onclick="toggleLanguage()"
+          >
+            <span data-es="Español" data-en="English">Español</span>
+          </button>
         </ul>
       </nav>
     </header>
@@ -94,8 +131,18 @@
         style="opacity: 0; transition: opacity 1s ease-in"
       ></video>
       <div class="title-container">
-        <h1 class="h1-index">Unlocking Value in Real Estate Deals</h1>
-        <h2 class="slogan">
+        <h1
+          class="h1-index"
+          data-en="Unlocking Value in Real Estate Deals"
+          data-es="Desbloqueando Valor en Negocios Inmobiliarios"
+        >
+          Unlocking Value in Real Estate Deals
+        </h1>
+        <h2
+          class="slogan"
+          data-en="We listen to our clients. We move fast. We deliver."
+          data-es="Escuchamos a nuestros clientes. Nos movemos rápido. Entregamos."
+        >
           We listen to our clients. We move fast. We deliver.
         </h2>
       </div>
@@ -103,8 +150,11 @@
 
     <div class="container">
       <div class="about-us">
-        <h6>ABOUT US</h6>
-        <h4>
+        <h6 data-en="ABOUT US" data-es="NOSOTROS">ABOUT US</h6>
+        <h4
+          data-en="NG Global Partners connects seasoned developers with investors to bring to life high-impact real estate projects. We provide capital stack solutions and access to institutional investors seeking high quality projects with robust cash flows."
+          data-es="NG Global Partners conecta desarrolladores experimentados con inversores para dar vida a proyectos inmobiliarios de alto impacto. Ofrecemos soluciones de estructura de capital y acceso a inversores institucionales que buscan proyectos de alta calidad con flujos de efectivo sólidos."
+        >
           NG Global Partners connects seasoned developers with investors to
           bring to life high-impact real estate projects. We provide capital
           stack solutions and access to institutional investors seeking high
@@ -116,18 +166,29 @@
               <div class="col-md-4 column-divider">
                 <strong>+$</strong
                 ><strong class="counter" data-target="400">0</strong>
-                <strong>M</strong><br />Projects & Assets under advisory
+                <strong>M</strong
+                ><br
+                  data-en="Projects & Assets under advisory"
+                  data-es="Proyectos y Activos bajo asesoramiento"
+                />
               </div>
               <div class="col-md-4 column-divider">
                 <strong>+$</strong
                 ><strong class="counter" data-target="100">0</strong>
-                <strong>M</strong><br />Value of projects closed
+                <strong>M</strong
+                ><br
+                  data-en="Value of projects closed"
+                  data-es="Valor de proyectos cerrados"
+                />
               </div>
               <div class="col-md-4 column-divider">
                 <strong>+</strong
                 ><strong class="counter" data-target="40">0</strong>
-                <strong>YEARS</strong><br />Combined in global strategic
-                projects
+                <strong>YEARS</strong
+                ><br
+                  data-en="Combined in global strategic projects"
+                  data-es="Años combinados en proyectos estratégicos globales"
+                />
               </div>
               <div class="row mt-4">
                 <div class="col text-start">
@@ -143,7 +204,13 @@
           </div>
         </section>
       </div>
-      <h6 class="services-h6">OUR SERVICES</h6>
+      <h6
+        class="services-h6"
+        data-en="OUR SERVICES"
+        data-es="NUESTROS SERVICIOS"
+      >
+        OUR SERVICES
+      </h6>
       <section id="services" class="services">
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
@@ -156,7 +223,9 @@
                 aria-expanded="false"
                 aria-controls="collapseOne"
               >
-                <strong>Pre - Assessments</strong>
+                <strong data-en="Pre - Assessments" data-es="Pre - Evaluaciones"
+                  >Pre - Assessments</strong
+                >
               </button>
             </h2>
             <div
@@ -165,11 +234,17 @@
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                <li>
+                <li
+                  data-en="Feasibility Studies: Assessing the viability of potential projects or investments"
+                  data-es="Estudios de Viabilidad: Evaluación de la viabilidad de proyectos o inversiones potenciales"
+                >
                   Feasibility Studies: Assessing the viability of potential
                   projects or investments
                 </li>
-                <li>
+                <li
+                  data-en="Risk Assessment: Identifying and mitigating risks associated with real estate investments or projects"
+                  data-es="Evaluación de Riesgos: Identificación y mitigación de riesgos asociados con inversiones o proyectos inmobiliarios"
+                >
                   Risk Assessment: Identifying and mitigating risks associated
                   with real estate investments or projects
                 </li>
@@ -186,7 +261,11 @@
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                <strong>Capital Stack Structure Advisory</strong>
+                <strong
+                  data-en="Capital Stack Structure Advisory"
+                  data-es="Asesoría en Estructura de Capital"
+                  >Capital Stack Structure Advisory</strong
+                >
               </button>
             </h2>
             <div
@@ -195,11 +274,17 @@
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                <li>
+                <li
+                  data-en="Funding Solutions: Advising on financing options and capital raising strategies"
+                  data-es="Soluciones de Financiamiento: Asesoramiento en opciones de financiamiento y estrategias de captación de capital"
+                >
                   Funding Solutions: Advising on financing options and capital
                   raising strategies
                 </li>
-                <li>
+                <li
+                  data-en="Debt and Equity Strategies: Structuring debt and equity for optimal financial performance"
+                  data-es="Estrategias de Deuda y Capital: Estructuración de deuda y capital para un rendimiento financiero óptimo"
+                >
                   Debt and Equity Strategies: Structuring debt and equity for
                   optimal financial performance
                 </li>
@@ -216,7 +301,11 @@
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                <strong>Strategic Planning</strong>
+                <strong
+                  data-en="Strategic Planning"
+                  data-es="Planificación Estratégica"
+                  >Strategic Planning</strong
+                >
               </button>
             </h2>
             <div
@@ -225,11 +314,17 @@
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                <li>
+                <li
+                  data-en="Long-term Strategy: Developing long-term real estate strategies aligned with client goals"
+                  data-es="Estrategia a Largo Plazo: Desarrollo de estrategias inmobiliarias a largo plazo alineadas con los objetivos del cliente"
+                >
                   Long-term Strategy: Developing long-term real estate
                   strategies aligned with client goals
                 </li>
-                <li>
+                <li
+                  data-en="Sustainability and ESG: Integrating sustainability and Environmental, Social, and Governance (ESG) considerations into real estate strategies."
+                  data-es="Sostenibilidad y ESG: Integración de consideraciones de sostenibilidad y gobernanza ambiental, social y corporativa (ESG) en estrategias inmobiliarias."
+                >
                   Sustainability and ESG: Integrating sustainability and
                   Environmental, Social, and Governance (ESG) considerations
                   into real estate strategies.
@@ -240,25 +335,58 @@
         </div>
       </section>
     </div>
+
     <footer class="footerr" data-bs-theme="dark">
       <div class="footer-section">
         <div class="footer-about-us">
-          <a href="./home.html"><h6>About Us</h6></a>
+          <a href="./home.html"
+            ><h6 data-en="About Us" data-es="Acerca de Nosotros">
+              About Us
+            </h6></a
+          >
           <p>
-            <a href="./home.html#overview">Overview</a><br />
-            <a href="./home.html#our-principles">Our Principles</a><br />
-            <a href="./home.html#our-people">Our People</a><br />
-            <a href="./home.html#strategic-partners">Strategic Partners</a>
+            <a
+              href="./home.html#overview"
+              data-en="Overview"
+              data-es="Visión General"
+              >Overview</a
+            ><br />
+            <a
+              href="./home.html#our-principles"
+              data-en="Our Principles"
+              data-es="Nuestros Principios"
+              >Our Principles</a
+            ><br />
+            <a
+              href="./home.html#our-people"
+              data-en="Our People"
+              data-es="Nuestro Equipo"
+              >Our People</a
+            ><br />
+            <a
+              href="./home.html#strategic-partners"
+              data-en="Strategic Partners"
+              data-es="Socios Estratégicos"
+              >Strategic Partners</a
+            >
           </p>
         </div>
         <div class="footer-services">
-          <a href="./services.html"><h6>Services</h6></a>
+          <a href="./services.html"
+            ><h6 data-en="Services" data-es="Servicios">Services</h6></a
+          >
         </div>
         <div class="footer-our-projects">
-          <a href="./our-projects.html"><h6>Our Projects</h6></a>
+          <a href="./our-projects.html"
+            ><h6 data-en="Our Projects" data-es="Nuestros Proyectos">
+              Our Projects
+            </h6></a
+          >
         </div>
         <div class="footer-contact">
-          <a href="./contact-information.html"><h6>Contact</h6></a>
+          <a href="./contact-information.html"
+            ><h6 data-en="Contact" data-es="Contacto">Contact</h6></a
+          >
           <div class="social-icons">
             <a
               href="https://www.linkedin.com/company/ng-global-partners"
@@ -269,7 +397,7 @@
                 style="color: #fff; font-size: 25px"
               ></i>
             </a>
-            <a href="mailto:info@ng-globalpartners.com ">
+            <a href="mailto:info@ng-globalpartners.com">
               <i
                 class="fa-solid fa-envelope"
                 style="color: #fff; font-size: 25px"
@@ -280,21 +408,44 @@
       </div>
       <div class="terms-conditions">
         <p>
-          <a href="./politica.html">Política de Privacidad</a> |
-          <a href="./terms-conditions.html">Términos y Condiciones</a>
+          <a
+            href="./politica.html"
+            data-en="Privacy Policy"
+            data-es="Política de Privacidad"
+            >Privacy Policy</a
+          >
+          |
+          <a
+            href="./terms-conditions.html"
+            data-en="Terms and Conditions"
+            data-es="Términos y Condiciones"
+            >Terms and Conditions</a
+          >
         </p>
-        <h6>DISCLAIMER</h6>
+        <h6 data-en="DISCLAIMER" data-es="RENUNCIA">DISCLAIMER</h6>
+
         <p>
-          The content of this website is for informational purposes only.
-          Nothing in this website should be deemed to constitute the provision
-          of financial, investment, or any other professional advice. The
-          website and its owners are not responsible for any errors or
-          omissions, or for any actions taken based on the information provided
-          on this site.
+          <span
+            data-en="The content of this website is for informational purposes only. Nothing in this website should be deemed to constitute the provision of financial, investment, or any other professional advice. The website and its owners are not responsible for any errors or omissions, or for any actions taken based on the information provided on this site."
+            data-es="El contenido de este sitio web es solo para fines informativos. Nada en este sitio web debe considerarse como la provisión de consejos financieros, de inversión o de cualquier otro tipo de asesoramiento profesional. El sitio web y sus propietarios no son responsables de errores u omisiones, ni de acciones tomadas en función de la información proporcionada en este sitio."
+            >The content of this website is for informational purposes only.
+            Nothing in this website should be deemed to constitute the provision
+            of financial, investment, or any other professional advice. The
+            website and its owners are not responsible for any errors or
+            omissions, or for any actions taken based on the information
+            provided on this site.</span
+          >
         </p>
-        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+        <p
+          data-en="&copy; 2024 NG Global Partners. All rights reserved."
+          data-es="&copy; 2024 NG Global Partners. Todos los derechos reservados."
+        >
+          &copy; 2024 NG Global Partners. Todos los derechos reservados.
+        </p>
       </div>
     </footer>
+
+    <script src="./scripts/language.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

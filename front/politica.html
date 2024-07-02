@@ -29,89 +29,161 @@
       </label>
       <a href="./index.html" class="enlace">
         <img src="./source/imagenes/logoo.jpg" alt="logo" class="logo" /><strong
+          data-en="NG Global Partners"
+          data-es="NG Global Partners"
           >NG Global Partners</strong
         >
       </a>
       <ul>
         <li>
-          <a href="./home.html"><strong>About Us</strong></a>
+          <a href="./home.html"
+            ><strong data-en="About Us" data-es="Acerca de Nosotros"
+              >About Us</strong
+            ></a
+          >
           <ul class="submenu">
             <li>
-              <a href="./home.html#overview"><strong>Overview</strong></a>
-            </li>
-            <li>
-              <a href="./home.html#our-principles"
-                ><strong>Our Values</strong></a
+              <a href="./home.html#overview"
+                ><strong data-en="Overview" data-es="Visión General"
+                  >Overview</strong
+                ></a
               >
             </li>
             <li>
-              <a href="./home.html#our-people"><strong>Our People</strong></a>
+              <a href="./home.html#our-principles"
+                ><strong data-en="Our Values" data-es="Nuestros Valores"
+                  >Our Values</strong
+                ></a
+              >
+            </li>
+            <li>
+              <a href="./home.html#our-people"
+                ><strong data-en="Our People" data-es="Nuestro Equipo"
+                  >Our People</strong
+                ></a
+              >
             </li>
             <li>
               <a href="./home.html#strategic-partners"
-                ><strong>Strategic Partners</strong></a
+                ><strong
+                  data-en="Strategic Partners"
+                  data-es="Socios Estratégicos"
+                  >Strategic Partners</strong
+                ></a
               >
             </li>
           </ul>
         </li>
         <li>
-          <a href="./index.html#services"><strong>Services</strong></a>
+          <a href="./index.html#services"
+            ><strong data-en="Services" data-es="Servicios">Services</strong></a
+          >
         </li>
         <li>
-          <a href="./our-projects.html"><strong>Our Projects</strong></a>
+          <a href="./our-projects.html"
+            ><strong data-en="Our Projects" data-es="Nuestros Proyectos"
+              >Our Projects</strong
+            ></a
+          >
         </li>
         <li>
-          <a href="contact-information.html"><strong>Contact</strong></a>
+          <a href="contact-information.html"
+            ><strong data-en="Contact" data-es="Contacto">Contact</strong></a
+          >
         </li>
       </ul>
+      <button
+        id="toggle-language"
+        class="btn btn-primary"
+        onclick="toggleLanguage()"
+      >
+        <span data-es="Español" data-en="English">Español</span>
+      </button>
     </nav>
   </header>
   <body>
-    <div class="container">
-      <h1>Política de Privacidad</h1>
+    <div class="container" id="privacy-policy">
+      <h1 data-en="Privacy Policy" data-es="Política de Privacidad">
+        Privacy Policy
+      </h1>
 
-      The email will be stored in the company's account if the user decides to
-      contact us through Gmail. Spam and junk mail will not be sent. Only the
-      user's email will be answered. The information provided will not be shared
-      with third parties outside the company. All information is stored
-      responsibly. No tracking, cookies, or other similar technologies are used.
-      No sensitive information or personal data beyond email is collected for
-      direct communication. There are no other personal data collection or use
-      practices at this time. Users will be notified of any changes via an alert
-      on the website's homepage. For more information, contact us at
-      info@ng-globalpartners.com or visit our LinkedIn profile.
-
+      <p
+        data-en="The email will be stored in the company's account if the user decides to contact us through Gmail. Spam and junk mail will not be sent. Only the user's email will be answered. The information provided will not be shared with third parties outside the company. All information is stored responsibly. No tracking, cookies, or other similar technologies are used. No sensitive information or personal data beyond email is collected for direct communication. There are no other personal data collection or use practices at this time. Users will be notified of any changes via an alert on the website's homepage. For more information, contact us at info@ng-globalpartners.com or visit our LinkedIn profile."
+        data-es="El correo electrónico se almacenará en la cuenta de la empresa si el usuario decide contactarnos a través de Gmail. No se enviará correo no deseado ni basura. Solo se responderá el correo electrónico del usuario. La información proporcionada no se compartirá con terceros fuera de la empresa. Toda la información se almacena de manera responsable. No se utilizan seguimientos, cookies ni otras tecnologías similares. No se recopila información sensible ni datos personales más allá del correo electrónico para comunicación directa. No hay otras prácticas de recopilación o uso de datos personales en este momento. Los usuarios serán notificados de cualquier cambio mediante una alerta en la página de inicio del sitio web. Para obtener más información, contáctenos en info@ng-globalpartners.com o visite nuestro perfil de LinkedIn."
+      >
+        The email will be stored in the company's account if the user decides to
+        contact us through Gmail. Spam and junk mail will not be sent. Only the
+        user's email will be answered. The information provided will not be
+        shared with third parties outside the company. All information is stored
+        responsibly. No tracking, cookies, or other similar technologies are
+        used. No sensitive information or personal data beyond email is
+        collected for direct communication. There are no other personal data
+        collection or use practices at this time. Users will be notified of any
+        changes via an alert on the website's homepage. For more information,
+        contact us at info@ng-globalpartners.com or visit our LinkedIn profile.
+      </p>
       <p>
-        Para más información, contáctenos en
-        <a href="mailto:info@ngglobalpartners.com" class="link-terms"
+        <a
+          href="mailto:info@ngglobalpartners.com"
+          class="link-terms"
+          data-en="info@ngglobalpartners.com"
+          data-es="info@ngglobalpartners.com"
           >info@ngglobalpartners.com</a
         >
-        o visite nuestro perfil de LinkedIn.
       </p>
     </div>
+
     <footer class="footerr" data-bs-theme="dark">
       <div class="footer-section">
         <div class="footer-about-us">
-          <h6>About Us</h6>
+          <a href="./home.html"
+            ><h6 data-en="About Us" data-es="Acerca de Nosotros">
+              About Us
+            </h6></a
+          >
           <p>
-            <a href="./home.html">About us</a><br />
-            <a href="./home.html#overview">Overview</a><br />
-            <a href="./home.html#our-principles">Our Principles</a><br />
-            <a href="./home.html#our-people">Our People</a><br />
-            <a href="./home.html#strategic-partners">Strategic Partners</a>
+            <a
+              href="./home.html#overview"
+              data-en="Overview"
+              data-es="Visión General"
+              >Overview</a
+            ><br />
+            <a
+              href="./home.html#our-principles"
+              data-en="Our Principles"
+              data-es="Nuestros Principios"
+              >Our Principles</a
+            ><br />
+            <a
+              href="./home.html#our-people"
+              data-en="Our People"
+              data-es="Nuestro Equipo"
+              >Our People</a
+            ><br />
+            <a
+              href="./home.html#strategic-partners"
+              data-en="Strategic Partners"
+              data-es="Socios Estratégicos"
+              >Strategic Partners</a
+            >
           </p>
         </div>
         <div class="footer-services">
-          <h6>Services</h6>
-          <p><a href="./services.html">Services</a></p>
+          <a href="./services.html"
+            ><h6 data-en="Services" data-es="Servicios">Services</h6></a
+          >
         </div>
         <div class="footer-our-projects">
-          <h6>Our Projects</h6>
-          <p><a href="./our-projects.html">Our Projects</a></p>
+          <a href="./our-projects.html"
+            ><h6 data-en="Our Projects" data-es="Nuestros Proyectos">
+              Our Projects
+            </h6></a
+          >
         </div>
         <div class="footer-contact">
-          <h6>Contact</h6>
-          <p><a href="./contact-information.html">Contact</a></p>
+          <a href="./contact-information.html"
+            ><h6 data-en="Contact" data-es="Contacto">Contact</h6></a
+          >
           <div class="social-icons">
             <a
               href="https://www.linkedin.com/company/ng-global-partners"
@@ -133,21 +205,44 @@
       </div>
       <div class="terms-conditions">
         <p>
-          <a href="./politica.html">Política de Privacidad</a> |
-          <a href="./terms-conditions.html">Términos y Condiciones</a>
+          <a
+            href="./politica.html"
+            data-en="Privacy Policy"
+            data-es="Política de Privacidad"
+            >Privacy Policy</a
+          >
+          |
+          <a
+            href="./terms-conditions.html"
+            data-en="Terms and Conditions"
+            data-es="Términos y Condiciones"
+            >Terms and Conditions</a
+          >
         </p>
-        <h6>DISCLAIMER</h6>
+        <h6 data-en="DISCLAIMER" data-es="RENUNCIA">DISCLAIMER</h6>
+
         <p>
-          The content of this website is for informational purposes only.
-          Nothing in this website should be deemed to constitute the provision
-          of financial, investment, or any other professional advice. The
-          website and its owners are not responsible for any errors or
-          omissions, or for any actions taken based on the information provided
-          on this site.
+          <span
+            data-en="The content of this website is for informational purposes only. Nothing in this website should be deemed to constitute the provision of financial, investment, or any other professional advice. The website and its owners are not responsible for any errors or omissions, or for any actions taken based on the information provided on this site."
+            data-es="El contenido de este sitio web es solo para fines informativos. Nada en este sitio web debe considerarse como la provisión de consejos financieros, de inversión o de cualquier otro tipo de asesoramiento profesional. El sitio web y sus propietarios no son responsables de errores u omisiones, ni de acciones tomadas en función de la información proporcionada en este sitio."
+            >The content of this website is for informational purposes only.
+            Nothing in this website should be deemed to constitute the provision
+            of financial, investment, or any other professional advice. The
+            website and its owners are not responsible for any errors or
+            omissions, or for any actions taken based on the information
+            provided on this site.</span
+          >
         </p>
-        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+        <p
+          data-en="&copy; 2024 NG Global Partners. All rights reserved."
+          data-es="&copy; 2024 NG Global Partners. Todos los derechos reservados."
+        >
+          &copy; 2024 NG Global Partners. Todos los derechos reservados.
+        </p>
       </div>
     </footer>
+
+    <script src="./scripts/language.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
