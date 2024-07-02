@@ -124,13 +124,22 @@ nav ul li:hover .submenu {
 
 
 .card {
-  margin: 0 auto;
   width: 100%;
 }
 
 .card-body {
+  border-top: 2px solid rgb(231, 150, 0);
+  padding-bottom: 5px;
+}
+
+.card-title {
   text-align: center;
 }
+
+.card-text {
+  text-align: left;
+}
+
 
 /* Estilos generales */
 body {
@@ -353,21 +362,23 @@ video {
 .service-item {
   padding-bottom: 15px;
   position: relative;
+  text-align: left; /* Mantén el texto alineado a la izquierda */
 }
 
 .service-item strong {
-  display: inline-block;
-  position: relative;
+  display: block; /* Cambia a block para que tome el ancho completo */
+  text-align: center; /* Centra el texto dentro de strong */
   padding-bottom: 5px;
 }
 
 .service-item .underline-orange {
   display: block;
-  margin-top: 5px;
-  width: 100%;
+  margin: 5px auto 0; /* Centra el underline también */
+  width: 70%; /* Ajusta el ancho según prefieras */
   height: 2px;
   background-color: #f59126;
 }
+
 
 .accordion-item {
   margin-bottom: 20px;
