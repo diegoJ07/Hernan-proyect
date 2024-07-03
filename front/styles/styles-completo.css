@@ -2,10 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: left;
 }
 
 body, html {
   height: 100%;
+}
+
+.slogan-home {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.slogan-content {
+  flex: 1;
+}
+
+.slogan-home h2 {
+  font-size: 50px;
+  margin: 0; /* Asegura que no haya margen por defecto en los h2 */
+  text-align: left;
+}
+
+.img-slogan {
+  margin-left: 5px; /* Espacio entre el texto y la imagen */
+}
+
+.img-slogan img {
+  width: 100px; /* Ancho máximo de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
 }
 
 nav {
@@ -96,7 +122,6 @@ li a.active, li a:hover {
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
   z-index: 1000;
-  text-align: left;
   display: flex;
   flex-direction: column;
 }
@@ -108,6 +133,7 @@ nav ul li:hover .submenu {
 
 .submenu li {
   margin: 0;
+  width: 100%; /* Asegúrate de que los li ocupen todo el ancho del submenu */
 }
 
 .submenu a {
@@ -116,6 +142,7 @@ nav ul li:hover .submenu {
   color: #fff;
   white-space: nowrap;
   line-height: 1.2;
+  width: 100%; /* Asegúrate de que los a ocupen todo el ancho del submenu */
 }
 
 .submenu a:hover {
@@ -123,12 +150,13 @@ nav ul li:hover .submenu {
 }
 
 
+
 .card {
   width: 100%;
 }
 
 .card-body {
-  border-top: 2px solid rgb(231, 150, 0);
+  border-top: 2px solid rgb(70, 70, 70);
   padding-bottom: 5px;
 }
 
@@ -136,9 +164,32 @@ nav ul li:hover .submenu {
   text-align: center;
 }
 
-.card-text {
-  text-align: left;
+.card-text-container {
+  display: flex;
+  align-items: flex-end;
 }
+.Overview img {
+  height: 100%;
+  width: 100%;
+}
+.card-text {
+  margin: 0;
+  text-align: justify;
+  position: relative;
+}
+
+.icon-container {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 5px;
+}
+
+.card-text::after {
+  content: "";
+  display: inline-block;
+  width: 5px; /* Adjust the width to add some space between the text and the icon */
+}
+
 
 
 /* Estilos generales */
@@ -192,7 +243,6 @@ body {
   font-size: 50px;
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -211,7 +261,6 @@ body {
   font-size: 40px;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -230,10 +279,14 @@ body {
   font-size: 25px;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
   line-height: 1.2;
   margin-bottom: 20px;
 }
+
+.custom-btn-style {
+  margin-bottom: 30px; /* Ajusta el valor de margin-bottom según tus necesidades */
+}
+
 
 .people {
   float: left; /* Flota la imagen a la izquierda */
@@ -243,14 +296,12 @@ body {
 }
 
 .h3-home {
-  text-align: left;
-  margin-left: 10px;
   font-weight: 700;
   font-size: 3vh;
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
   text-decoration: underline;
-  text-decoration-color: orange;
+  text-decoration-color: rgb(70, 70, 70);
   text-underline-offset: 8px;
 }
 
@@ -265,17 +316,40 @@ body {
 h6 {
   font-family: "Roboto", sans-serif;
   text-decoration: underline;
-  text-decoration-color: orange;
+  text-decoration-color: rgb(70, 70, 70);
   text-underline-offset: 8px;
 }
 
 .services-h6 {
   font-family: "Roboto", sans-serif;
   text-decoration: underline;
-  text-decoration-color: orange;
+  text-decoration-color: rgb(66, 66, 66);
   text-underline-offset: 8px;
   margin: 30px 0;
 }
+
+
+
+.services .row {
+  display: flex;
+  align-items: flex-start; /* Alinear elementos en la parte superior */
+}
+
+.services .accordion {
+  margin-bottom: 30px;
+}
+
+.services .accordion-image {
+  display: flex;
+  align-items: center;
+}
+
+.services .accordion-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 
 .about-us h4 {
   font-family: Arial, Helvetica, sans-serif;
@@ -317,9 +391,9 @@ h6 {
   top: 0;
   left: 50%; /* Centra el divisor horizontalmente */
   transform: translateX(-50%); /* Ajusta la posición para centrar */
-  width: 80%; /* Ajusta el ancho del divisor */
+  width: 95%; /* Ajusta el ancho del divisor */
   height: 3px; /* Grosor del divisor */
-  background-color: orange; /* Color del divisor */
+  background-color: rgb(70, 70, 70); /* Color del divisor */
 }
 .col-md-4 strong {
   font-family: Arial, Helvetica, sans-serif;
@@ -371,22 +445,20 @@ video {
 }
 .service-item {
   padding-bottom: 15px;
-  position: relative;
-  text-align: left; /* Mantén el texto alineado a la izquierda */
+  position: relative; /* Mantén el texto alineado a la izquierda */
 }
 
 .service-item strong {
   display: block; /* Cambia a block para que tome el ancho completo */
-  text-align: center; /* Centra el texto dentro de strong */
   padding-bottom: 5px;
+  font-size: 17px;
 }
 
 .service-item .underline-orange {
   display: block;
-  margin: 5px auto 0; /* Centra el underline también */
-  width: 70%; /* Ajusta el ancho según prefieras */
+  width: 100%; /* Ajusta el ancho según prefieras */
   height: 2px;
-  background-color: #f59126;
+  background-color: rgb(70, 70, 70);
 }
 
 
@@ -405,7 +477,6 @@ video {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  text-align: left;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 20px;
@@ -541,8 +612,14 @@ video {
 .footer-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Para espaciar los elementos */
+  justify-content: left;
   padding: 10px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
 }
 
 .footer-section a {
@@ -558,13 +635,14 @@ video {
 }
 
 .footer-section > div {
-  flex: 1; /* Para que cada sección ocupe el mismo ancho */
+  flex: 1;
   margin: 10px;
 }
 
 .footer-section h6 {
-  margin: 0 0 10px 0;
-  font-size: 22px;
+  display: inline-block;
+  margin: 0;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
@@ -586,7 +664,7 @@ video {
 .terms-conditions {
   width: 100%;
   text-align: center;
-  margin-top: 20px; /* Espacio adicional para separarlo del contenido anterior */
+  margin-top: 20px;
 }
 
 .terms-conditions a {
@@ -597,6 +675,7 @@ video {
 .terms-conditions a:hover {
   color: #a09f9f;
 }
+
 
 @media (max-width: 770px) {
   .h1-index {
