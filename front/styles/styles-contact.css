@@ -167,6 +167,11 @@ nav ul li:hover .submenu {
   padding: 20px;
 }
 
+.row {
+  display: flex;
+  align-items: stretch; /* Alinea las columnas verticalmente */
+}
+
 .offices-container {
   background-color: transparent;
   color: #fff;
@@ -178,39 +183,17 @@ nav ul li:hover .submenu {
   margin-bottom: 20px;
 }
 
-.form-container {
-  background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  color: #fff;
-}
-
-.form-container h4,
-.offices-container h4 {
-  color: #ffffff;
-}
-
-textarea {
-  padding: 8px;
-  width: 100%;
-  height: 90px;
-  resize: none !important;
-}
-
 .info-section {
-  margin-top: 10vh;
   background-image: url("../source/imagenes/imagen7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
+  padding: 40px; /* Ajusta el padding según sea necesario */
   border-radius: 8px;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  height: 92%;
+  height: 450px; /* Ajusta según el espacio disponible y la altura del footer */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,22 +208,15 @@ textarea {
   margin: 0 10px;
 }
 
-.instagram img,
-.linkedin img {
-  width: 70px;
-  height: 70px;
-  margin-top: 10px;
-}
-
 .text-h3 {
   margin-bottom: 20px;
-  color: #fff;
+  color: #000;
 }
 
 .text-h4 {
   margin: 20px 0;
   padding: 10px;
-  background-color: #333;
+  color: #000;
   border-radius: 5px;
 }
 
@@ -249,18 +225,17 @@ textarea {
   align-items: center;
   margin-top: 10px;
   padding: 10px;
-  background-color: #333;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
-.ubicacion i {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
+.contact {
+  margin-top: 100px;
 }
 
 .ubicacion p {
-  color: #fff;
+  color: #000;
+  padding-left: 5px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -268,110 +243,58 @@ textarea {
 
 .footerr {
   background-color: #000;
-  color: #fff;
-  text-align: center;
   padding: 20px;
-  margin-top: 20px;
-  position: absolute;
-  width: 100%;
+  color: #fff;
 }
 
 .footer-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: left;
-  padding: 10px;
+  flex-wrap: wrap;
+  text-align: left;
 }
 
-.footer-item {
-  display: flex;
-  flex-direction: column;
-  margin: 0 10px;
+.footer-section li {
+  list-style: none; /* Quita los puntos de la lista */
+  margin: 0 20px; /* Espacio entre las columnas */
 }
 
-.footer-section a {
-  text-decoration: none;
-  color: #ffffff;
+.footer-section li a {
+  color: #ffffff; /* Color de letra blanco */
+  text-decoration: none; /* Quita la decoración del texto */
+}
+
+.footer-section li strong {
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  display: block;
+}
+
+.footer-section .submenu-footer {
+  padding: 0;
   margin-top: 5px;
 }
 
-.footer-section a:hover {
-  color: #a09f9f;
+.footer-section .submenu-footer li {
+  margin: 2px 0; /* Espacio entre los elementos de la lista */
 }
 
-.footer-section > div {
-  flex: 1;
-  margin: 10px;
-}
-
-.footer-section h6 {
-  display: inline-block;
-  margin: 0;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-}
-
-.footer-section p {
-  margin: 0;
-}
-
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 5px;
+.footer-section .submenu-footer a {
+  color: #ffffff; /* Color de letra blanco */
+  text-decoration: none; /* Quita la decoración del texto */
+  font-size: 13px;
 }
 
 .terms-conditions {
-  width: 100%;
   text-align: center;
-  margin-top: 20px;
+  padding: 10px 0;
 }
 
+.terms-conditions h6,
+.terms-conditions p,
 .terms-conditions a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.terms-conditions a:hover {
-  color: #a09f9f;
-}
-.form-container label {
-  text-align: center;
-}
-
-.form-container input,
-.form-container textarea {
-  padding: 8px;
-  width: 100%;
-  border: 2px solid #ffffff;
-  background-color: black;
-  color: #ffffff;
-  font-size: 16px;
-  box-sizing: border-box;
-}
-
-.submit-btn {
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 16px;
-  width: 100%;
-  margin: auto;
-}
-
-.submit-btn:hover {
-  background-color: #d00202;
+  color: #fff;
+  margin: 5px 0;
 }
 
 @media (max-width: 768px) {
@@ -423,27 +346,70 @@ textarea {
     display: none;
   }
 
-  .navbar {
-    height: auto;
-    padding: 10px;
-  }
-
-  .navbar-brand img {
-    position: static;
+  .checkbtn {
     display: block;
-    margin: 0 auto;
-    width: 150px;
-    height: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1100; /* Asegura que el botón de hamburguesa esté por encima del contenido */
   }
 
-  .navbar-nav {
-    margin-left: 0;
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    top: 80px;
+    left: -100%;
     text-align: center;
+    transition: all 0.5s;
+    z-index: 1000;
+    flex-direction: column; /* Cambia la dirección del flexbox para mostrar los enlaces uno debajo del otro */
+    padding-top: 20px; /* Añade espacio superior para el logo */
   }
 
-  .navbar-nav .nav-link {
-    margin-left: 0;
-    padding: 10px;
+  nav ul li {
     display: block;
+    margin: 20px 0; /* Espacio entre los elementos */
+    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
+  }
+
+  nav ul li a {
+    font-size: 15px;
+    display: block; /* Hace que cada enlace esté en su propia línea */
+    padding: 10px; /* Ajusta el espaciado entre enlaces */
+  }
+
+  /* Ajuste para el submenu en dispositivos responsivos */
+  .submenu {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  nav ul li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .submenu li {
+    text-align: center; /* Centrar los elementos del submenu */
+  }
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section > div {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .footer-section h6 {
+    font-size: 18px;
   }
 }

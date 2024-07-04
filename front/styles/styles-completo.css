@@ -20,9 +20,11 @@ body, html {
 }
 
 .slogan-home h2 {
-  font-size: 50px;
-  margin: 0; /* Asegura que no haya margen por defecto en los h2 */
-  text-align: left;
+   font-size: 32px; /* Tamaño de la fuente del h2 */
+      color: #fff; /* Color del texto */
+      text-align: left; /* Alineación del texto a la izquierda */
+      margin: 0; /* Elimina los márgenes por defecto del h2 */
+      padding: 0; /* Elimina los rellenos por defecto del h2 */
 }
 
 .img-slogan {
@@ -149,16 +151,16 @@ nav ul li:hover .submenu {
   background-color: #333;
 }
 
-
-
 .card {
-  width: 100%;
+  height: 100%; /* Ajusta esta altura según tus necesidades */
 }
 
 .card-body {
-  border-top: 2px solid rgb(70, 70, 70);
-  padding-bottom: 5px;
+  height: 100%; /* Ajusta esta altura según tus necesidades */
+  display: flex;
+  flex-direction: column;
 }
+
 
 .card-title {
   text-align: center;
@@ -287,6 +289,20 @@ body {
   margin-bottom: 30px; /* Ajusta el valor de margin-bottom según tus necesidades */
 }
 
+.img-home {
+  position: relative;
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+  height: 600px; /* Ajusta la altura según tus necesidades */
+  background-image: url('../source/imagenes/Foto1.jpg'); /* Coloca tu imagen de fondo aquí */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px; /* Espacio a la izquierda del contenedor */
+  margin-top: 50px;
+}
+
 
 .people {
   float: left; /* Flota la imagen a la izquierda */
@@ -296,13 +312,23 @@ body {
 }
 
 .h3-home {
-  font-weight: 700;
-  font-size: 3vh;
+  font-size: 2vh;
   font-family: Arial, Helvetica, sans-serif;
-  color: #000;
+  color: #070707;
   text-decoration: underline;
-  text-decoration-color: rgb(70, 70, 70);
+  text-decoration-color: #adb5bd;
   text-underline-offset: 8px;
+}
+
+.h3-strategic {
+  font-size: 2vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #070707;
+  text-decoration: underline;
+  text-decoration-color: #adb5bd;
+  text-underline-offset: 8px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .sect {
@@ -316,7 +342,7 @@ body {
 h6 {
   font-family: "Roboto", sans-serif;
   text-decoration: underline;
-  text-decoration-color: rgb(70, 70, 70);
+  text-decoration-color: #adb5bd;
   text-underline-offset: 8px;
 }
 
@@ -327,8 +353,6 @@ h6 {
   text-underline-offset: 8px;
   margin: 30px 0;
 }
-
-
 
 .services .row {
   display: flex;
@@ -350,7 +374,6 @@ h6 {
   object-fit: cover;
 }
 
-
 .about-us h4 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -358,6 +381,11 @@ h6 {
   color: #000;
   margin-top: 25px;
   margin-bottom: 30px;
+}
+
+#our-values {
+  margin-top: 40px;
+  margin-bottom: 0px;
 }
 
 .Overview,
@@ -378,27 +406,29 @@ h6 {
   padding-top: 20px; /* Añadir espacio para el divisor */
 }
 
+
 /* Estilo para el divisor de columnas */
 .column-divider {
   position: relative;
-  text-align: center; /* Centra el contenido dentro de la columna */
+  text-align: left; /* Centra el contenido dentro de la columna */
 }
 
 /* Estilo para el borde superior */
 .column-divider::before {
   content: "";
   position: absolute;
+  text-align: right;
   top: 0;
-  left: 50%; /* Centra el divisor horizontalmente */
+  left: 25%; /* Centra el divisor horizontalmente */
   transform: translateX(-50%); /* Ajusta la posición para centrar */
-  width: 95%; /* Ajusta el ancho del divisor */
+  width: 50%; /* Ajusta el ancho del divisor */
   height: 3px; /* Grosor del divisor */
-  background-color: rgb(70, 70, 70); /* Color del divisor */
+  background-color: #adb5bd; /* Color del divisor */
 }
 .col-md-4 strong {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 .section-projects-h3 h3{
@@ -458,55 +488,21 @@ video {
   display: block;
   width: 100%; /* Ajusta el ancho según prefieras */
   height: 2px;
-  background-color: rgb(70, 70, 70);
+  background-color: #adb5bd;
 }
 
+.accordion-header {
+  font-size: 18px;
+  margin-left: 5px;
+  margin-bottom: 8px !important;
+}
 
 .accordion-item {
   margin-bottom: 20px;
   align-items: center;
 }
 
-.accordion-btn {
-  background-color: #f0f0f0;
-  color: #333;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 20px;
-}
 
-/* ACORDION*/
-.accordion-btn:hover {
-  background-color: #e0e0e0;
-}
-
-.accordion-icon {
-  font-size: 16px;
-  transition: transform 0.3s ease-in-out;
-  font-size: 30px;
-}
-
-.accordion-content {
-  display: none;
-  padding: 10px 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-}
-
-/* Mostrar contenido cuando se hace clic en el botón */
-.active .accordion-content {
-  display: block;
-}
-.active .accordion-icon {
-  transform: rotate(45deg);
-}
 
 .offices-container {
   background-color: transparent;
@@ -598,84 +594,61 @@ video {
 .ubicacion:hover {
   background-color: #333;
 }
-
 .footerr {
   background-color: #000;
-  color: #fff;
-  text-align: center;
   padding: 20px;
-  margin-top: 20px;
-  position: absolute;
-  width: 100%;
+  color: #fff;
 }
 
 .footer-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: left;
-  padding: 10px;
+  flex-wrap: wrap;
+  text-align: left;
 }
 
-.footer-item {
-  display: flex;
-  flex-direction: column;
-  margin: 0 10px;
+.footer-section li {
+  list-style: none; /* Quita los puntos de la lista */
+  margin: 0 20px; /* Espacio entre las columnas */
 }
 
-.footer-section a {
-  text-decoration: none;
-  color: #ffffff;
+.footer-section li a {
+  color: #ffffff; /* Color de letra blanco */
+  text-decoration: none; /* Quita la decoración del texto */
+}
+
+.footer-section li strong {
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  display: block;
+}
+
+.footer-section .submenu-footer {
+  padding: 0;
   margin-top: 5px;
 }
 
-.footer-section a:hover {
-  color: #a09f9f;
+.footer-section .submenu-footer li {
+  margin: 2px 0; /* Espacio entre los elementos de la lista */
 }
 
-.footer-section > div {
-  flex: 1;
-  margin: 10px;
-}
-
-.footer-section h6 {
-  display: inline-block;
-  margin: 0;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-}
-
-.footer-section p {
-  margin: 0;
-}
-
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 5px;
+.footer-section .submenu-footer a {
+  color: #ffffff; /* Color de letra blanco */
+  text-decoration: none; /* Quita la decoración del texto */
+  font-size: 13px;
 }
 
 .terms-conditions {
-  width: 100%;
   text-align: center;
-  margin-top: 20px;
+  padding: 10px 0;
 }
 
+.terms-conditions h6,
+.terms-conditions p,
 .terms-conditions a {
-  text-decoration: none;
-  color: #ffffff;
+  color: #fff;
+  margin: 5px 0;
 }
-
-.terms-conditions a:hover {
-  color: #a09f9f;
-}
-
 
 @media (max-width: 770px) {
   .h1-index {
