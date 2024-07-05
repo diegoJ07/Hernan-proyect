@@ -312,7 +312,7 @@ body {
 }
 
 .h3-home {
-  font-size: 2vh;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   color: #070707;
   text-decoration: underline;
@@ -321,7 +321,7 @@ body {
 }
 
 .h3-strategic {
-  font-size: 2vh;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   color: #070707;
   text-decoration: underline;
@@ -406,6 +406,15 @@ h6 {
   padding-top: 20px; /* Añadir espacio para el divisor */
 }
 
+.col-sm {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-top: 20px; /* Añadir espacio para el divisor */
+}
 
 /* Estilo para el divisor de columnas */
 .column-divider {
@@ -502,7 +511,15 @@ video {
   align-items: center;
 }
 
+/* Ajustar margen inferior del botón "Learn More" */
+.btn-learn-more {
+  margin-bottom: 5px; /* Ajusta este valor según sea necesario */
+}
 
+/* Ajustar margen superior de la sección "Our Services" */
+.our-services {
+  margin-top: 40px; /* Ajusta este valor según sea necesario */
+}
 
 .offices-container {
   background-color: transparent;
