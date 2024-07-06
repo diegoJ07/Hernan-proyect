@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -201,8 +208,10 @@ nav ul li:hover .submenu {
 
 .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
+
+
 
 .social-icons a {
   margin: 0 10px;
@@ -228,6 +237,31 @@ nav ul li:hover .submenu {
   background-color: #ffffff;
   border-radius: 5px;
 }
+
+.social-icons-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 10px 0; /* Ajusta el margen según necesites */
+  text-align: left;
+}
+
+.social-icons-footer a {
+  margin-right: 10px; /* Ajusta el espacio entre los iconos según necesites */
+}
+
+.contact-addresses {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-addresses a {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px; /* Puedes ajustar el margen según necesites */
+}
+
 
 .contact {
   margin-top: 100px;

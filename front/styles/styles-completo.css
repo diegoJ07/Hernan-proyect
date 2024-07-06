@@ -21,10 +21,10 @@ body, html {
 
 .slogan-home h2 {
    font-size: 32px; /* Tamaño de la fuente del h2 */
-      color: #fff; /* Color del texto */
-      text-align: left; /* Alineación del texto a la izquierda */
-      margin: 0; /* Elimina los márgenes por defecto del h2 */
-      padding: 0; /* Elimina los rellenos por defecto del h2 */
+  color: #fff; /* Color del texto */
+  text-align: left; /* Alineación del texto a la izquierda */
+  margin: 0; /* Elimina los márgenes por defecto del h2 */
+  padding: 0; /* Elimina los rellenos por defecto del h2 */
 }
 
 .img-slogan {
@@ -623,14 +623,7 @@ video {
   justify-content: center;
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-}
 
-.social-icons a {
-  margin: 0 10px;
-}
 
 .gmail img,
 .linkedin img {
@@ -688,6 +681,31 @@ video {
   padding: 20px;
   color: #fff;
 }
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 10px 0; /* Ajusta el margen según necesites */
+  text-align: left;
+}
+
+.social-icons a {
+  margin-right: 10px; /* Ajusta el espacio entre los iconos según necesites */
+}
+
+.contact-addresses {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-addresses a {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px; /* Puedes ajustar el margen según necesites */
+}
+
 
 .footer-section {
   display: flex;

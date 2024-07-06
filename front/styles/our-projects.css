@@ -193,6 +193,31 @@ nav ul li:hover .submenu {
   text-decoration: none;
 }
 
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 10px 0; /* Ajusta el margen según necesites */
+  text-align: left;
+}
+
+.social-icons a {
+  margin-right: 10px; /* Ajusta el espacio entre los iconos según necesites */
+}
+
+.contact-addresses {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-addresses a {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px; /* Puedes ajustar el margen según necesites */
+}
+
+
 
 
 /* Estilos para info-section */
