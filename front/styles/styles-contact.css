@@ -260,6 +260,7 @@ nav ul li:hover .submenu {
   text-align: left;
   display: block;
   margin-bottom: 10px; /* Puedes ajustar el margen según necesites */
+  font-size: 13px;
 }
 
 
@@ -329,6 +330,7 @@ nav ul li:hover .submenu {
 .terms-conditions a {
   color: #fff;
   margin: 5px 0;
+  font-size: 12px;
 }
 
 @media (max-width: 768px) {

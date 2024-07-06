@@ -97,10 +97,10 @@ nav ul li strong {
   font-size: 12px;
 }
 
-li a.active, li a:hover {
+/* li a.active, li a:hover {
   background-color: #ececee;
   transition: .5s;
-}
+} */
 
 .checkbtn {
   font-size: 30px;
@@ -722,8 +722,12 @@ video {
 .footer-section li a {
   color: #ffffff; /* Color de letra blanco */
   text-decoration: none; /* Quita la decoración del texto */
+  font-size: 13px;
 }
 
+.footer-section strong {
+  margin-right: 30px;
+}
 
 .footer-section li strong {
   font-size: 14px;
@@ -756,6 +760,7 @@ video {
 .terms-conditions a {
   color: #fff;
   margin: 5px 0;
+  font-size: 12px;
 }
 
 @media (max-width: 770px) {

@@ -72,6 +72,7 @@ body {
 .terms-conditions a {
   color: #fff;
   margin: 5px 0;
+  font-size: 12px;
 }
 nav {
   background-color: #000;
@@ -215,6 +216,7 @@ nav ul li:hover .submenu {
   text-align: left;
   display: block;
   margin-bottom: 10px; /* Puedes ajustar el margen según necesites */
+  font-size: 13px;
 }
 
 
