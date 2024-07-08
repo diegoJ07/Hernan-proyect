@@ -913,6 +913,6 @@ video {
     margin-top: -140px; /* Ajuste específico para pantallas medianas */
   }
   .services-h6 {
-    scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu barra de navegación */
+    scroll-margin-top: 60px; /* Ajusta este valor según la altura de tu barra de navegación */
   }
 }
