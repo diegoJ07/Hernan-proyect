@@ -370,7 +370,7 @@ body {
 
 .img-home {
   position: relative;
-  width: 100%; /* Ajusta el ancho según tus necesidades */
+  width: 110%; /* Ajusta el ancho según tus necesidades */
   height: 850px; /* Ajusta la altura según tus necesidades */
   background-image: url('../source/imagenes/Velero\ 3.jpg'); /* Coloca tu imagen de fondo aquí */
   background-size: cover;
@@ -380,6 +380,7 @@ body {
   align-items: center;
   padding-left: 20px; /* Espacio a la izquierda del contenedor */
   margin-top: 50px;
+  margin-left: -10px;
 }
 
 
@@ -910,5 +911,8 @@ video {
 @media (max-width: 992px) {
   .slogan-home {
     margin-top: -140px; /* Ajuste específico para pantallas medianas */
+  }
+  .h3-home {
+    scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu barra de navegación */
   }
 }
