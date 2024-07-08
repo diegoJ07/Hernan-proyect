@@ -181,30 +181,11 @@ nav ul li:hover .submenu {
 
 .offices-container {
   background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 120px;
   margin-top: 10vh;
   margin-bottom: 20px;
 }
 
-.info-section {
-  background-image: url("../source/imagenes/imagen7.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 40px; /* Ajusta el padding según sea necesario */
-  border-radius: 8px;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-  height: 450px; /* Ajusta según el espacio disponible y la altura del footer */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 .social-icons {
   display: flex;
@@ -224,7 +205,6 @@ nav ul li:hover .submenu {
 
 .text-h4 {
   margin: 20px 0;
-  padding: 10px;
   color: #000;
   border-radius: 5px;
 }
@@ -232,8 +212,7 @@ nav ul li:hover .submenu {
 .ubicacion {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 20px;
   background-color: #ffffff;
   border-radius: 5px;
 }
