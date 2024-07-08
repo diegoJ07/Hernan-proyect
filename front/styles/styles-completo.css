@@ -5,7 +5,8 @@
   text-align: left;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -26,7 +27,6 @@ body, html {
   margin: 0; /* Elimina los márgenes por defecto del h2 */
   padding: 0; /* Elimina los rellenos por defecto del h2 */
 }
-
 
 .img-slogan {
   margin-left: 5px; /* Espacio entre el texto y la imagen */
@@ -100,7 +100,7 @@ nav ul li strong {
 
 nav li a:hover {
   background-color: #ececee;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .checkbtn {
@@ -197,14 +197,11 @@ nav ul li:hover .submenu {
   margin: 0;
 }
 
-
-
 .stat-description {
   display: block;
   margin-top: 2px; /* Ajusta este valor según sea necesario */
   font-size: 17px;
 }
-
 
 .card-title {
   text-align: center;
@@ -235,8 +232,6 @@ nav ul li:hover .submenu {
   display: inline-block;
   width: 5px; /* Adjust the width to add some space between the text and the icon */
 }
-
-
 
 /* Estilos generales */
 body {
@@ -286,7 +281,6 @@ body {
   height: 300px;
   width: 300px;
 }
-
 
 .container-services {
   display: flex;
@@ -372,7 +366,7 @@ body {
   position: relative;
   width: 110%; /* Ajusta el ancho según tus necesidades */
   height: 850px; /* Ajusta la altura según tus necesidades */
-  background-image: url('../source/imagenes/Velero\ 3.jpg'); /* Coloca tu imagen de fondo aquí */
+  background-image: url("../source/imagenes/Velero\ 3.jpg"); /* Coloca tu imagen de fondo aquí */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -382,7 +376,6 @@ body {
   margin-top: 50px;
   margin-left: -10px;
 }
-
 
 .people {
   float: left; /* Flota la imagen a la izquierda */
@@ -433,8 +426,7 @@ h6 {
   text-decoration-color: rgb(66, 66, 66);
   text-underline-offset: 8px;
   margin: 30px 0;
-  scroll-margin-top: 140px; /* Ajusta este valor según la altura de tu barra de navegación */
-  
+  scroll-margin-top: 120px; /* Ajusta este valor según la altura de tu barra de navegación */
 }
 
 .services .row {
@@ -493,7 +485,7 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 2.5rem;
-  
+
   position: relative;
   padding-top: 20px; /* Añadir espacio para el divisor */
 }
@@ -522,7 +514,7 @@ h6 {
   font-size: 3rem;
 }
 
-.section-projects-h3 h3{
+.section-projects-h3 h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   margin: 200px 200px;
@@ -533,7 +525,6 @@ h6 {
   font-size: 18px;
   margin-bottom: 10px;
 }
-
 
 .partner-section .partner-content {
   display: flex;
@@ -552,8 +543,6 @@ h6 {
 .partner-section p {
   flex: 1; /* El texto ocupa todo el espacio restante */
 }
-
-
 
 video {
   position: absolute;
@@ -633,8 +622,6 @@ video {
   flex-direction: column;
   justify-content: center;
 }
-
-
 
 .gmail img,
 .linkedin img {
@@ -717,7 +704,6 @@ video {
   margin-bottom: 10px; /* Puedes ajustar el margen según necesites */
 }
 
-
 .footer-section {
   display: flex;
   justify-content: left;
@@ -784,7 +770,6 @@ video {
   .h1-home {
     margin-top: 0;
   }
-
 
   .about-us h4 {
     font-family: Arial, Helvetica, sans-serif;
@@ -913,6 +898,6 @@ video {
     margin-top: -140px; /* Ajuste específico para pantallas medianas */
   }
   .services-h6 {
-    scroll-margin-top: 60px; /* Ajusta este valor según la altura de tu barra de navegación */
+    scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
   }
 }
