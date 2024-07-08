@@ -96,7 +96,7 @@ nav ul li strong {
   font-size: 12px;
 }
 
-li a.active, li a:hover {
+nav li a:hover {
   background-color: #ececee;
   transition: .5s;
 }
