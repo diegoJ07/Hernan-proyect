@@ -764,6 +764,21 @@ video {
 }
 
 @media (max-width: 770px) {
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+
   .h1-index {
     margin-left: 25px;
     font-size: 30px;
@@ -773,7 +788,6 @@ video {
   .h1-home {
     margin-top: 0;
   }
-
 
   .about-us h4 {
     font-family: Arial, Helvetica, sans-serif;
@@ -788,7 +802,7 @@ video {
     display: block;
     position: absolute;
     right: 20px;
-    z-index: 1100; /* Asegura que el botón de hamburguesa esté por encima del contenido */
+    z-index: 1100;
   }
 
   nav ul {
@@ -801,23 +815,22 @@ video {
     text-align: center;
     transition: all 0.5s;
     z-index: 1000;
-    flex-direction: column; /* Cambia la dirección del flexbox para mostrar los enlaces uno debajo del otro */
-    padding-top: 20px; /* Añade espacio superior para el logo */
+    flex-direction: column;
+    padding-top: 20px;
   }
 
   nav ul li {
     display: block;
-    margin: 20px 0; /* Espacio entre los elementos */
-    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
+    margin: 20px 0;
+    line-height: normal;
   }
 
   nav ul li a {
     font-size: 15px;
-    display: block; /* Hace que cada enlace esté en su propia línea */
-    padding: 10px; /* Ajusta el espaciado entre enlaces */
+    display: block;
+    padding: 10px;
   }
 
-  /* Ajuste para el submenu en dispositivos responsivos */
   .submenu {
     left: 50%;
     transform: translateX(-50%);
@@ -834,8 +847,9 @@ video {
   }
 
   .submenu li {
-    text-align: left; /* Centrar los elementos del submenu */
+    text-align: left;
   }
+
   .footer-section {
     flex-direction: column;
     align-items: left;
@@ -852,18 +866,18 @@ video {
 
   .footerr ul li {
     display: block;
-    margin: 10px 0; /* Espacio entre los elementos */
+    margin: 10px 0;
     text-align: left;
-    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
+    line-height: normal;
   }
 
   .submenu-footer li {
-    text-align: left; /* Centrar los elementos del submenu */
+    text-align: left;
   }
 
   .footerr ul li a {
     font-size: 15px;
-    display: block; /* Hace que cada enlace esté en su propia línea */
-    padding: 0px; /* Ajusta el espaciado entre enlaces */
+    display: block;
+    padding: 0px;
   }
 }

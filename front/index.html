@@ -128,8 +128,22 @@
         playsinline
         oncanplay="this.style.opacity=1"
         onerror="this.parentElement.classList.add('video-error')"
-        style="opacity: 0; transition: opacity 1s ease-in"
-      ></video>
+        style="
+          opacity: 0;
+          transition: opacity 1s ease-in;
+          width: 100%;
+          height: auto;
+        "
+        poster="./source/images/fallback-image.jpg"
+      >
+        <source src="./source/videos/iStock-1197863194.mp4" type="video/mp4" />
+        <source
+          src="./source/videos/iStock-1197863194.webm"
+          type="video/webm"
+        />
+        <source src="./source/videos/iStock-1197863194.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
       <div class="title-container">
         <h1
           class="h1-index"
