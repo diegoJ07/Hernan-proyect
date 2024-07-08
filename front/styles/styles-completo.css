@@ -912,7 +912,7 @@ video {
   .slogan-home {
     margin-top: -140px; /* Ajuste específico para pantallas medianas */
   }
-  .h3-home {
+  .services-h6 {
     scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu barra de navegación */
   }
 }
