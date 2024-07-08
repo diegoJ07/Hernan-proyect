@@ -97,7 +97,7 @@
             >
           </li>
           <li>
-            <a href="./our-projects.html"
+            <a href="./index.html#our-projects"
               ><strong data-en="Our Projects" data-es="Nuestros Proyectos"
                 >Our Projects</strong
               ></a
@@ -128,22 +128,8 @@
         playsinline
         oncanplay="this.style.opacity=1"
         onerror="this.parentElement.classList.add('video-error')"
-        style="
-          opacity: 0;
-          transition: opacity 1s ease-in;
-          width: 100%;
-          height: auto;
-        "
-        poster="./source/imagenes/Velero 3.jpg"
-      >
-        <source src="./source/videos/iStock-1197863194.mp4" type="video/mp4" />
-        <source
-          src="./source/videos/iStock-1197863194.webm"
-          type="video/webm"
-        />
-        <source src="./source/videos/iStock-1197863194.ogg" type="video/ogg" />
-        Your browser does not support the video tag.
-      </video>
+        style="opacity: 0; transition: opacity 1s ease-in"
+      ></video>
       <div class="title-container">
         <h1
           class="h1-index"
@@ -178,42 +164,48 @@
           <div class="container text-left">
             <div class="row align-items-start" style="margin-bottom: 0">
               <div class="col-sm column-divider">
-                <strong>+$</strong
-                ><strong class="counter" data-target="400">0</strong>
-                <strong>M</strong
+                <strong class="stat-value">+$</strong>
+                <strong class="counter stat-value" data-target="400">0</strong>
+                <strong class="stat-value">M</strong
                 ><br
                   data-en="Projects & Assets under advisory"
                   data-es="Proyectos y Activos bajo asesoramiento"
-                /><span
-                  style="font-size: 17px"
+                />
+                <span
+                  class="stat-description"
                   data-en="Projects & Assets under advisory"
                   data-es="Proyectos y Activos bajo asesoramiento"
-                  >Projects & Assets under advisory</span
                 >
+                  Projects & Assets under advisory
+                </span>
               </div>
               <div class="col-sm column-divider">
-                <strong>+$</strong
-                ><strong class="counter" data-target="100">0</strong>
-                <strong>M</strong
+                <strong class="stat-value">+$</strong>
+                <strong class="counter stat-value" data-target="100">0</strong>
+                <strong class="stat-value">M</strong
                 ><br
                   data-en="Value of projects closed"
                   data-es="Valor de proyectos cerrados"
-                /><span
-                  style="font-size: 17px"
+                />
+                <span
+                  class="stat-description"
                   data-en="Value of projects closed"
                   data-es="Valor de proyectos cerrados"
-                  >Value of projects closed</span
                 >
+                  Value of projects closed
+                </span>
               </div>
               <div class="col-sm column-divider">
-                <strong>+</strong
-                ><strong class="counter" data-target="40">0</strong>
-                <strong>Years</strong><br /><span
-                  style="font-size: 17px"
+                <strong class="stat-value">+</strong>
+                <strong class="counter stat-value" data-target="40">0</strong>
+                <strong class="stat-value">Years</strong><br />
+                <span
+                  class="stat-description"
                   data-en="Combined in global strategic projects"
                   data-es="Combinados en proyectos estratégicos globales"
-                  >Combined in global strategic projects</span
                 >
+                  Combined in global strategic projects
+                </span>
               </div>
             </div>
           </div>
@@ -231,12 +223,13 @@
       <div class="our-services">
         <h6
           class="services-h6"
+          id="services"
           data-en="OUR SERVICES"
           data-es="NUESTROS SERVICIOS"
         >
           OUR SERVICES
         </h6>
-        <section id="services" class="services">
+        <section class="services">
           <div class="row no-margin-top">
             <div class="col-md-12">
               <div class="border">
@@ -332,7 +325,7 @@
           </div>
         </section>
       </div>
-      <section class="our-projects">
+      <section class="our-projects" id="our-projects">
         <h6
           class="services-h6"
           data-en="OUR PROJECTS"
@@ -340,34 +333,33 @@
         >
           OUR PROJECTS
         </h6>
-        <div class="img-projects">
-          <div class="card-container">
-            <div class="card" style="width: 18rem">
-              <img
-                src="./source/imagenes/proyecto1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-img-overlay">
-                <p class="card-text">
-                  Pre assessment & Capital Structure Advisory for a Luxury
-                  Project in Miami Beach, Florida.
-                </p>
-              </div>
+        <div class="card-container">
+          <div class="card" style="width: 18rem">
+            <img
+              src="./source/imagenes/proyecto1.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Pre assessment & Capital Structure Advisory for a Luxury Project
+                in Miami Beach, Florida.
+              </p>
             </div>
-            <div class="card" style="width: 18rem">
-              <img
-                src="./source/imagenes/proyecto2.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-img-overlay">
-                <p class="card-text">
-                  $59M Joint Venture/Construction loan for a 240 units
-                  multifamily rental community on a 15 acres development site in
-                  Cape Coral, Florida .
-                </p>
-              </div>
+          </div>
+
+          <div class="card" style="width: 18rem">
+            <img
+              src="./source/imagenes/proyecto2.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                $59M Joint Venture/Construction loan for a 240 units multifamily
+                rental community on a 15 acres development site in Cape Coral,
+                Florida.
+              </p>
             </div>
           </div>
         </div>

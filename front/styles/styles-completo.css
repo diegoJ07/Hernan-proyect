@@ -12,7 +12,7 @@ body, html {
 .slogan-home {
   display: flex;
   align-items: center;
-  margin-top: 100px;
+  margin-top: -100px; /* Ajusta este valor según sea necesario */
 }
 
 .slogan-content {
@@ -20,12 +20,13 @@ body, html {
 }
 
 .slogan-home h2 {
-   font-size: 32px; /* Tamaño de la fuente del h2 */
+  font-size: 35px; /* Tamaño de la fuente del h2 */
   color: #fff; /* Color del texto */
   text-align: left; /* Alineación del texto a la izquierda */
   margin: 0; /* Elimina los márgenes por defecto del h2 */
   padding: 0; /* Elimina los rellenos por defecto del h2 */
 }
+
 
 .img-slogan {
   margin-left: 5px; /* Espacio entre el texto y la imagen */
@@ -165,6 +166,7 @@ nav ul li:hover .submenu {
   display: flex;
   gap: 20px; /* Espacio entre las tarjetas */
   flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
+  margin-bottom: 30px;
 }
 
 .card {
@@ -193,10 +195,15 @@ nav ul li:hover .submenu {
 
 .card-text {
   margin: 0;
-  padding: 10px;
 }
 
 
+
+.stat-description {
+  display: block;
+  margin-top: 2px; /* Ajusta este valor según sea necesario */
+  font-size: 17px;
+}
 
 
 .card-title {
@@ -390,6 +397,7 @@ body {
   text-decoration: underline;
   text-decoration-color: #adb5bd;
   text-underline-offset: 8px;
+  scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
 }
 
 .h3-strategic {
@@ -424,6 +432,8 @@ h6 {
   text-decoration-color: rgb(66, 66, 66);
   text-underline-offset: 8px;
   margin: 30px 0;
+  scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
+  
 }
 
 .services .row {
@@ -482,7 +492,7 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 2.5rem;
-  margin-top: 10px;
+  
   position: relative;
   padding-top: 20px; /* Añadir espacio para el divisor */
 }
@@ -764,31 +774,16 @@ video {
 }
 
 @media (max-width: 770px) {
-  video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .title-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #000;
-  }
-
   .h1-index {
     margin-left: 25px;
     font-size: 30px;
     padding: 0 20px;
-    color: #000;
   }
 
   .h1-home {
     margin-top: 0;
   }
+
 
   .about-us h4 {
     font-family: Arial, Helvetica, sans-serif;
@@ -803,7 +798,7 @@ video {
     display: block;
     position: absolute;
     right: 20px;
-    z-index: 1100;
+    z-index: 1100; /* Asegura que el botón de hamburguesa esté por encima del contenido */
   }
 
   nav ul {
@@ -816,22 +811,23 @@ video {
     text-align: center;
     transition: all 0.5s;
     z-index: 1000;
-    flex-direction: column;
-    padding-top: 20px;
+    flex-direction: column; /* Cambia la dirección del flexbox para mostrar los enlaces uno debajo del otro */
+    padding-top: 20px; /* Añade espacio superior para el logo */
   }
 
   nav ul li {
     display: block;
-    margin: 20px 0;
-    line-height: normal;
+    margin: 20px 0; /* Espacio entre los elementos */
+    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
   }
 
   nav ul li a {
     font-size: 15px;
-    display: block;
-    padding: 10px;
+    display: block; /* Hace que cada enlace esté en su propia línea */
+    padding: 10px; /* Ajusta el espaciado entre enlaces */
   }
 
+  /* Ajuste para el submenu en dispositivos responsivos */
   .submenu {
     left: 50%;
     transform: translateX(-50%);
@@ -848,9 +844,8 @@ video {
   }
 
   .submenu li {
-    text-align: left;
+    text-align: left; /* Centrar los elementos del submenu */
   }
-
   .footer-section {
     flex-direction: column;
     align-items: left;
@@ -867,18 +862,54 @@ video {
 
   .footerr ul li {
     display: block;
-    margin: 10px 0;
+    margin: 10px 0; /* Espacio entre los elementos */
     text-align: left;
-    line-height: normal;
+    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
   }
 
   .submenu-footer li {
-    text-align: left;
+    text-align: left; /* Centrar los elementos del submenu */
   }
 
   .footerr ul li a {
     font-size: 15px;
-    display: block;
-    padding: 0px;
+    display: block; /* Hace que cada enlace esté en su propia línea */
+    padding: 0px; /* Ajusta el espaciado entre enlaces */
+  }
+}
+
+
+@media (min-width: 769px) {
+  .services .image-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services .border {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro del contenedor */
+  }
+
+  .services .image-container {
+    order: 2; /* Mueve la imagen al final en móviles */
+    width: 100%;
+    margin-top: 20px; /* Espacio superior para separar la imagen del contenido */
+  }
+
+  .services .accordion-content {
+    order: 1;
+    width: 100%;
+  }
+
+  .services .image-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  .slogan-home {
+    margin-top: -140px; /* Ajuste específico para pantallas medianas */
   }
 }
