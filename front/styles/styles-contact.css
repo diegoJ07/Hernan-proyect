@@ -338,14 +338,14 @@ nav ul li:hover .submenu {
   }
 
   .offices-container {
-    background-color: transparent;
+    /* background-color: transparent;
     color: #fff;
     border: 2px solid #000;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     margin-top: 10vh;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
+    padding: 20px;
   }
 
   .form-container {
@@ -416,7 +416,7 @@ nav ul li:hover .submenu {
   }
   .footer-section {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
 
   .footer-section > div {
@@ -426,5 +426,22 @@ nav ul li:hover .submenu {
 
   .footer-section h6 {
     font-size: 18px;
+  }
+
+  .footerr ul li {
+    display: block;
+    margin: 10px 0; /* Espacio entre los elementos */
+    text-align: left;
+    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
+  }
+
+  .submenu-footer li {
+    text-align: left; /* Centrar los elementos del submenu */
+  }
+
+  .footerr ul li a {
+    font-size: 13px;
+    display: block; /* Hace que cada enlace esté en su propia línea */
+    padding: 0px; /* Ajusta el espaciado entre enlaces */
   }
 }

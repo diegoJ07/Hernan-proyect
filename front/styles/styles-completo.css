@@ -361,21 +361,20 @@ body {
 .custom-btn-style {
   margin-bottom: 30px; /* Ajusta el valor de margin-bottom según tus necesidades */
 }
-
 .img-home {
   position: relative;
-  width: 110%; /* Ajusta el ancho según tus necesidades */
-  height: 850px; /* Ajusta la altura según tus necesidades */
-  background-image: url("../source/imagenes/Velero\ 3.jpg"); /* Coloca tu imagen de fondo aquí */
+  width: 100%;
+  height: 850px;
+  background-image: url("../source/imagenes/Velero\ 3.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 20px; /* Espacio a la izquierda del contenedor */
-  margin-top: 50px;
-  margin-left: -10px;
+  padding-left: 20px;
+  margin-top: 80px;
 }
+
 
 .people {
   float: left; /* Flota la imagen a la izquierda */
@@ -762,13 +761,33 @@ video {
 
 @media (max-width: 770px) {
   .h1-index {
-    margin-left: 25px;
     font-size: 30px;
-    padding: 0 20px;
+  }
+
+  .column-divider::before {
+
+    margin-top: 13px;
   }
 
   .h1-home {
     margin-top: 0;
+  }
+
+  .slogan-content br {
+    display: none;
+  }
+
+  .slogan-home h2 {
+    font-size: 30px; /* Tamaño de la fuente del h2 */
+    color: #fff; /* Color del texto */
+  }
+
+  .partner-section .partner-image {
+    height: 100px;
+  }
+
+  .h3-strategic {
+    scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
   }
 
   .about-us h4 {
@@ -808,21 +827,15 @@ video {
   }
 
   nav ul li a {
-    font-size: 15px;
-    display: block; /* Hace que cada enlace esté en su propia línea */
-    padding: 10px; /* Ajusta el espaciado entre enlaces */
+    display: block;
+    padding: 10px;
   }
-
   /* Ajuste para el submenu en dispositivos responsivos */
   .submenu {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+    display: none; /* Ocultar submenú en móviles */
   }
-
   nav ul li:hover .submenu {
-    opacity: 1;
-    visibility: visible;
+    display: block;
   }
 
   #check:checked ~ ul {
@@ -830,7 +843,8 @@ video {
   }
 
   .submenu li {
-    text-align: left; /* Centrar los elementos del submenu */
+    display: block;
+    text-align: left;
   }
   .footer-section {
     flex-direction: column;
@@ -858,7 +872,7 @@ video {
   }
 
   .footerr ul li a {
-    font-size: 15px;
+    font-size: 13px;
     display: block; /* Hace que cada enlace esté en su propia línea */
     padding: 0px; /* Ajusta el espaciado entre enlaces */
   }

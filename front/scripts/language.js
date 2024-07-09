@@ -15,3 +15,15 @@ function toggleLanguage() {
     ? "English"
     : "Español";
 }
+
+document.querySelectorAll("nav ul li a").forEach((el) => {
+  el.addEventListener("click", () => {
+    document.getElementById("check").checked = false;
+  });
+});
+
+document.querySelectorAll(".submenu li a").forEach((el) => {
+  el.addEventListener("click", () => {
+    document.getElementById("check").checked = false;
+  });
+});

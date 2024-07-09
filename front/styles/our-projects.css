@@ -33,7 +33,7 @@ body {
 
 .footer-section li {
   list-style: none; /* Quita los puntos de la lista */
-  margin: 0 20px; /* Espacio entre las columnas */
+  margin-right: 20px; /* Espacio entre las columnas */
 }
 
 .footer-section li a {
@@ -221,7 +221,6 @@ nav ul li:hover .submenu {
 
 
 
-
 /* Estilos para info-section */
 .info-section {
   flex: 1; /* Ocupa todo el espacio disponible en la columna */
@@ -244,9 +243,13 @@ nav ul li:hover .submenu {
 }
 
 
-
-
 @media (max-width: 770px) {
+
+  .policy  {
+    font-size: 25px;
+  }
+  
+
   .about-us h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -259,7 +262,6 @@ nav ul li:hover .submenu {
   .checkbtn {
     display: block;
     position: absolute;
-    top: 20px;
     right: 20px;
     z-index: 1100; /* Asegura que el botón de hamburguesa esté por encima del contenido */
   }
@@ -285,21 +287,15 @@ nav ul li:hover .submenu {
   }
 
   nav ul li a {
-    font-size: 15px;
-    display: block; /* Hace que cada enlace esté en su propia línea */
-    padding: 10px; /* Ajusta el espaciado entre enlaces */
+    display: block;
+    padding: 10px;
   }
-
   /* Ajuste para el submenu en dispositivos responsivos */
   .submenu {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+    display: none; /* Ocultar submenú en móviles */
   }
-
   nav ul li:hover .submenu {
-    opacity: 1;
-    visibility: visible;
+    display: block;
   }
 
   #check:checked ~ ul {
@@ -307,11 +303,12 @@ nav ul li:hover .submenu {
   }
 
   .submenu li {
-    text-align: center; /* Centrar los elementos del submenu */
+    display: block;
+    text-align: left;
   }
   .footer-section {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
 
   .footer-section > div {
@@ -320,7 +317,23 @@ nav ul li:hover .submenu {
   }
 
   .footer-section h6 {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+
+  .footerr ul li {
+    display: block;
+    margin: 10px 0; /* Espacio entre los elementos */
+    text-align: left;
+    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
+  }
+
+  .submenu-footer li {
+    text-align: left; /* Centrar los elementos del submenu */
+  }
+
+  .footerr ul li a {
+    font-size: 13px;
+    display: block; /* Hace que cada enlace esté en su propia línea */
+    padding: 0px; /* Ajusta el espaciado entre enlaces */
   }
 }
