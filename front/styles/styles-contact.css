@@ -270,7 +270,7 @@ nav ul li:hover .submenu {
 
 .footer-section li {
   list-style: none; /* Quita los puntos de la lista */
-  margin: 0 20px; /* Espacio entre las columnas */
+  margin-right: 20px;
 }
 
 .footer-section li a {
