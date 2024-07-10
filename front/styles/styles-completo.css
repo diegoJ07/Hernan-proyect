@@ -197,6 +197,7 @@ nav ul li:hover .submenu {
   margin: 0;
 }
 
+
 .stat-description {
   display: block;
   margin-top: 2px; /* Ajusta este valor según sea necesario */
@@ -484,7 +485,7 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 2.5rem;
-
+  margin: 20px;
   position: relative;
   padding-top: 20px; /* Añadir espacio para el divisor */
 }
@@ -765,7 +766,6 @@ video {
   }
 
   .column-divider::before {
-
     margin-top: 13px;
   }
 
@@ -778,7 +778,7 @@ video {
   }
 
   .slogan-home h2 {
-    font-size: 30px; /* Tamaño de la fuente del h2 */
+    font-size: 32px; /* Tamaño de la fuente del h2 */
     color: #fff; /* Color del texto */
   }
 
@@ -793,8 +793,7 @@ video {
   .about-us h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 18px;
-    color: #000;
+    font-size: 20px;
     margin-top: 25px;
     margin-bottom: 30px;
   }
@@ -830,12 +829,10 @@ video {
     display: block;
     padding: 10px;
   }
-  /* Ajuste para el submenu en dispositivos responsivos */
+
+  /* Ocultar el submenu en móviles */
   .submenu {
-    display: none; /* Ocultar submenú en móviles */
-  }
-  nav ul li:hover .submenu {
-    display: block;
+    display: none;
   }
 
   #check:checked ~ ul {
@@ -846,6 +843,7 @@ video {
     display: block;
     text-align: left;
   }
+
   .footer-section {
     flex-direction: column;
     align-items: left;
@@ -878,13 +876,12 @@ video {
   }
 }
 
-@media (min-width: 769px) {
+
+@media (max-width: 768px) {
   .services .image-container {
     margin-top: 20px;
   }
-}
 
-@media (max-width: 768px) {
   .services .border {
     display: flex;
     flex-direction: column;

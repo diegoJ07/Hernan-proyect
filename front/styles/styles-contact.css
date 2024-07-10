@@ -313,6 +313,14 @@ nav ul li:hover .submenu {
 }
 
 @media (max-width: 768px) {
+  .ubicacion i {
+    display: none;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
   .contact-information-body {
     background-color: #6e6969;
     font-family: "Arial", sans-serif;
@@ -338,13 +346,6 @@ nav ul li:hover .submenu {
   }
 
   .offices-container {
-    /* background-color: transparent;
-    color: #fff;
-    border: 2px solid #000;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 10vh;
-    margin-bottom: 20px; */
     padding: 20px;
   }
 
