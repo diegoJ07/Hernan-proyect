@@ -197,7 +197,6 @@ nav ul li:hover .submenu {
   margin: 0;
 }
 
-
 .stat-description {
   display: block;
   margin-top: 2px; /* Ajusta este valor según sea necesario */
@@ -376,7 +375,6 @@ body {
   margin-top: 80px;
 }
 
-
 .people {
   float: left; /* Flota la imagen a la izquierda */
   height: auto; /* Ajusta automáticamente la altura */
@@ -434,6 +432,10 @@ h6 {
   align-items: flex-start; /* Alinear elementos en la parte superior */
 }
 
+.row {
+  padding-left: 0 !important;
+}
+
 .services .accordion {
   margin-bottom: 30px;
 }
@@ -485,9 +487,9 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 2.5rem;
-  margin: 20px;
   position: relative;
   padding-top: 20px; /* Añadir espacio para el divisor */
+  padding-left: 0 !important;
 }
 
 /* Estilo para el divisor de columnas */
@@ -777,9 +779,18 @@ video {
     display: none;
   }
 
-  .slogan-home h2 {
-    font-size: 32px; /* Tamaño de la fuente del h2 */
-    color: #fff; /* Color del texto */
+  .slogan-home h2 span {
+    display: block;
+    text-align: left;
+  }
+
+  .slogan-home h2 span br {
+    display: none; /* Oculta los <br> existentes */
+  }
+
+  .slogan-home h2 span::after {
+    content: "We build long term\nrelationships with our\nclients and partners";
+    white-space: pre-line;
   }
 
   .partner-section .partner-image {
@@ -875,7 +886,6 @@ video {
     padding: 0px; /* Ajusta el espaciado entre enlaces */
   }
 }
-
 
 @media (max-width: 768px) {
   .services .image-container {
