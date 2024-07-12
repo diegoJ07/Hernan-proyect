@@ -778,19 +778,13 @@ video {
   .slogan-content br {
     display: none;
   }
-
   .slogan-home h2 span {
-    display: block;
+    display: inline-block;
     text-align: left;
   }
 
   .slogan-home h2 span br {
-    display: none; /* Oculta los <br> existentes */
-  }
-
-  .slogan-home h2 span::after {
-    content: "We build long term\nrelationships with our\nclients and partners";
-    white-space: pre-line;
+    display: none;
   }
 
   .partner-section .partner-image {
