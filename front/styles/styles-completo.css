@@ -255,7 +255,7 @@ body {
 }
 
 .services .accordion-content {
-  flex: 1 1 60%;
+  flex: 1 1 30%;
 }
 
 .services .image-container {
