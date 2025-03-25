@@ -540,6 +540,7 @@ h6 {
 .partner-section .partner-image {
   flex: 0 0 auto; /* Establece la imagen con tamaño fijo */
   margin-right: 20px; /* Espacio entre la imagen y el texto */
+  margin-top: 0.7%;
 }
 
 .partner-section p {
