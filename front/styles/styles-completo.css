@@ -788,6 +788,9 @@ video {
   .h1-index {
     font-size: 30px;
   }
+  .card {
+    flex: 1 1 100%;
+  }
 
   .column-divider::before {
     margin-top: 13px;
