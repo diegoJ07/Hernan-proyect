@@ -5,6 +5,15 @@
   text-align: left;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -23,17 +32,6 @@
   padding: 0;
 }
 
-#bg-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-}
 
 nav {
   background-color: #000;
@@ -97,8 +95,8 @@ nav ul li strong {
 }
 
 nav li a:hover {
-  background-color: #ececee;
-  transition: .5s;
+  background-color: #a38b6a;
+  transition: 0.5s;
 }
 
 .checkbtn {
@@ -172,6 +170,7 @@ nav ul li:hover .submenu {
 .container {
   margin-top: 0;
   padding: 20px;
+  flex: 1;
 }
 
 .row {
@@ -187,14 +186,14 @@ nav ul li:hover .submenu {
 }
 
 
-.social-icons {
+.social-icons-body {
   display: flex;
   justify-content: left;
 }
 
 
 
-.social-icons a {
+.social-icons-body a {
   margin: 0 10px;
 }
 
@@ -395,6 +394,7 @@ nav ul li:hover .submenu {
     display: block; /* Hace que cada enlace esté en su propia línea */
     padding: 10px; /* Ajusta el espaciado entre enlaces */
   }
+
 
   /* Ajuste para el submenu en dispositivos responsivos */
   .submenu {
