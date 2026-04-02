@@ -228,7 +228,7 @@ nav ul li:hover .submenu {
   border-radius: 5px;
 }
 
-.social-icons-footer {
+.social-icons {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -236,7 +236,7 @@ nav ul li:hover .submenu {
   text-align: left;
 }
 
-.social-icons-footer a {
+.social-icons a {
   margin-right: 10px; /* Ajusta el espacio entre los iconos según necesites */
 }
 
