@@ -4,10 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="Description"
-      content="Welcome to the main page of Ng Global Partners. Explore our services, projects and more."
+      name="description"
+      content="NG Global Partners provides strategic advisory for complex real estate transactions, capital structuring, and institutional partnerships."
     />
-    <title>Home</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.ng-globalpartners.com/" />
+    <meta property="og:title" content="NG Global Partners" />
+    <meta
+      property="og:description"
+      content="Strategic Advisory for Complex Real Estate Transactions"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.ng-globalpartners.com/" />
+    <meta
+      property="og:image"
+      content="https://www.ng-globalpartners.com/source/imagenes/logo-ng-global-partners.jpeg"
+    />
+    <meta name="author" content="NG Global Partners" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:site_name" content="NG Global Partners" />
+    <title>NG Global Partners | Strategic Real Estate Advisory</title>
     <link rel="stylesheet" href="./styles/styles-completo.css" />
     <script
       src="https://kit.fontawesome.com/6f59efdb02.js"
@@ -32,6 +48,16 @@
       href="./source/imagenes/ng-global-partners.png"
       type="image/png"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NG Global Partners",
+        "url": "https://www.ng-globalpartners.com",
+        "logo": "https://www.ng-globalpartners.com/source/imagenes/logo-ng-global-partners.jpeg",
+        "sameAs": ["https://www.linkedin.com/company/ng-global-partners"]
+      }
+    </script>
   </head>
 
   <body class="body-home">
@@ -44,7 +70,7 @@
         <a href="./index.html" class="enlace">
           <img
             src="./source/imagenes/logo-ng-global-partners.jpeg"
-            alt="logo"
+            alt="NG Global Partners logo"
             class="logo"
           />
           <strong>NG Global Partners</strong>
@@ -55,7 +81,7 @@
             <ul class="submenu">
               <li>
                 <a href="./about-us.html#overview"
-                  ><strong>How we work</strong></a
+                  ><strong>How We Work</strong></a
                 >
               </li>
               <li>
@@ -75,7 +101,7 @@
           </li>
           <li>
             <a href="./index.html#our-projects"
-              ><strong>Our Projects</strong></a
+              ><strong>Selected Experience</strong></a
             >
           </li>
           <li>
@@ -84,179 +110,187 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <section id="sect1" class="sect">
+        <video
+          src="./source/videos/ciudad3.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          oncanplay="this.style.opacity = 1"
+          onerror="this.parentElement.classList.add('video-error')"
+          style="opacity: 0; transition: opacity 1s ease-in"
+          loading="lazy"
+        ></video>
+        <div class="title-container">
+          <h1 class="h1-index">
+            Strategic Advisory for Real Estate Transactions
+          </h1>
+          <p class="slogan">Independent perspective. Institutional approach.</p>
+        </div>
+      </section>
 
-    <section id="sect1" class="sect">
-      <video
-        src="./source/videos/ciudad3.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        oncanplay="this.style.opacity = 1"
-        onerror="this.parentElement.classList.add('video-error')"
-        style="opacity: 0; transition: opacity 1s ease-in"
-        loading="lazy"
-      ></video>
-      <div class="title-container">
-        <h1 class="h1-index">
-          Strategic Advisory for Complex <br />Real Estate Transactions
-        </h1>
-        <h2 class="slogan">Independent perspective. Institutional approach.</h2>
-      </div>
-    </section>
+      <div class="container">
+        <div class="about-us">
+          <h2 class="section-title">Overview</h2>
+          <p class="about-text">
+            NG Global Partners provides strategic advisory services to
+            experienced developers, helping align real estate projects with
+            appropriate capital partners. <br /><br />
+            Leveraging long-standing relationships, we support positioning,
+            structuring, and execution, and facilitate introductions to
+            institutional investors and family offices.
+          </p>
 
-    <div class="container">
-      <div class="about-us">
-        <h6>ABOUT US</h6>
-        <h4>
-          NG Global Partners provides strategic advisory services to experienced
-          developers, helping align real estate projects with appropriate
-          capital partners.<br />Leveraging long-standing relationships, we
-          support positioning, structuring, and execution, and facilitate
-          introductions to institutional investors and family offices.
-        </h4>
-
-        <section>
-          <div class="container text-left">
-            <div class="row align-items-start" style="margin-bottom: 0">
-              <div class="col-sm column-divider">
-                <strong
-                  >+$<span class="counter" data-target="250"></span>M</strong
-                >
-                <span class="stat-description"> Advisory Pipeline </span>
-              </div>
-              <div class="col-sm column-divider">
-                <strong
-                  >+$<span class="counter" data-target="145"></span>M</strong
-                >
-                <span class="stat-description"> Advised Transactions </span>
-              </div>
-              <div class="col-sm column-divider">
-                <strong
-                  >+<span class="counter" data-target="20"></span>Years</strong
-                >
-                <span class="stat-description"> Global Experience </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col text-start">
-            <a
-              href="./about-us.html"
-              class="btn btn-outline-dark btn-learn-more rounded-pill custom-btn-style"
-              style="margin-top: 40px; text-align: left"
-            >
-              About Us
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </section>
-      </div>
-
-      <div class="our-services">
-        <h6 class="services-h6" id="services">SERVICES</h6>
-
-        <section class="services">
-          <div class="row no-margin-top">
-            <div class="col-md-12">
-              <div class="border">
-                <div class="accordion-content">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <strong
-                        >Strategic Advisory & Capital Partner Network</strong
-                      >
-                    </h2>
-                    <ul>
-                      We provide strategic advisory services to experienced
-                      developers and facilitate introductions to a network of
-                      strategic partners, institutional counterparties, and
-                      family offices interested in high-quality real estate
-                      opportunities.
-                    </ul>
-                    <hr />
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <strong>Project Positioning & Capital Alignment</strong>
-                    </h2>
-                    <ul>
-                      We assist developers in positioning projects to align with
-                      the investment criteria and strategic objectives of
-                      potential capital partners, supporting constructive
-                      engagement and long-term relationships between independent
-                      counterparties.
-                    </ul>
-                    <hr />
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <strong>Strategic & M&A Advisory</strong>
-                    </h2>
-                    <ul>
-                      We provide tailored advisory support on strategic
-                      initiatives and M&A transactions, helping clients make
-                      informed decisions in complex transactions and strategic
-                      investments.
-                    </ul>
-                  </div>
+          <div>
+            <div class="container text-left">
+              <div class="row align-items-start" style="margin-bottom: 0">
+                <div class="col-sm column-divider">
+                  <strong
+                    >+$<span class="counter" data-target="250"></span>M</strong
+                  >
+                  <span class="stat-description"> Advisory Pipeline </span>
                 </div>
-
-                <div class="image-container">
-                  <img
-                    src="./source/imagenes/imagen11.jpeg"
-                    alt="Image Description"
-                    class="img-fluid"
-                  />
+                <div class="col-sm column-divider">
+                  <strong
+                    >+$<span class="counter" data-target="145"></span>M</strong
+                  >
+                  <span class="stat-description"> Advised Transactions </span>
+                </div>
+                <div class="col-sm column-divider">
+                  <strong
+                    >+<span class="counter" data-target="20"></span
+                    >Years</strong
+                  >
+                  <span class="stat-description"> Global Experience </span>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </div>
 
-      <section class="our-projects">
-        <h6 class="services-h6" id="our-projects">OUR PROJECTS</h6>
-
-        <div class="card-container">
-          <div class="card" style="width: 18rem">
-            <img src="./source/imagenes/proyecto1.jpg" class="card-img-top" />
-            <div class="card-body">
-              <p class="card-text" style="text-align: left">
-                Pre-assessment and capital structure planning for a luxury
-                project in Miami, Florida
-              </p>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem">
-            <img
-              src="./source/imagenes/IMG-20240721-WA0001.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <p class="card-text" style="text-align: left">
-                $59M Joint Venture/Construction loan for a 240 units multifamily
-                rental community on a 15 acres development site in Cape Coral,
-                Florida.
-              </p>
+            <div class="col text-start">
+              <a
+                href="./about-us.html"
+                class="btn btn-outline-dark btn-learn-more rounded-pill custom-btn-style"
+                style="margin-top: 40px; text-align: left"
+              >
+                About Us
+                <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+
+        <div class="our-services">
+          <h2 class="section-title">Services</h2>
+
+          <section class="services">
+            <div class="row no-margin-top">
+              <div class="col-md-12">
+                <div class="border">
+                  <div class="accordion-content">
+                    <div class="accordion-item">
+                      <h3 class="accordion-header">
+                        <strong
+                          >Strategic Advisory & Capital Partner Network</strong
+                        >
+                      </h3>
+                      <p>
+                        We provide strategic advisory services to experienced
+                        developers and facilitate introductions to a network of
+                        strategic partners, institutional counterparties, and
+                        family offices interested in high-quality real estate
+                        opportunities.
+                      </p>
+                      <hr />
+                    </div>
+
+                    <div class="accordion-item">
+                      <h3 class="accordion-header">
+                        <strong>Project Positioning & Capital Alignment</strong>
+                      </h3>
+                      <p>
+                        We assist developers in positioning projects to align
+                        with the investment criteria and strategic objectives of
+                        potential capital partners, supporting constructive
+                        engagement and long-term relationships between
+                        independent counterparties.
+                      </p>
+                      <hr />
+                    </div>
+
+                    <div class="accordion-item">
+                      <h3 class="accordion-header">
+                        <strong>Strategic & M&A Advisory</strong>
+                      </h3>
+                      <p>
+                        We provide tailored advisory support on strategic
+                        initiatives and M&A transactions, helping clients make
+                        informed decisions in complex transactions and strategic
+                        investments.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="image-container">
+                    <img
+                      src="./source/imagenes/imagen11.jpeg"
+                      alt="Real estate strategic advisory services"
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="our-projects">
+          <h2 class="section-title">Selected Experience</h2>
+
+          <div class="card-container">
+            <div class="card" style="width: 18rem">
+              <img
+                src="./source/imagenes/proyecto1.jpg"
+                class="card-img-top"
+                alt="Luxury real estate project in Miami"
+              />
+              <div class="card-body">
+                <p class="card-text" style="text-align: left">
+                  Pre-assessment and capital structure planning for a luxury
+                  project in Miami, Florida
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem">
+              <img
+                src="./source/imagenes/IMG-20240721-WA0001.jpg"
+                class="card-img-top"
+                alt="Multifamily rental community project"
+              />
+              <div class="card-body">
+                <p class="card-text" style="text-align: left">
+                  $59M Joint Venture/Construction loan for a 240 units
+                  multifamily rental community on a 15 acres development site in
+                  Cape Coral, Florida.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <footer class="footerr" data-bs-theme="dark">
       <div class="container">
         <ul class="footer-section" style="padding-left: 0">
           <li>
-            <a href="./about-us"><strong>About Us</strong></a>
+            <a href="./about-us.html"><strong>About Us</strong></a>
             <ul class="submenu-footer">
-              <li><a href="./about-us#overview">How we work</a></li>
-              <li><a href="./about-us#our-principles">Our Values</a></li>
-              <li><a href="./about-us#our-people">Our People</a></li>
+              <li><a href="./about-us#overview.html">How we work</a></li>
+              <li><a href="./about-us#our-principles.html">Our Values</a></li>
+              <li><a href="./about-us#our-people.html">Our People</a></li>
             </ul>
           </li>
 
@@ -292,21 +326,25 @@
 
         <div class="terms-conditions">
           <p style="text-align: left">
-            <a href="./politica">Privacy Policy</a> |
-            <a href="./terms-conditions">Terms and Conditions</a> | &copy; 2024
-            NG Global Partners. All rights reserved.
+            <a href="./politica.html">Privacy Policy</a> |
+            <a href="./terms-conditions.html">Terms and Conditions</a> | &copy;
+            2024 NG Global Partners. All rights reserved.
           </p>
 
           <hr />
 
           <p>
-            <strong>Disclaimer:</strong> NG Global Partners acts solely as an
-            independent strategic advisory and consulting firm. The content of
-            this website is provided for informational purposes only and does
-            not constitute legal, tax, financial, or investment advice. NG
-            Global Partners makes no representations or warranties as to the
-            accuracy or completeness of the information contained herein and
-            shall not be liable for actions taken based on such information.
+            NG Global Partners acts solely as an independent strategic advisory
+            and consulting firm.<br />
+            <br />
+            <span style="font-size: 12px">
+              <strong>Disclaimer:</strong> The content of this website is
+              provided for informational purposes only and does not constitute
+              legal, tax, financial, or investment advice. NG Global Partners
+              makes no representations or warranties as to the accuracy or
+              completeness of the information contained herein and shall not be
+              liable for actions taken based on such information.
+            </span>
           </p>
         </div>
       </div>

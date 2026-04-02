@@ -10,22 +10,35 @@ html {
   height: 100%;
 }
 
+h1, h2, h3 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 .slogan-home {
   display: flex;
   align-items: center;
   margin-top: -100px; /* Ajusta este valor según sea necesario */
 }
 
+.text-section {
+  margin-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
 .slogan-content {
   flex: 1;
 }
 
-.slogan-home h2 {
-  font-size: 35px; /* Tamaño de la fuente del h2 */
-  color: #fff; /* Color del texto */
-  text-align: left; /* Alineación del texto a la izquierda */
-  margin: 0; /* Elimina los márgenes por defecto del h2 */
-  padding: 0; /* Elimina los rellenos por defecto del h2 */
+.slogan-home h1 {
+  font-size: 35px;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .img-slogan {
@@ -50,22 +63,6 @@ nav {
   padding: 0 20px;
 }
 
-/* Ejemplo de código CSS */
-/* nav {
-  background-image: url('../source/imagenes/ng-global-partners-fondo.png');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-  height: 81px; 
-    width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-} */
 
 
 .enlace {
@@ -117,7 +114,7 @@ nav ul li strong {
 }
 
 nav li a:hover {
-  background-color: #a38b6a;
+  background-color: #cecece;
   transition: 0.5s;
 }
 
@@ -356,6 +353,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
   margin-bottom: 20px;
+  max-width: 600px;
+  line-height: 1.2;
 }
 
 .h2-home {
@@ -366,14 +365,6 @@ body {
   font-size: 5vh;
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
-}
-
-.slogan {
-  font-size: 25px;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.2;
-  margin-bottom: 20px;
 }
 
 .custom-btn-style {
@@ -400,6 +391,21 @@ body {
   margin-right: 20px; /* Espacio entre la imagen y el texto */
 }
 
+.hero-title span {
+  display: block;
+}
+
+.hero-title {
+  font-size: 35px;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 600px;
+}
+
 .h3-home {
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -408,6 +414,7 @@ body {
   text-decoration-color: #adb5bd;
   text-underline-offset: 8px;
   scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
+  text-transform: uppercase;
 }
 
 .h3-strategic {
@@ -429,21 +436,7 @@ body {
   margin: 0; /* Asegura que no haya márgenes adicionales */
 }
 
-h6 {
-  font-family: "Roboto", sans-serif;
-  text-decoration: underline;
-  text-decoration-color: #adb5bd;
-  text-underline-offset: 8px;
-}
 
-.services-h6 {
-  font-family: "Roboto", sans-serif;
-  text-decoration: underline;
-  text-decoration-color: rgb(66, 66, 66);
-  text-underline-offset: 8px;
-  margin: 30px 0;
-  scroll-margin-top: 120px; /* Ajusta este valor según la altura de tu barra de navegación */
-}
 
 .services .row {
   display: flex;
@@ -469,13 +462,18 @@ h6 {
   object-fit: cover;
 }
 
-.about-us h4 {
+.about-text {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 30px;
   color: #000;
+
+  font-weight: 500;   /* bootstrap heading */
+  line-height: 1.2;   /* bootstrap heading */
+
   margin-top: 25px;
   margin-bottom: 30px;
+  bottom: 30px;
 }
 
 #our-values {
@@ -516,6 +514,29 @@ h6 {
   text-align: left; /* Centra el contenido dentro de la columna */
 }
 
+.section-title {
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+  text-decoration-color: #adb5bd;
+  text-underline-offset: 8px;
+
+  font-size: 1rem;          /* igual que h6 */
+  font-weight: 500;         /* bootstrap heading */
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+
+  margin: 30px 0;
+  scroll-margin-top: 120px;
+  text-transform: uppercase;
+}
+
+.overview-section {
+  margin: 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
 /* Estilo para el borde superior */
 .column-divider::before {
   content: "";
@@ -546,7 +567,9 @@ h6 {
   margin-bottom: 10px;
 }
 
-.partner-content {
+/*POR SI QUIERE IMAGEN CUADRADA*/
+
+/* .partner-content {
   display: flex;
   align-items: stretch;
   gap: 20px;
@@ -554,12 +577,38 @@ h6 {
   margin-bottom: 25px;
 }
 
-/* CONTENEDOR DE IMAGEN */
 .partner-image {
   width: 180px;
   flex-shrink: 0;
-  align-self: stretch; /* 👈 ESTO ES LA CLAVE */
+  align-self: stretch; 
   object-fit: cover;
+} */
+
+.partner-content {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+/* CONTENEDOR DE LA IMAGEN */
+.partner-image-container {
+  width: 180px;
+  flex-shrink: 0;
+  display: flex; 
+}
+
+/* IMAGEN */
+.partner-image {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+
+/* TEXTO */
+.partner-content p {
+  flex: 1;
+  margin: 0;
 }
 
 /* TEXTO */
@@ -704,11 +753,11 @@ video {
   color: #fff;
 }
 
-.social-icons-footer {
+.social-icons {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  margin: 10px 0; /* Ajusta el margen según necesites */
+  margin: 10px 0;
   text-align: left;
 }
 
@@ -784,6 +833,10 @@ video {
   font-size: 12px;
 }
 
+.accordion-item p {
+  margin-left: .3rem;
+}
+
 @media (max-width: 770px) {
   .h1-index {
     font-size: 30px;
@@ -825,7 +878,7 @@ video {
     scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
   }
 
-  .about-us h4 {
+  .about-text{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-size: 20px;
