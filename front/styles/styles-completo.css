@@ -32,7 +32,7 @@ h1, h2, h3 {
 }
 
 .slogan-home h1 {
-  font-size: 35px;
+  font-size: 38px;
   color: #fff;
   text-align: left;
   margin: 0;
@@ -396,14 +396,21 @@ body {
 }
 
 .hero-title {
-  font-size: 35px;
+  font-size: 50px;
   color: #fff;
   text-align: left;
   margin: 0;
   padding: 0;
   font-weight: 500;
   line-height: 1.2;
-  max-width: 600px;
+  max-width: 400px;
+}
+
+#services,
+#about,
+#contact,
+#selected-experience {
+  scroll-margin-top: 100px; /* ajustá según la altura de tu navbar */
 }
 
 .h3-home {
@@ -577,19 +584,26 @@ body {
   margin-bottom: 25px;
 }
 
+/*SI QUIERE QUE LA IMAGEN SE VEA ARRIBA*/
+/* .partner-image {
+  width: 180px;
+  align-self: stretch;
+  object-fit: cover;
+
+} */
+
+/*SI QUIERE QUE LA IMAGEN SE VEA CENTRADA*/
 .partner-image {
   width: 180px;
-  flex-shrink: 0;
-  align-self: stretch; 
-  object-fit: cover;
 }
 
-/* IMAGEN */
-.partner-image {
-  width: 100%;
-  height: 100%; 
-  object-fit: cover;
+.partner-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;     
 }
+
+
 
 /* TEXTO */
 .partner-content p {
