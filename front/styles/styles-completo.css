@@ -15,6 +15,10 @@ h1, h2, h3 {
   line-height: 1.2;
 }
 
+.slogan {
+  font-size: 25px;
+}
+
 .slogan-home {
   display: flex;
   align-items: center;
@@ -30,6 +34,7 @@ h1, h2, h3 {
 .slogan-content {
   flex: 1;
 }
+
 
 .slogan-home h1 {
   font-size: 38px;
@@ -500,7 +505,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 18px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 100px;
   position: relative;
   padding-top: 20px; /* Añadir espacio para el divisor */
@@ -585,24 +590,27 @@ body {
 }
 
 /*SI QUIERE QUE LA IMAGEN SE VEA ARRIBA*/
-/* .partner-image {
+.partner-image {
   width: 180px;
   align-self: stretch;
   object-fit: cover;
 
-} */
-
-/*SI QUIERE QUE LA IMAGEN SE VEA CENTRADA*/
-.partner-image {
-  width: 180px;
 }
 
-.partner-image-container {
+/*SI QUIERE QUE LA IMAGEN SE VEA CENTRADA*/
+/* .partner-image {
+  width: 180px;
+} */
+
+/* .partner-image-container {
   display: flex;
   justify-content: center;
   align-items: center;     
-}
+} */
 
+.mb-4 {
+  margin-bottom: 1.2rem !important;
+}
 
 
 /* TEXTO */
@@ -610,6 +618,7 @@ body {
   flex: 1;
   margin: 0;
 }
+
 
 
 video {
