@@ -42,8 +42,9 @@ h1, h2, h3 {
   text-align: left;
   margin: 0;
   padding: 0;
-  font-weight: 500;
+  font-weight: 550;
   line-height: 1.2;
+  max-width: 600px;
 }
 
 .img-slogan {
@@ -400,17 +401,6 @@ body {
   display: block;
 }
 
-.hero-title {
-  font-size: 50px;
-  color: #fff;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
-  line-height: 1.2;
-  max-width: 400px;
-}
-
 #services,
 #about,
 #contact,
@@ -508,7 +498,11 @@ body {
   margin-top: 10px;
   margin-bottom: 100px;
   position: relative;
-  padding-top: 20px; /* Añadir espacio para el divisor */
+  padding-top: 0px
+}
+
+.slogan-content {
+  transform: translateY(-30px);
 }
 
 .col-sm {
@@ -898,7 +892,7 @@ video {
 
   .partner-image-container {
     width: 100%;
-    height: 250px;
+    height: 180px;
   }
 
   .h3-strategic {
