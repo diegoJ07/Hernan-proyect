@@ -380,7 +380,7 @@ body {
   position: relative;
   width: 100%;
   height: 850px;
-  background-image: url("../source/imagenes/Velero\ 3.jpg");
+  background-image: url("../source/imagenes/Velero-3.webp");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -780,11 +780,15 @@ video {
   justify-content: left;
   flex-wrap: wrap;
   text-align: left;
+  padding: 12px;         /* Esto expande el área de clic sin cambiar el tamaño del icono */
+  min-width: 44px;       /* Asegura un ancho mínimo aceptable */
+  min-height: 44px;
 }
 
 .footer-section li {
   list-style: none; /* Quita los puntos de la lista */
   margin-right: 20px;
+  
 }
 
 .footer-section li a {
@@ -965,6 +969,12 @@ video {
 
   .footer-section h6 {
     font-size: 18px;
+  }
+
+  .footer-section li {
+    padding: 12px;         /* Esto expande el área de clic sin cambiar el tamaño del icono */
+    min-width: 44px;       /* Asegura un ancho mínimo aceptable */
+    min-height: 44px;
   }
 
   .footerr ul li {
