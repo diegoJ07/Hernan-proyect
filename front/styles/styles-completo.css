@@ -44,7 +44,7 @@ h1, h2, h3 {
   padding: 0;
   font-weight: 550;
   line-height: 1.2;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .img-slogan {
@@ -358,8 +358,6 @@ body {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
-  margin-bottom: 20px;
-  max-width: 480px;
   line-height: 1.2;
 }
 
@@ -971,17 +969,12 @@ video {
     font-size: 18px;
   }
 
-  .footer-section li {
-    padding: 12px;         /* Esto expande el área de clic sin cambiar el tamaño del icono */
-    min-width: 44px;       /* Asegura un ancho mínimo aceptable */
-    min-height: 44px;
-  }
 
   .footerr ul li {
     display: block;
-    margin: 10px 0; /* Espacio entre los elementos */
+    margin: 15px 0; /* Espacio entre los elementos */
     text-align: left;
-    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
+   
   }
 
   .submenu-footer li {
