@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       threshold: 0.5,
-    }
+    },
   );
 
   counters.forEach((counter) => {
