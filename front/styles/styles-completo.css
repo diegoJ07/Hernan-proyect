@@ -19,6 +19,52 @@ h1, h2, h3 {
   font-size: 25px;
 }
 
+/* =========================================
+   NUEVA SECCIÓN ABOUT US
+   ========================================= */
+.about-content-wrapper {
+  display: flex;
+  align-items: center; /* Alinea el texto y las métricas al medio verticalmente */
+  justify-content: space-between;
+  gap: 40px; /* Espacio general entre las columnas */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.about-text-column {
+  flex: 1; /* Permite que el texto ocupe todo el espacio sobrante a la izquierda */
+  padding-right: 20px;
+}
+
+.about-metrics-column {
+  flex: 0 0 auto; /* Mantiene el tamaño fijo basado en su contenido */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Espacio vertical entre los 200M y los 20Years */
+
+  /* ESTA ES LA LÍNEA VERTICAL */
+  padding-left: 40px;
+  border-left: 2px solid #adb5bd;
+}
+
+.metric-item strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000;
+  display: block;
+}
+
+.metric-item .stat-description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  display: block;
+  margin-top: 5px;
+  color: #000;
+}
+
 .slogan-home {
   display: flex;
   align-items: center;
@@ -56,6 +102,14 @@ h1, h2, h3 {
   height: auto; /* Altura automática para mantener la proporción */
 }
 
+/* =========================================
+   NAV — CORREGIDO
+   El nav ahora es solo la franja negra full-width.
+   Todo su contenido (logo + menú) vive dentro de
+   .nav-container, que comparte el MISMO ancho máximo
+   y padding que .container (1200px + 20px), para que
+   el logo siempre quede alineado con el resto del sitio.
+   ========================================= */
 nav {
   background-color: #000;
   height: 81px;
@@ -64,12 +118,16 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
 }
 
-
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
 .enlace {
   display: flex;
@@ -96,26 +154,17 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-left: auto; /* Empuja los enlaces a la derecha */
+  margin-left: auto; /* Empuja los enlaces a la derecha, dentro de .nav-container */
 }
 
-/* Métricas principales */
-.metrics-row {
-  max-width: 900px;
-  margin: 0 auto !important;
-}
+
 
 .metrics-row .column-divider {
   text-align: left;
   padding-top: 20px;
 }
 
-.metrics-row .column-divider::before {
-  left: 0;
-  transform: none;
-  width: 75%;
-  height: 3px;
-}
+
 
 .metrics-row .column-divider strong {
   font-size: 3rem;
@@ -299,9 +348,9 @@ body {
 
 /* Contenedor principal para dar margen */
 .container {
-  max-width: 1200px;
+  max-width: 1200px !important;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px !important;
   margin-top: 50px;
 }
 
@@ -379,22 +428,36 @@ body {
   margin-bottom: 20px;
 }
 
+/* =========================================
+   HERO / TITLE-CONTAINER — CORREGIDO
+   Antes: position:absolute; left:0; padding-left:20px
+   (quedaba pegado al borde real de la pantalla).
+   Ahora: comparte el mismo carril de 1200px + 20px
+   que .nav-container y .container, centrado con
+   left:50% + translateX(-50%), así el texto del hero
+   siempre arranca en la misma línea vertical que el
+   logo y que el contenido de más abajo.
+   ========================================= */
 .title-container {
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
   color: white;
-  padding-left: 20px; /* Ajusta según sea necesario */
 }
 
 .h1-index {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 44px; /* levemente más grande para dar más presencia sobre el video */
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
-  line-height: 1.2;
+  max-width: 700px; /* evita que la línea se estire demasiado en pantallas anchas */
+  padding:0;
 }
 
 .h2-home {
@@ -633,7 +696,7 @@ body {
 /* .partner-image-container {
   display: flex;
   justify-content: center;
-  align-items: center;     
+  align-items: center;
 } */
 
 .mb-4 {
@@ -658,6 +721,25 @@ video {
   object-fit: cover;
   z-index: -1;
 }
+
+/* Overlay oscuro sobre el video para que el texto blanco
+   siempre tenga buen contraste, sin importar el frame del
+   video que esté pasando (por ejemplo, el cielo claro del
+   atardecer). */
+.sect::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.15) 45%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
 .service-item {
   padding-bottom: 15px;
   position: relative; /* Mantén el texto alineado a la izquierda */
@@ -822,7 +904,7 @@ video {
 .footer-section li {
   list-style: none; /* Quita los puntos de la lista */
   margin-right: 20px;
-  
+
 }
 
 .footer-section li a {
@@ -914,6 +996,55 @@ video {
   .carousel-track .card {
     flex: 0 0 100%;
   }
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-text-column {
+    padding-right: 0;
+    margin-bottom: 25px; /* Espacio antes de la línea divisoria */
+  }
+
+  .about-metrics-column {
+    width: 100%;
+    flex-direction: row; /* Pone las métricas una al lado de la otra */
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-left: none; /* Saca la línea vertical gruesa de escritorio */
+    padding-left: 0;
+    padding-top: 25px;
+    border-top: 1px solid #adb5bd; /* Agrega la línea horizontal superior */
+    position: relative;
+    gap: 0; /* Quitamos el gap para controlar el espacio manualmente */
+  }
+
+  /* ESTA ES LA LÍNEA VERTICAL CORTITA DEL MEDIO */
+  .about-metrics-column::before {
+    content: "";
+    position: absolute;
+    left: 50%; /* La ubica exactamente en el medio */
+    top: 30px; /* La baja un poquito para que no toque la línea de arriba */
+    height: 70%; /* Le da el alto cortito que se ve en el diseño */
+    width: 1px;
+    background-color: #adb5bd;
+  }
+
+  .metric-item {
+    width: 50%; /* Cada métrica ocupa la mitad exacta */
+  }
+
+  .metric-item:nth-child(2) {
+    padding-left: 20px; /* Empuja el texto de la segunda métrica un poco a la derecha de la línea */
+  }
+
+  .metric-item strong {
+    font-size: 2rem; /* Achicamos un poco los números para que no se pisen en pantallas chicas */
+  }
+
+  .metric-item .stat-description {
+    font-size: 14px; /* Achicamos la descripción para que quede en una o dos líneas prolijas */
+  }
 }
 
 .carousel-btn {
@@ -934,7 +1065,8 @@ video {
 
 @media (max-width: 770px) {
   .h1-index {
-    font-size: 30px;
+    font-size: 28px;
+    max-width: 100%;
   }
   .card {
     flex: 1 1 100%;
@@ -1061,7 +1193,7 @@ video {
     display: block;
     margin: 15px 0; /* Espacio entre los elementos */
     text-align: left;
-   
+
   }
 
   .submenu-footer li {
@@ -1182,7 +1314,7 @@ video {
     grid-template-columns: 1fr; /* Pasa a 1 sola columna apilada */
     gap: 40px;
   }
-  
+
   .section-title-word {
     font-size: 30px;
     margin-bottom: 30px;

@@ -67,47 +67,51 @@
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
         </label>
-        <a href="./index.html" class="enlace">
-          <img
-            src="./source/imagenes/logo-ng-global-partners.webp"
-            alt="NG Global Partners logo"
-            class="logo"
-          />
-          <strong>NG Global Partners</strong>
-        </a>
-        <ul>
-          <li>
-            <a href="./about-us.html"><strong>About Us</strong></a>
-            <ul class="submenu">
-              <li>
-                <a href="./about-us.html#overview"
-                  ><strong>How We Work</strong></a
-                >
-              </li>
-              <li>
-                <a href="./about-us.html#our-principles"
-                  ><strong>Our Values</strong></a
-                >
-              </li>
-              <li>
-                <a href="./about-us.html#our-people"
-                  ><strong>Our People</strong></a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="./index.html#services"><strong>Services</strong></a>
-          </li>
-          <li>
-            <a href="./index.html#selected-experience"
-              ><strong>Selected Experience</strong></a
-            >
-          </li>
-          <li>
-            <a href="contact-information.html"><strong>Contact</strong></a>
-          </li>
-        </ul>
+
+        <!-- NUEVO: wrapper que limita el contenido del nav a 1200px, igual que .container -->
+        <div class="nav-container">
+          <a href="./index.html" class="enlace">
+            <img
+              src="./source/imagenes/logo-ng-global-partners.webp"
+              alt="NG Global Partners logo"
+              class="logo"
+            />
+            <strong>NG Global Partners</strong>
+          </a>
+          <ul>
+            <li>
+              <a href="./about-us.html"><strong>About Us</strong></a>
+              <ul class="submenu">
+                <li>
+                  <a href="./about-us.html#overview"
+                    ><strong>How We Work</strong></a
+                  >
+                </li>
+                <li>
+                  <a href="./about-us.html#our-principles"
+                    ><strong>Our Values</strong></a
+                  >
+                </li>
+                <li>
+                  <a href="./about-us.html#our-people"
+                    ><strong>Our People</strong></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./index.html#services"><strong>Services</strong></a>
+            </li>
+            <li>
+              <a href="./index.html#selected-experience"
+                ><strong>Selected Experience</strong></a
+              >
+            </li>
+            <li>
+              <a href="contact-information.html"><strong>Contact</strong></a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -123,7 +127,7 @@
           style="opacity: 0; transition: opacity 1s ease-in"
           loading="lazy"
         ></video>
-        <div class="title-container">
+        <div class="title-container container">
           <h1 class="h1-index">Strategic Real Estate Advisory</h1>
           <p class="slogan">Independent. Institutional.</p>
         </div>
@@ -131,31 +135,33 @@
 
       <div class="container">
         <div class="about-us">
-          <p class="about-text">
-            NG Global Partners provides strategic advisory services to
-            experienced developers, helping align real estate projects with
-            appropriate capital partners. <br /><br />
-            Leveraging long-standing relationships, we support positioning,
-            structuring, and execution, and facilitate introductions to
-            institutional investors and family offices.
-          </p>
+          <div class="about-content-wrapper">
+            <!-- Columna Izquierda: Texto -->
+            <div class="about-text-column">
+              <p class="about-text">
+                NG Global Partners provides strategic advisory services to
+                experienced developers, helping align real estate projects with
+                appropriate capital partners. <br /><br />
+                Leveraging long-standing relationships, we support positioning,
+                structuring, and execution, and facilitate introductions to
+                institutional investors and family offices.
+              </p>
+            </div>
 
-          <div>
-            <div class="container text-left">
-              <div class="row metrics-row">
-                <div class="col-sm column-divider">
-                  <strong>
-                    +$<span class="counter" data-target="200"></span>M
-                  </strong>
-                  <span class="stat-description">Advised Transactions</span>
-                </div>
+            <!-- Columna Derecha: Métricas y Línea Vertical -->
+            <div class="about-metrics-column">
+              <div class="metric-item">
+                <strong
+                  >+$<span class="counter" data-target="200"></span>M</strong
+                >
+                <span class="stat-description">Advised Transactions</span>
+              </div>
 
-                <div class="col-sm column-divider">
-                  <strong>
-                    +<span class="counter" data-target="20"></span>Years
-                  </strong>
-                  <span class="stat-description">Global Experience</span>
-                </div>
+              <div class="metric-item">
+                <strong
+                  >+<span class="counter" data-target="20"></span>Years</strong
+                >
+                <span class="stat-description">Global Experience</span>
               </div>
             </div>
           </div>
@@ -208,19 +214,6 @@
 
             <div class="carousel">
               <div class="carousel-track">
-                <!-- <div class="card">
-                  <img
-                    src="./source/imagenes/proyecto1.webp"
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <p class="card-text">
-                      Strategic advisory and capital structure planning on a
-                      Luxury Residential Development - Miami, Florida
-                    </p>
-                  </div>
-                </div> -->
-
                 <div class="card">
                   <img
                     src="./source/imagenes/Imagen2.webp"
