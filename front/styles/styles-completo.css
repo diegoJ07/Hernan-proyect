@@ -259,6 +259,7 @@ nav ul li:hover .submenu {
   height: 100%; /* Ajusta esta altura según tus necesidades */
   display: flex;
   flex-direction: column;
+  background-color: #F4F4F4;
 }
 
 .card-container {
@@ -1165,9 +1166,9 @@ video {
     display: none;
   }
 
-  #check:checked ~ ul {
-    left: 0;
-  }
+  #check:checked ~ .nav-container ul {
+  left: 0;
+}
 
   .submenu li {
     display: block;

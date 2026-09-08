@@ -63,53 +63,57 @@
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
         </label>
-        <a href="./" class="enlace">
-          <img
-            src="./source/imagenes/logo-ng-global-partners.webp"
-            alt="NG Global Partners logo"
-            class="logo"
-          />
-          <strong>NG Global Partners</strong>
-        </a>
-        <ul>
-          <li>
-            <a href="./about-us.html"><strong>About Us</strong></a>
-            <ul class="submenu">
-              <li>
-                <a href="./about-us.html#overview"
-                  ><strong>How We Work</strong></a
-                >
-              </li>
-              <li>
-                <a href="./about-us.html#our-principles"
-                  ><strong>Our Values</strong></a
-                >
-              </li>
-              <li>
-                <a href="./about-us.html#our-people"
-                  ><strong>Our People</strong></a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="./index.html#services"><strong>Services</strong></a>
-          </li>
-          <li>
-            <a href="./index.html#selected-experience"
-              ><strong>Selected Experience</strong></a
-            >
-          </li>
-          <li>
-            <a href="./contact-information.html"><strong>Contact</strong></a>
-          </li>
-        </ul>
+
+        <!-- NUEVO: wrapper que limita el contenido del nav a 1200px, igual que .container -->
+        <div class="nav-container">
+          <a href="./index.html" class="enlace">
+            <img
+              src="./source/imagenes/logo-ng-global-partners.webp"
+              alt="NG Global Partners logo"
+              class="logo"
+            />
+            <strong>NG Global Partners</strong>
+          </a>
+          <ul>
+            <li>
+              <a href="./about-us.html"><strong>About Us</strong></a>
+              <ul class="submenu">
+                <li>
+                  <a href="./about-us.html#overview"
+                    ><strong>How We Work</strong></a
+                  >
+                </li>
+                <li>
+                  <a href="./about-us.html#our-principles"
+                    ><strong>Our Values</strong></a
+                  >
+                </li>
+                <li>
+                  <a href="./about-us.html#our-people"
+                    ><strong>Our People</strong></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./index.html#services"><strong>Services</strong></a>
+            </li>
+            <li>
+              <a href="./index.html#selected-experience"
+                ><strong>Selected Experience</strong></a
+              >
+            </li>
+            <li>
+              <a href="contact-information.html"><strong>Contact</strong></a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
     <main>
       <section class="img-home">
-        <div class="slogan-home">
+        <div class="slogan-home container">
           <div class="slogan-content">
             <h1 class="hero-title">
               Relationships built on trust and collaboration

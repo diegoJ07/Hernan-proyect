@@ -13,6 +13,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* =========================================
+   NAV Y MENU
+   ========================================= */
 nav {
   background-color: #000;
   height: 81px;
@@ -21,41 +25,15 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 20px;
-}
-
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.contact-information-body {
-  background-color: #ececec;
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-
-nav {
-  background-color: #000;
-  height: 81px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
 }
 
 .enlace {
@@ -74,7 +52,7 @@ nav {
 .nav-links {
   display: flex;
   align-items: center;
-  margin-left: auto; /* Empuja los enlaces a la derecha */
+  margin-left: auto; 
 }
 
 nav ul {
@@ -83,7 +61,7 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-left: auto; /* Empuja los enlaces a la derecha */
+  margin-left: auto; 
 }
 
 nav ul li {
@@ -108,6 +86,7 @@ nav ul li strong {
 
 nav li a:hover {
   background-color: #ececec;
+  color: #000;
   transition: 0.5s;
 }
 
@@ -144,7 +123,7 @@ nav ul li:hover .submenu {
 
 .submenu li {
   margin: 0;
-  width: 100%; /* Asegúrate de que los li ocupen todo el ancho del submenu */
+  width: 100%;
 }
 
 .submenu a {
@@ -153,11 +132,39 @@ nav ul li:hover .submenu {
   color: #fff;
   white-space: nowrap;
   line-height: 1.2;
-  width: 100%; /* Asegúrate de que los a ocupen todo el ancho del submenu */
+  width: 100%; 
 }
 
 .submenu a:hover {
   background-color: #333;
+}
+
+/* =========================================
+   CONTENEDORES Y ESTRUCTURA GENERAL
+   ========================================= */
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding: 0 20px !important;
+  margin-top: 50px;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contact-information-body {
+  background-color: #ececec;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .title-container {
@@ -179,34 +186,20 @@ nav ul li:hover .submenu {
   animation: backwards;
 }
 
-.container {
-  margin-top: 0;
-  padding: 20px;
-  flex: 1;
-}
-
 .row {
   display: flex;
-  align-items: stretch; /* Alinea las columnas verticalmente */
+  align-items: stretch;
 }
 
 .offices-container {
   background-color: transparent;
-  padding: 120px;
+  padding: 0 0 180px 0;
   margin-top: 10vh;
   margin-bottom: 20px;
 }
 
-
-.social-icons-body {
-  display: flex;
-  justify-content: left;
-}
-
-
-
-.social-icons-body a {
-  margin: 0 10px;
+.contact {
+  margin-top: 100px;
 }
 
 .text-h3 {
@@ -220,6 +213,18 @@ nav ul li:hover .submenu {
   border-radius: 5px;
 }
 
+/* =========================================
+   REDES SOCIALES Y UBICACIÓN
+   ========================================= */
+.social-icons-body {
+  display: flex;
+  justify-content: left;
+}
+
+.social-icons-body a {
+  margin: 0 10px;
+}
+
 .ubicacion {
   display: flex;
   align-items: center;
@@ -228,16 +233,24 @@ nav ul li:hover .submenu {
   border-radius: 5px;
 }
 
+.ubicacion p {
+  color: #000;
+  padding-left: 5px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
 .social-icons {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  margin: 10px 0; /* Ajusta el margen según necesites */
+  margin: 10px 0; 
   text-align: left;
 }
 
 .social-icons a {
-  margin-right: 10px; /* Ajusta el espacio entre los iconos según necesites */
+  margin-right: 10px; 
 }
 
 .contact-addresses {
@@ -249,23 +262,13 @@ nav ul li:hover .submenu {
 .contact-addresses a {
   text-align: left;
   display: block;
-  margin-bottom: 10px; /* Puedes ajustar el margen según necesites */
+  margin-bottom: 10px; 
   font-size: 13px;
 }
 
-
-.contact {
-  margin-top: 100px;
-}
-
-.ubicacion p {
-  color: #000;
-  padding-left: 5px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
+/* =========================================
+   FOOTER
+   ========================================= */
 .footerr {
   background-color: #000;
   padding: 20px;
@@ -280,13 +283,13 @@ nav ul li:hover .submenu {
 }
 
 .footer-section li {
-  list-style: none; /* Quita los puntos de la lista */
+  list-style: none;
   margin-right: 20px;
 }
 
 .footer-section li a {
-  color: #ffffff; /* Color de letra blanco */
-  text-decoration: none; /* Quita la decoración del texto */
+  color: #ffffff; 
+  text-decoration: none; 
 }
 
 .footer-section li strong {
@@ -301,12 +304,12 @@ nav ul li:hover .submenu {
 }
 
 .footer-section .submenu-footer li {
-  margin: 2px 0; /* Espacio entre los elementos de la lista */
+  margin: 2px 0; 
 }
 
 .footer-section .submenu-footer a {
-  color: #ffffff; /* Color de letra blanco */
-  text-decoration: none; /* Quita la decoración del texto */
+  color: #ffffff; 
+  text-decoration: none; 
   font-size: 13px;
 }
 
@@ -323,6 +326,9 @@ nav ul li:hover .submenu {
   font-size: 12px;
 }
 
+/* =========================================
+   MEDIA QUERIES (VERSIÓN MÓVIL)
+   ========================================= */
 @media (max-width: 768px) {
   .ubicacion i {
     display: none;
@@ -378,7 +384,7 @@ nav ul li:hover .submenu {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 1100; /* Asegura que el botón de hamburguesa esté por encima del contenido */
+    z-index: 1100;
   }
 
   nav ul {
@@ -391,24 +397,22 @@ nav ul li:hover .submenu {
     text-align: center;
     transition: all 0.5s;
     z-index: 1000;
-    flex-direction: column; /* Cambia la dirección del flexbox para mostrar los enlaces uno debajo del otro */
-    padding-top: 20px; /* Añade espacio superior para el logo */
+    flex-direction: column; 
+    padding-top: 20px; 
   }
 
   nav ul li {
     display: block;
-    margin: 20px 0; /* Espacio entre los elementos */
-    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
+    margin: 20px 0; 
+    line-height: normal; 
   }
 
   nav ul li a {
     font-size: 15px;
-    display: block; /* Hace que cada enlace esté en su propia línea */
-    padding: 10px; /* Ajusta el espaciado entre enlaces */
+    display: block; 
+    padding: 10px; 
   }
 
-
-  /* Ajuste para el submenu en dispositivos responsivos */
   .submenu {
     left: 50%;
     transform: translateX(-50%);
@@ -420,13 +424,15 @@ nav ul li:hover .submenu {
     visibility: visible;
   }
 
-  #check:checked ~ ul {
+  /* Aquí está la corrección para el menú móvil */
+  #check:checked ~ .nav-container ul {
     left: 0;
   }
 
   .submenu li {
-    text-align: center; /* Centrar los elementos del submenu */
+    text-align: center; 
   }
+
   .footer-section {
     flex-direction: column;
     align-items: left;
@@ -443,18 +449,18 @@ nav ul li:hover .submenu {
 
   .footerr ul li {
     display: block;
-    margin: 10px 0; /* Espacio entre los elementos */
+    margin: 10px 0; 
     text-align: left;
-    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
+    line-height: normal; 
   }
 
   .submenu-footer li {
-    text-align: left; /* Centrar los elementos del submenu */
+    text-align: left; 
   }
 
   .footerr ul li a {
     font-size: 13px;
-    display: block; /* Hace que cada enlace esté en su propia línea */
-    padding: 0px; /* Ajusta el espaciado entre enlaces */
+    display: block; 
+    padding: 0px; 
   }
 }
