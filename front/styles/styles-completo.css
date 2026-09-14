@@ -272,11 +272,11 @@ video {
 }
 
 /* =========================================
-   TEXTO ABOUT (INDEX)
+   TEXTO ABOUT US (CORREGIDO)
    ========================================= */
 .about-text-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0; /* Saca el centrado forzado que empujaba el texto */
 }
 
 .about-text {
@@ -287,8 +287,8 @@ video {
   line-height: 1.35;
   margin: 0;
   text-align: left;
+  max-width: 1000px; /* Limita el largo de línea para que sea legible sin mover su inicio */
 }
-
 /* =========================================
    SERVICES (INDEX)
    ========================================= */
