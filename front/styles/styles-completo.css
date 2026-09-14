@@ -2,12 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: left;
 }
 
 body,
 html {
   height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #ffffff;
 }
 
 h1, h2, h3 {
@@ -20,99 +25,37 @@ h1, h2, h3 {
 }
 
 /* =========================================
-   NUEVA SECCIÓN ABOUT US
+   CONTENEDOR GLOBAL
    ========================================= */
-.about-content-wrapper {
-  display: flex;
-  align-items: center; /* Alinea el texto y las métricas al medio verticalmente */
-  justify-content: space-between;
-  gap: 40px; /* Espacio general entre las columnas */
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.about-text-column {
-  flex: 1; /* Permite que el texto ocupe todo el espacio sobrante a la izquierda */
-  padding-right: 20px;
-}
-
-.about-metrics-column {
-  flex: 0 0 auto; /* Mantiene el tamaño fijo basado en su contenido */
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* Espacio vertical entre los 200M y los 20Years */
-
-  /* ESTA ES LA LÍNEA VERTICAL */
-  padding-left: 40px;
-  border-left: 2px solid #adb5bd;
-}
-
-.metric-item strong {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #000;
-  display: block;
-}
-
-.metric-item .stat-description {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  display: block;
-  margin-top: 5px;
-  color: #000;
-}
-
-.slogan-home {
-  display: flex;
-  align-items: center;
-  margin-top: -100px; /* Ajusta este valor según sea necesario */
-}
-
-.text-section {
-  margin-top: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-}
-
-.slogan-content {
-  flex: 1;
-}
-
-
-.slogan-home h1 {
-  font-size: 38px;
-  color: #fff;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  font-weight: 550;
-  line-height: 1.2;
-  max-width: 500px;
-}
-
-.img-slogan {
-  margin-left: 5px; /* Espacio entre el texto y la imagen */
-}
-
-.img-slogan img {
-  width: 100px; /* Ancho máximo de la imagen */
-  height: auto; /* Altura automática para mantener la proporción */
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding: 0 20px !important;
 }
 
 /* =========================================
-   NAV — CORREGIDO
-   El nav ahora es solo la franja negra full-width.
-   Todo su contenido (logo + menú) vive dentro de
-   .nav-container, que comparte el MISMO ancho máximo
-   y padding que .container (1200px + 20px), para que
-   el logo siempre quede alineado con el resto del sitio.
+   SISTEMA DE BLOQUES A PANTALLA COMPLETA (HOME)
+   ========================================= */
+.section-full {
+  width: 100%;
+  padding: 65px 0;
+  box-sizing: border-box;
+}
+
+.section-gray {
+  background-color: #f4f4f4;
+}
+
+.section-white {
+  background-color: #ffffff;
+}
+
+/* =========================================
+   NAVBAR (COMPARTIDO)
    ========================================= */
 nav {
   background-color: #000;
-  height: 81px;
+  height: 80px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -127,6 +70,7 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .enlace {
@@ -142,39 +86,12 @@ nav {
   margin-right: 10px;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  margin-left: auto; /* Empuja los enlaces a la derecha */
-}
-
 nav ul {
   display: flex;
   align-items: center;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
   list-style: none;
-  margin-left: auto; /* Empuja los enlaces a la derecha, dentro de .nav-container */
-}
-
-
-
-.metrics-row .column-divider {
-  text-align: left;
-  padding-top: 20px;
-}
-
-
-
-.metrics-row .column-divider strong {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.metrics-row .stat-description {
-  display: block;
-  margin-top: 2px;
-  font-size: 17px;
 }
 
 nav ul li {
@@ -191,19 +108,22 @@ nav ul li a {
   border-radius: 3px;
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-block;
+  line-height: 1.5;
 }
 
 nav ul li strong {
   font-size: 12px;
 }
 
-nav li a:hover {
+nav ul li a:hover {
   background-color: #cecece;
-  transition: 0.5s;
+  color: #000;
+  transition: 0.3s;
 }
 
 .checkbtn {
-  font-size: 30px;
+  font-size: 26px;
   color: #ffffff;
   line-height: 80px;
   cursor: pointer;
@@ -217,15 +137,16 @@ nav li a:hover {
 .submenu {
   position: absolute;
   background-color: #000;
-  min-width: 160px;
-  top: 100%;
+  min-width: 180px;
+  top: 80px;
   left: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1000;
   display: flex;
   flex-direction: column;
+  padding: 10px 0;
 }
 
 nav ul li:hover .submenu {
@@ -235,483 +156,34 @@ nav ul li:hover .submenu {
 
 .submenu li {
   margin: 0;
-  width: 100%; /* Asegúrate de que los li ocupen todo el ancho del submenu */
+  width: 100%;
+  line-height: normal;
 }
 
 .submenu a {
-  padding: 5px 10px;
+  padding: 8px 16px;
   display: block;
   color: #fff;
   white-space: nowrap;
   line-height: 1.2;
-  width: 100%; /* Asegúrate de que los a ocupen todo el ancho del submenu */
+  width: 100%;
 }
 
 .submenu a:hover {
   background-color: #333;
-}
-
-.card {
-  height: 100%; /* Ajusta esta altura según tus necesidades */
-}
-
-.card-body {
-  height: 100%; /* Ajusta esta altura según tus necesidades */
-  display: flex;
-  flex-direction: column;
-  background-color: #F4F4F4;
-}
-
-.card-container {
-  display: flex;
-  gap: 20px; /* Espacio entre las tarjetas */
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
-  margin-bottom: 30px;
-}
-
-.card {
-  position: relative;
-}
-
-.card-img-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  opacity: 0; /* Oculta el texto inicialmente */
-  transition: opacity 0.3s ease; /* Transición suave */
-}
-
-.card:hover .card-img-overlay {
-  opacity: 1; /* Muestra el texto al pasar el mouse */
-}
-
-.card-img-top {
-  width: 100%;
-  height: 200px; /* 👈 ajustá este valor */
-  object-fit: cover; /* 👈 clave */
-  display: block;
-}
-
-.card-text {
-  margin: 0;
-}
-
-.stat-description {
-  display: block;
-  margin-top: 2px; /* Ajusta este valor según sea necesario */
-  font-size: 17px;
-}
-
-.card-title {
-  text-align: center;
-}
-
-.card-text-container {
-  display: flex;
-  align-items: flex-end;
-}
-.Overview img {
-  height: 100%;
-  width: 100%;
-}
-.card-text {
-  margin: 0;
-  text-align: left;
-  position: relative;
-}
-
-.icon-container {
-  display: flex;
-  align-items: flex-end;
-  margin-left: 5px;
-}
-
-.card-text::after {
-  content: "";
-  display: inline-block;
-  width: 5px; /* Adjust the width to add some space between the text and the icon */
-}
-
-/* Estilos generales */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Contenedor principal para dar margen */
-.container {
-  max-width: 1200px !important;
-  margin: 0 auto;
-  padding: 0 20px !important;
-  margin-top: 50px;
-}
-
-.services .border {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.services .accordion-content {
-  flex: 1 1 30%;
-}
-
-.services .image-container {
-  flex: 1 1 40%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start; /* Alinea la imagen en la parte superior */
-  height: 450px;
-}
-
-.services .image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.img-projects {
-  margin: 20px 0;
-  padding: 0 20px;
-}
-
-.img-projects img {
-  height: 300px;
-  width: 300px;
-}
-
-.container-services {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center; /* Añadir esta línea */
-}
-
-.services-section p {
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.accordion-container {
-  flex-grow: 1; /* Añadir esta línea para que el contenedor del acordeón crezca */
-  width: 100%; /* Asegurar que el acordeón ocupe todo el ancho */
-}
-.content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Estilos específicos de la página */
-.body-home {
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
-}
-
-.h1-home {
-  margin-top: 0;
-  font-weight: 700;
-  font-size: 50px;
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.2;
-  margin-bottom: 20px;
 }
 
 /* =========================================
-   HERO / TITLE-CONTAINER — CORREGIDO
-   Antes: position:absolute; left:0; padding-left:20px
-   (quedaba pegado al borde real de la pantalla).
-   Ahora: comparte el mismo carril de 1200px + 20px
-   que .nav-container y .container, centrado con
-   left:50% + translateX(-50%), así el texto del hero
-   siempre arranca en la misma línea vertical que el
-   logo y que el contenido de más abajo.
+   HERO / VIDEO (INDEX)
    ========================================= */
-.title-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  color: white;
-}
-
-.h1-index {
-  font-weight: 700;
-  font-size: 44px; /* levemente más grande para dar más presencia sobre el video */
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.2;
-  max-width: 700px; /* evita que la línea se estire demasiado en pantallas anchas */
-  padding:0;
-}
-
-.h2-home {
-  margin-top: 100px;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 5vh;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000;
-}
-
-.custom-btn-style {
-  margin-bottom: 30px; /* Ajusta el valor de margin-bottom según tus necesidades */
-}
-.img-home {
-  position: relative;
-  width: 100%;
-  height: 850px;
-  background-image: url("../source/imagenes/Velero-3.webp");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 20px;
-  margin-top: 80px;
-}
-
-.people {
-  float: left; /* Flota la imagen a la izquierda */
-  height: auto; /* Ajusta automáticamente la altura */
-  width: 80px; /* Ancho fijo para la imagen */
-  margin-right: 20px; /* Espacio entre la imagen y el texto */
-}
-
-.hero-title span {
-  display: block;
-}
-
-#services,
-#about,
-#contact,
-#selected-experience {
-  scroll-margin-top: 100px; /* ajustá según la altura de tu navbar */
-}
-
-.h3-home {
-  font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #070707;
-  text-decoration: underline;
-  text-decoration-color: #adb5bd;
-  text-underline-offset: 8px;
-  scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
-  text-transform: uppercase;
-}
-
-.h3-strategic {
-  font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #070707;
-  text-decoration: underline;
-  text-decoration-color: #adb5bd;
-  text-underline-offset: 8px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
 .sect {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px); /* Ajusta para restar la altura del nav */
+  height: calc(100vh - 80px);
+  margin-top: 80px;
   overflow: hidden;
-  margin: 0; /* Asegura que no haya márgenes adicionales */
 }
-
-
-
-.services .row {
-  display: flex;
-  align-items: flex-start; /* Alinear elementos en la parte superior */
-}
-
-.row {
-  padding-left: 0 !important;
-}
-
-.services .accordion {
-  margin-bottom: 30px;
-}
-
-.services .accordion-image {
-  display: flex;
-  align-items: center;
-}
-
-.services .accordion-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.about-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 30px;
-  color: #000;
-
-  font-weight: 500;   /* bootstrap heading */
-  line-height: 1.2;   /* bootstrap heading */
-
-  margin-top: 25px;
-  margin-bottom: 30px;
-  bottom: 30px;
-}
-
-#our-values {
-  margin-top: 40px;
-  margin-bottom: 0px;
-}
-
-.Overview,
-.our-people,
-.strategic-partners p {
-  margin: 0 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-}
-
-.col-md-4 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 100px;
-  position: relative;
-  padding-top: 0px
-}
-
-.slogan-content {
-  transform: translateY(-30px);
-}
-
-.col-sm {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 2.5rem;
-  position: relative;
-  padding-top: 20px; /* Añadir espacio para el divisor */
-  padding-left: 0 !important;
-}
-
-/* Estilo para el divisor de columnas */
-.column-divider {
-  position: relative;
-  text-align: left; /* Centra el contenido dentro de la columna */
-}
-
-.section-title {
-  font-family: "Roboto", sans-serif;
-  text-decoration: underline;
-  text-decoration-color: #adb5bd;
-  text-underline-offset: 8px;
-
-  font-size: 1rem;          /* igual que h6 */
-  font-weight: 500;         /* bootstrap heading */
-  line-height: 1.2;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-
-  margin: 30px 0;
-  scroll-margin-top: 120px;
-  text-transform: uppercase;
-}
-
-.overview-section {
-  margin: 0 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-}
-
-/* Estilo para el borde superior */
-.column-divider::before {
-  content: "";
-  position: absolute;
-  text-align: right;
-  top: 0;
-  left: 25%; /* Centra el divisor horizontalmente */
-  transform: translateX(-50%); /* Ajusta la posición para centrar */
-  width: 50%; /* Ajusta el ancho del divisor */
-  height: 3px; /* Grosor del divisor */
-  background-color: #adb5bd; /* Color del divisor */
-}
-.col-md-4 strong {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 3rem;
-}
-
-.section-projects-h3 h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  margin: 200px 200px;
-}
-
-.section-projects li {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/*POR SI QUIERE IMAGEN CUADRADA*/
-
-.partner-content {
-  display: flex;
-  align-items: stretch;
-  gap: 20px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-/*SI QUIERE QUE LA IMAGEN SE VEA ARRIBA*/
-.partner-image {
-  width: 180px;
-  align-self: stretch;
-  object-fit: cover;
-
-}
-
-/*SI QUIERE QUE LA IMAGEN SE VEA CENTRADA*/
-/* .partner-image {
-  width: 180px;
-} */
-
-/* .partner-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.mb-4 {
-  margin-bottom: 1.2rem !important;
-}
-
-
-/* TEXTO */
-.partner-content p {
-  flex: 1;
-  margin: 0;
-}
-
-
 
 video {
   position: absolute;
@@ -723,563 +195,132 @@ video {
   z-index: -1;
 }
 
-/* Overlay oscuro sobre el video para que el texto blanco
-   siempre tenga buen contraste, sin importar el frame del
-   video que esté pasando (por ejemplo, el cielo claro del
-   atardecer). */
 .sect::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.55) 0%,
-    rgba(0, 0, 0, 0.15) 45%,
-    rgba(0, 0, 0, 0) 70%
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.1) 100%
   );
   pointer-events: none;
   z-index: 0;
 }
 
-.service-item {
-  padding-bottom: 15px;
-  position: relative; /* Mantén el texto alineado a la izquierda */
+.title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: white;
+  z-index: 1;
 }
 
-.service-item strong {
-  display: block; /* Cambia a block para que tome el ancho completo */
-  padding-bottom: 5px;
-  font-size: 17px;
+.h1-index {
+  font-weight: 700;
+  font-size: 44px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  max-width: 700px;
+  margin-bottom: 10px;
 }
 
-.service-item .underline-orange {
+/* =========================================
+   MÉTRICAS (INDEX)
+   ========================================= */
+.metrics-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.metric-horizontal-item {
+  text-align: center;
+  flex: 1;
+}
+
+.metric-horizontal-item strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000;
   display: block;
-  width: 100%; /* Ajusta el ancho según prefieras */
-  height: 2px;
+}
+
+.metric-horizontal-item .stat-description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  display: block;
+  margin-top: 8px;
+  color: #333;
+}
+
+.metric-divider-center {
+  width: 1px;
+  height: 70px;
   background-color: #adb5bd;
 }
 
-.accordion-header {
-  font-size: 18px;
-  margin-left: 5px;
-  margin-bottom: 8px !important;
+/* =========================================
+   TEXTO ABOUT (INDEX)
+   ========================================= */
+.about-text-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.accordion-item {
-  margin-bottom: 20px;
-  align-items: center;
-}
-
-/* Ajustar margen inferior del botón "Learn More" */
-.btn-learn-more {
-  margin-top: 0px;
-  margin-bottom: 0px; /* Ajusta este valor según sea necesario */
-}
-
-/* Ajustar margen superior de la sección "Our Services" */
-.our-services {
-  margin-top: 40px; /* Ajusta este valor según sea necesario */
-}
-
-.offices-container {
-  background-color: transparent;
+.about-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
   color: #000;
-  border: 2px solid #000;
-  border-radius: 8px;
-  padding: 20px;
-  height: 100%;
-  margin-bottom: 20px;
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.info-section {
-  background-image: url("../source/imagenes/imagen7.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 20px;
-  border-radius: 8px;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.gmail img,
-.linkedin img {
-  width: 70px;
-  height: 70px;
-  margin-top: 10px;
-}
-
-.text-h3 {
-  margin-bottom: 20px;
-  color: #000;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.text-h4 {
-  font-size: 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 20px 0;
-  padding: 10px;
-  background-color: #000;
-  color: #ffffff;
-  border-radius: 5px;
-}
-
-.ubicacion {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #000;
-  border-radius: 5px;
-}
-
-.ubicacion i {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.ubicacion a {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
+  font-weight: 500;
+  line-height: 1.35;
   margin: 0;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.ubicacion:hover {
-  background-color: #333;
-}
-.footerr {
-  background-color: #000;
-  padding: 20px;
-  color: #fff;
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  margin: 10px 0;
   text-align: left;
 }
-
-.social-icons a {
-  margin-right: 10px; /* Ajusta el espacio entre los iconos según necesites */
-}
-
-.contact-addresses {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.contact-addresses a {
-  text-align: left;
-  display: block;
-  margin-bottom: 10px; /* Puedes ajustar el margen según necesites */
-}
-
-.footer-section {
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
-  text-align: left;
-  padding: 12px;         /* Esto expande el área de clic sin cambiar el tamaño del icono */
-  min-width: 44px;       /* Asegura un ancho mínimo aceptable */
-  min-height: 44px;
-}
-
-.footer-section li {
-  list-style: none; /* Quita los puntos de la lista */
-  margin-right: 20px;
-
-}
-
-.footer-section li a {
-  color: #ffffff; /* Color de letra blanco */
-  text-decoration: none; /* Quita la decoración del texto */
-  font-size: 13px;
-}
-
-.footer-section strong {
-  margin-right: 30px;
-}
-
-.footer-section li strong {
-  font-size: 14px;
-  text-transform: uppercase;
-  display: block;
-}
-
-.footer-section .submenu-footer {
-  padding: 0;
-  margin-top: 5px;
-}
-
-.footer-section .submenu-footer li {
-  margin: 2px 0; /* Espacio entre los elementos de la lista */
-}
-
-.footer-section .submenu-footer a {
-  color: #ffffff; /* Color de letra blanco */
-  text-decoration: none; /* Quita la decoración del texto */
-  font-size: 13px;
-}
-
-.terms-conditions {
-  text-align: center;
-  padding: 10px 0;
-}
-
-.terms-conditions h6,
-.terms-conditions p,
-.terms-conditions a {
-  color: #fff;
-  margin: 5px 0;
-  font-size: 12px;
-}
-
-.accordion-item p {
-  margin-left: .3rem;
-}
-
-.mobile-break {
-  display: none;
-}
-
-.desktop-break {
-  display: block;
-}
-
-.carousel-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto 50px auto;
-}
-
-.carousel {
-  overflow: hidden;
-  width: 100%;
-  padding: 0 15px; /* 👈 clave */
-  box-sizing: border-box;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 15px;
-  transition: transform 0.5s ease;
-}
-
-.carousel-track .card {
-  flex: 0 0 calc((100% - 30px) / 3);
-  box-sizing: border-box;
-  min-width: 0;
-  width: unset;
-}
-
-@media (max-width: 768px) {
-  .carousel-track .card {
-    flex: 0 0 100%;
-  }
-  .about-content-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .about-text-column {
-    padding-right: 0;
-    margin-bottom: 25px; /* Espacio antes de la línea divisoria */
-  }
-
-  .about-metrics-column {
-    width: 100%;
-    flex-direction: row; /* Pone las métricas una al lado de la otra */
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-left: none; /* Saca la línea vertical gruesa de escritorio */
-    padding-left: 0;
-    padding-top: 25px;
-    border-top: 1px solid #adb5bd; /* Agrega la línea horizontal superior */
-    position: relative;
-    gap: 0; /* Quitamos el gap para controlar el espacio manualmente */
-  }
-
-  /* ESTA ES LA LÍNEA VERTICAL CORTITA DEL MEDIO */
-  .about-metrics-column::before {
-    content: "";
-    position: absolute;
-    left: 50%; /* La ubica exactamente en el medio */
-    top: 30px; /* La baja un poquito para que no toque la línea de arriba */
-    height: 70%; /* Le da el alto cortito que se ve en el diseño */
-    width: 1px;
-    background-color: #adb5bd;
-  }
-
-  .metric-item {
-    width: 50%; /* Cada métrica ocupa la mitad exacta */
-  }
-
-  .metric-item:nth-child(2) {
-    padding-left: 20px; /* Empuja el texto de la segunda métrica un poco a la derecha de la línea */
-  }
-
-  .metric-item strong {
-    font-size: 2rem; /* Achicamos un poco los números para que no se pisen en pantallas chicas */
-  }
-
-  .metric-item .stat-description {
-    font-size: 14px; /* Achicamos la descripción para que quede en una o dos líneas prolijas */
-  }
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  background: #f4f4f4;
-  color: #000;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 10;
-  padding: 10px 15px;
-}
-
-.carousel-btn.prev { left: 0; }
-.carousel-btn.next { right: 0; }
-
-@media (max-width: 770px) {
-  .h1-index {
-    font-size: 28px;
-    max-width: 100%;
-  }
-  .card {
-    flex: 1 1 100%;
-  }
-
-  .column-divider::before {
-    margin-top: 13px;
-  }
-
-  .h1-home {
-    margin-top: 0;
-  }
-
-  .slogan-content br {
-    display: none;
-  }
-
-  .mobile-break {
-    display: block;
-  }
-
-  .desktop-break {
-    display: none;
-  }
-
-  .slogan-home h1 {
-    font-size: 27px;
-    line-height: 1.2;
-    max-width: 320px;
-  }
-
-  .slogan-home h2 span {
-    display: inline-block;
-    text-align: left;
-  }
-
-  .slogan-home h2 span br {
-    display: none;
-  }
-
-  .partner-content {
-    flex-direction: column;
-  }
-
-  .partner-image-container {
-    width: 100%;
-    height: 180px;
-  }
-
-  .h3-strategic {
-    scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
-  }
-
-  .about-text{
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-size: 20px;
-    margin-top: 25px;
-    margin-bottom: 30px;
-  }
-
-  .checkbtn {
-    display: block;
-    position: absolute;
-    right: 20px;
-    z-index: 1100; /* Asegura que el botón de hamburguesa esté por encima del contenido */
-  }
-
-  nav ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-    z-index: 1000;
-    flex-direction: column; /* Cambia la dirección del flexbox para mostrar los enlaces uno debajo del otro */
-    padding-top: 20px; /* Añade espacio superior para el logo */
-  }
-
-  nav ul li {
-    display: block;
-    margin: 20px 0; /* Espacio entre los elementos */
-    line-height: normal; /* Ajusta la altura de línea normal para evitar el espaciado adicional */
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 10px;
-  }
-
-  /* Ocultar el submenu en móviles */
-  .submenu {
-    display: none;
-  }
-
-  #check:checked ~ .nav-container ul {
-  left: 0;
-}
-
-  .submenu li {
-    display: block;
-    text-align: left;
-  }
-
-  .footer-section {
-    flex-direction: column;
-    align-items: left;
-  }
-
-  .footer-section > div {
-    margin: 10px 0;
-    width: 100%;
-  }
-
-  .footer-section h6 {
-    font-size: 18px;
-  }
-
-
-  .footerr ul li {
-    display: block;
-    margin: 15px 0; /* Espacio entre los elementos */
-    text-align: left;
-
-  }
-
-  .submenu-footer li {
-    text-align: left; /* Centrar los elementos del submenu */
-  }
-
-  .footerr ul li a {
-    font-size: 13px;
-    display: block; /* Hace que cada enlace esté en su propia línea */
-    padding: 0px; /* Ajusta el espaciado entre enlaces */
-  }
-}
-
-@media (max-width: 768px) {
-  .services .image-container {
-    margin-top: 20px;
-  }
-
-  .services .border {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos dentro del contenedor */
-  }
-
-  .services .image-container {
-    order: 2; /* Mueve la imagen al final en móviles */
-    width: 100%;
-    margin-top: 20px; /* Espacio superior para separar la imagen del contenido */
-  }
-
-  .services .accordion-content {
-    order: 1;
-    width: 100%;
-  }
-
-  .services .image-container img {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 992px) {
-  .slogan-home {
-    margin-top: -140px; /* Ajuste específico para pantallas medianas */
-  }
-  .services-h6 {
-    scroll-margin-top: 100px; /* Ajusta este valor según la altura de tu barra de navegación */
-  }
-}
-
 
 /* =========================================
-   NUEVA SECCIÓN SERVICES (Estilo Word)
+   SERVICES (INDEX)
    ========================================= */
-
-.our-services-updated {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
+#services,
+#selected-experience {
+  scroll-margin-top: 80px;
 }
 
-/* Título principal sin subrayado y alineado a la izquierda */
-.section-title-word {
+.section-title {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 38px;
+  text-decoration: underline;
+  text-decoration-color: #adb5bd;
+  text-underline-offset: 8px;
+  font-size: 1.1rem;
   font-weight: 700;
+  margin: 0 0 35px 0;
+  text-transform: uppercase;
   color: #000;
-  margin-bottom: 50px;
-  text-align: left;
 }
 
-/* Grilla de 3 columnas para escritorio */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
-/* Estilo de cada columna de servicio */
 .service-column {
-  text-align: left;
   position: relative;
-  padding-top: 25px; /* Espacio para la línea negra superior */
+  padding-top: 20px;
+  text-align: left;
 }
 
-/* Línea negra superior (emulando el diseño de las métricas) */
 .service-column::before {
   content: "";
   position: absolute;
@@ -1291,7 +332,6 @@ video {
 }
 
 .service-column h3 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -1300,24 +340,395 @@ video {
 }
 
 .service-column p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #333;
   line-height: 1.6;
   margin: 0;
 }
 
 /* =========================================
-   MEDIA QUERIES (Versión Móvil)
+   CAROUSEL (INDEX)
+   ========================================= */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 5px;
+  box-sizing: border-box;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track .card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  box-sizing: border-box;
+  min-width: 0;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card-body {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  margin: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(244, 244, 244, 0.9);
+  color: #000;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  padding: 12px 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.carousel-btn.prev { left: -15px; }
+.carousel-btn.next { right: -15px; }
+
+/* =========================================
+   SECCIÓN ABOUT US (PAGE: about-us.html)
+   ========================================= */
+.img-home {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background-image: url("../source/imagenes/Velero-3.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.img-home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.slogan-home {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.slogan-content .hero-title {
+  font-size: 42px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 700px;
+  margin: 0;
+}
+
+.overview-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.h3-home {
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #070707;
+  text-decoration: underline;
+  text-decoration-color: #adb5bd;
+  text-underline-offset: 8px;
+  scroll-margin-top: 100px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.text-section {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Tarjetas Our Values */
+.service-item {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  height: 100%;
+  text-align: left;
+}
+
+.service-item strong {
+  display: block;
+  font-size: 19px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.service-item .underline-orange {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #adb5bd;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+/* Our People */
+.our-people {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.partner-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.partner-image-container {
+  flex: 0 0 220px;
+}
+
+.partner-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.partner-text {
+  flex: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+.partner-text a {
+  text-decoration: none;
+}
+
+/* =========================================
+   FOOTER (COMPARTIDO)
+   ========================================= */
+.footerr {
+  background-color: #000;
+  padding: 40px 0 20px 0;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.footer-section > li {
+  flex: 1 1 200px;
+}
+
+.footer-section li strong {
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-section .submenu-footer {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section .submenu-footer li {
+  margin: 6px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.terms-conditions {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.terms-conditions p,
+.terms-conditions a {
+  color: #888;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.terms-conditions a:hover {
+  color: #fff;
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE & TABLET)
    ========================================= */
 @media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr; /* Pasa a 1 sola columna apilada */
-    gap: 40px;
+  .section-full {
+    padding: 40px 0;
   }
 
-  .section-title-word {
+  .checkbtn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: 1100;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: #000;
+    top: 80px;
+    left: -100%;
+    transition: left 0.4s ease;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    z-index: 1000;
+  }
+
+  #check:checked ~ .nav-container > ul {
+    left: 0 !important;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: normal;
+    margin: 15px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .submenu {
+    display: none !important;
+  }
+
+  .h1-index {
     font-size: 30px;
-    margin-bottom: 30px;
+  }
+
+  .slogan {
+    font-size: 18px;
+  }
+
+  .metrics-horizontal {
+    justify-content: space-between;
+  }
+
+  .metric-horizontal-item strong {
+    font-size: 2.2rem;
+  }
+
+  .metric-horizontal-item .stat-description {
+    font-size: 14px;
+  }
+
+  .metric-divider-center {
+    height: 50px;
+  }
+
+  .about-text {
+    font-size: 19px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .carousel-track .card {
+    flex: 0 0 100%;
+  }
+
+  .carousel-btn.prev { left: 0; }
+  .carousel-btn.next { right: 0; }
+
+  /* Responsive específico de About Us */
+  .img-home {
+    height: 380px;
+  }
+
+  .slogan-content .hero-title {
+    font-size: 28px;
+  }
+
+  .partner-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-image-container {
+    width: 180px;
   }
 }

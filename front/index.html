@@ -24,11 +24,7 @@
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:site_name" content="NG Global Partners" />
     <title>NG Global Partners | Strategic Real Estate Advisory</title>
-    <link rel="stylesheet" href="./styles/styles-completo.css" />
-    <script
-      src="https://kit.fontawesome.com/6f59efdb02.js"
-      crossorigin="anonymous"
-    ></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -37,6 +33,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/styles-completo.css" />
+
+    <script
+      src="https://kit.fontawesome.com/6f59efdb02.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -68,7 +70,6 @@
           <i class="fas fa-bars"></i>
         </label>
 
-        <!-- NUEVO: wrapper que limita el contenido del nav a 1200px, igual que .container -->
         <div class="nav-container">
           <a href="./index.html" class="enlace">
             <img
@@ -108,13 +109,15 @@
               >
             </li>
             <li>
-              <a href="contact-information.html"><strong>Contact</strong></a>
+              <a href="./contact-information.html"><strong>Contact</strong></a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main>
+      <!-- HERO / VIDEO -->
       <section id="sect1" class="sect">
         <video
           src="./source/videos/ciudad3.mp4"
@@ -125,99 +128,106 @@
           oncanplay="this.style.opacity = 1"
           onerror="this.parentElement.classList.add('video-error')"
           style="opacity: 0; transition: opacity 1s ease-in"
-          loading="lazy"
         ></video>
-        <div class="title-container container">
+        <div class="title-container">
           <h1 class="h1-index">Strategic Real Estate Advisory</h1>
           <p class="slogan">Independent. Institutional.</p>
         </div>
       </section>
 
-      <div class="container">
-        <div class="about-us">
-          <div class="about-content-wrapper">
-            <!-- Columna Izquierda: Texto -->
-            <div class="about-text-column">
-              <p class="about-text">
-                NG Global Partners provides strategic advisory services to
-                experienced developers, helping align real estate projects with
-                appropriate capital partners. <br /><br />
-                Leveraging long-standing relationships, we support positioning,
-                structuring, and execution, and facilitate introductions to
-                institutional investors and family offices.
-              </p>
+      <!-- BLOQUE 1: MÉTRICAS (Fondo Gris 100%) -->
+      <section class="section-full section-gray" id="metrics-section">
+        <div class="container">
+          <div class="metrics-horizontal">
+            <div class="metric-horizontal-item">
+              <strong
+                >+$<span class="counter" data-target="200">0</span>M</strong
+              >
+              <span class="stat-description">Advised Transactions</span>
             </div>
 
-            <!-- Columna Derecha: Métricas y Línea Vertical -->
-            <div class="about-metrics-column">
-              <div class="metric-item">
-                <strong
-                  >+$<span class="counter" data-target="200"></span>M</strong
-                >
-                <span class="stat-description">Advised Transactions</span>
-              </div>
+            <div class="metric-divider-center"></div>
 
-              <div class="metric-item">
-                <strong
-                  >+<span class="counter" data-target="20"></span>Years</strong
-                >
-                <span class="stat-description">Global Experience</span>
-              </div>
+            <div class="metric-horizontal-item">
+              <strong
+                >+<span class="counter" data-target="20">0</span>Years</strong
+              >
+              <span class="stat-description">Global Experience</span>
             </div>
           </div>
         </div>
+      </section>
 
-        <div id="services" class="our-services">
+      <!-- BLOQUE 2: ABOUT US TEXT (Fondo Blanco 100%) -->
+      <section class="section-full section-white">
+        <div class="container">
+          <div class="about-text-wrapper">
+            <p class="about-text">
+              NG Global Partners provides strategic advisory services to
+              experienced developers, helping align real estate projects with
+              appropriate capital partners. <br /><br />
+              Leveraging long-standing relationships, we support positioning,
+              structuring, and execution, and facilitate introductions to
+              institutional investors and family offices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 3: SERVICES (Fondo Gris 100%) -->
+      <section id="services" class="section-full section-gray">
+        <div class="container">
           <h2 class="section-title">Services</h2>
 
-          <section class="services-container">
-            <div class="services-grid">
-              <!-- Servicio 1 -->
-              <div class="service-column">
-                <h3>Strategic Advisory & Capital Partners Network</h3>
-                <p>
-                  We provide strategic advisory to experienced developers and
-                  facilitate introductions to institutional counterparties and
-                  family offices interested in high-quality real estate
-                  opportunities.
-                </p>
-              </div>
-
-              <!-- Servicio 2 -->
-              <div class="service-column">
-                <h3>Project Positioning & Capital Alignment</h3>
-                <p>
-                  We assist developers in positioning projects to align with the
-                  investment criteria of potential capital partners, supporting
-                  long-term relationships between independent counterparties.
-                </p>
-              </div>
-
-              <!-- Servicio 3 -->
-              <div class="service-column">
-                <h3>M&A Advisory</h3>
-                <p>
-                  Tailored advisory support on strategic initiatives and M&A
-                  transactions, helping clients navigate complex decisions and
-                  investments.
-                </p>
-              </div>
+          <div class="services-grid">
+            <div class="service-column">
+              <h3>Strategic Advisory & Capital Partners Network</h3>
+              <p>
+                We provide strategic advisory to experienced developers and
+                facilitate introductions to institutional counterparties and
+                family offices interested in high-quality real estate
+                opportunities.
+              </p>
             </div>
-          </section>
-        </div>
 
-        <section id="selected-experience" class="our-projects">
+            <div class="service-column">
+              <h3>Project Positioning & Capital Alignment</h3>
+              <p>
+                We assist developers in positioning projects to align with the
+                investment criteria of potential capital partners, supporting
+                long-term relationships between independent counterparties.
+              </p>
+            </div>
+
+            <div class="service-column">
+              <h3>M&A Advisory</h3>
+              <p>
+                Tailored advisory support on strategic initiatives and M&A
+                transactions, helping clients navigate complex decisions and
+                investments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 4: SELECTED EXPERIENCE (Fondo Blanco 100%) -->
+      <section id="selected-experience" class="section-full section-white">
+        <div class="container">
           <h2 class="section-title">Selected Experience</h2>
 
           <div class="carousel-wrapper">
-            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn prev" aria-label="Previous slide">
+              &#10094;
+            </button>
 
             <div class="carousel">
               <div class="carousel-track">
-                <div class="card">
+                <div class="card project-card">
                   <img
                     src="./source/imagenes/Imagen2.webp"
                     class="card-img-top"
+                    alt="Cape Coral Project"
                   />
                   <div class="card-body">
                     <p class="card-text">
@@ -228,10 +238,11 @@
                   </div>
                 </div>
 
-                <div class="card">
+                <div class="card project-card">
                   <img
                     src="./source/imagenes/Imagen3.webp"
                     class="card-img-top"
+                    alt="Buenos Aires Asset"
                   />
                   <div class="card-body">
                     <p class="card-text">
@@ -242,10 +253,11 @@
                   </div>
                 </div>
 
-                <div class="card">
+                <div class="card project-card">
                   <img
                     src="./source/imagenes/Imagen7.webp"
                     class="card-img-top"
+                    alt="Miami Property"
                   />
                   <div class="card-body">
                     <p class="card-text">
@@ -255,10 +267,11 @@
                   </div>
                 </div>
 
-                <div class="card">
+                <div class="card project-card">
                   <img
                     src="./source/imagenes/Imagen5.webp"
                     class="card-img-top"
+                    alt="Surfside Townhomes"
                   />
                   <div class="card-body">
                     <p class="card-text">
@@ -269,10 +282,11 @@
                   </div>
                 </div>
 
-                <div class="card">
+                <div class="card project-card">
                   <img
                     src="./source/imagenes/Imagen6.webp"
                     class="card-img-top"
+                    alt="Argentina Expansion"
                   />
                   <div class="card-body">
                     <p class="card-text">
@@ -281,26 +295,30 @@
                     </p>
                   </div>
                 </div>
-                <div class="card">
+
+                <div class="card project-card">
                   <img
                     src="./source/imagenes/Imagen8.webp"
                     class="card-img-top"
+                    alt="Hollywood Florida Project"
                   />
                   <div class="card-body">
                     <p class="card-text">
                       Strategic advisory in connection with the refinancing of
                       the land and pre-development structuring for a luxury
-                      waterfront residential project - Hollywood, Florida .
+                      waterfront residential project - Hollywood, Florida.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <button class="carousel-btn next">&#10095;</button>
+            <button class="carousel-btn next" aria-label="Next slide">
+              &#10095;
+            </button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footerr" data-bs-theme="dark">
@@ -326,12 +344,13 @@
           </li>
 
           <li>
-            <a href="./contact-information"><strong>Contact</strong></a>
+            <a href="./contact-information.html"><strong>Contact</strong></a>
             <div class="social-icons">
               <a
                 href="https://www.linkedin.com/company/ng-global-partners"
                 aria-label="Visitar nuestro perfil de LinkedIn"
                 target="_blank"
+                rel="noreferrer"
               >
                 <i
                   class="fa-brands fa-linkedin"
@@ -355,15 +374,14 @@
           <p style="text-align: left">
             <a href="./politica.html">Privacy Policy</a> |
             <a href="./terms-conditions.html">Terms and Conditions</a> | &copy;
-            2024 NG Global Partners. All rights reserved.
+            2026 NG Global Partners. All rights reserved.
           </p>
 
           <hr />
 
           <p>
             NG Global Partners acts solely as an independent strategic advisory
-            and consulting firm.<br />
-            <br />
+            and consulting firm.<br /><br />
             <span style="font-size: 12px">
               <strong>Disclaimer:</strong> The content of this website is
               provided for informational purposes only and does not constitute
@@ -376,6 +394,7 @@
         </div>
       </div>
     </footer>
+
     <script src="./scripts/carousel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./scripts/index.js"></script>
