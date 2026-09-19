@@ -47,7 +47,7 @@ h1, h2, h3 {
 
 .metric-item strong {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.1;
   color: #000;
@@ -119,7 +119,7 @@ nav {
   width: 100%;
   max-width: 100% !important; /* Quita el límite de 1200px */
   margin: 0;
-  padding: 0 40px; /* Margen sutil contra el borde de la pantalla */
+  padding: 0 20px; /* Margen sutil contra el borde de la pantalla */
   height: 100%;
   display: flex;
   align-items: center;
@@ -1054,7 +1054,7 @@ video {
   }
 
   .metric-item strong {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .metric-item .stat-description {
@@ -1302,7 +1302,7 @@ video {
 
 .service-column p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
   line-height: 1.6;
   margin: 0;
