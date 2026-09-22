@@ -63,10 +63,11 @@ h1, h2, h3 {
   color: #000;
 }
 
+/* HERO SECTION / SLOGAN */
 .slogan-home {
   display: flex;
   align-items: center;
-  margin-top: -200px;
+  margin-top: -160px; /* Calibralo acá para desktop */
 }
 
 .text-section {
@@ -90,7 +91,6 @@ h1, h2, h3 {
   font-weight: 550;
   line-height: 1.2;
   max-width: 500px;
-  margin-top: 2.3rem;
 }
 
 .img-slogan {
@@ -103,7 +103,7 @@ h1, h2, h3 {
 }
 
 /* =========================================
-   NAV Y CONTENEDOR (Alineados a 1200px)
+   NAV Y CONTENEDOR
    ========================================= */
 nav {
   background-color: #000;
@@ -117,13 +117,14 @@ nav {
 
 .nav-container {
   width: 100%;
-  max-width: 100% !important; /* Quita el límite de 1200px */
+  max-width: 100% !important;
   margin: 0;
-  padding: 0 20px; /* Margen sutil contra el borde de la pantalla */
+  padding: 0 20px;
   height: 100%;
   display: flex;
   align-items: center;
 }
+
 .enlace {
   display: flex;
   align-items: center;
@@ -131,6 +132,20 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   color: #ffffff;
+}
+
+/* Cuadro distintivo NG del navbar */
+.logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #ffffff;
+  padding: 3px 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-right: 12px;
+  line-height: 1;
 }
 
 .enlace strong {
@@ -333,7 +348,6 @@ nav ul li:hover .submenu {
   width: 5px;
 }
 
-/* Estilos generales */
 body {
   margin: 0;
   padding: 0;
@@ -431,7 +445,6 @@ main > .container {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  /* max-width: 1200px; */
   padding: 0 20px;
   box-sizing: border-box;
   color: white;
@@ -461,6 +474,7 @@ main > .container {
   margin-bottom: 30px;
 }
 
+/* HERO SECTION - CALIBRADO RESPONSIVO */
 .img-home {
   position: relative;
   width: 100%;
@@ -496,11 +510,11 @@ main > .container {
   scroll-margin-top: 110px;
 }
 
-/* TÍTULOS EN ABOUT US (Negrita e idénticos a index) */
+/* TÍTULOS EN ABOUT US */
 .h3-home {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  font-weight: 700; /* NEGRITA */
+  font-weight: 700;
   color: #070707;
   text-decoration: underline;
   text-decoration-color: #adb5bd;
@@ -627,14 +641,14 @@ main > .container {
 }
 
 /* =========================================
-   OUR VALUES - AJUSTE DE ESPACIADO
+   OUR VALUES
    ========================================= */
 #our-values-section .row {
-  --bs-gutter-y: 1.25rem !important; /* Reduce la separación que impone Bootstrap (g-4) */
+  --bs-gutter-y: 1.25rem !important;
 }
 
 #our-values-section .col-md-4 {
-  margin-bottom: 0 !important; /* Elimina márgenes extra que separaban las columnas */
+  margin-bottom: 0 !important;
 }
 
 .service-item {
@@ -644,18 +658,15 @@ main > .container {
 
 .service-item p {
   line-height: 1.5;
-  margin-bottom: 0 !important; /* Evita que el párrafo empuje de más hacia abajo */
+  margin-bottom: 0 !important;
 }
 
-/* =========================================
-   SEPARACIÓN ESPECÍFICA PARA OUR VALUES
-   ========================================= */
 #our-values-section {
   margin-top: 50px;
 }
 
 #our-values-section .h3-home {
-  margin-bottom: 45px; /* Le da más aire y separación de lo que está abajo */
+  margin-bottom: 45px;
 }
 
 .overview-section {
@@ -746,11 +757,6 @@ video {
   z-index: 0;
 }
 
-.service-item {
-  padding-bottom: 15px;
-  position: relative;
-}
-
 .service-item strong {
   display: block;
   padding-bottom: 5px;
@@ -764,10 +770,6 @@ video {
   height: 2px;
   background-color: #adb5bd;
   margin-bottom: 12px;
-}
-
-.service-item p {
-  line-height: 1.5;
 }
 
 .accordion-header {
@@ -1008,61 +1010,6 @@ video {
   width: unset;
 }
 
-@media (max-width: 768px) {
-  .carousel-track .card {
-    flex: 0 0 100%;
-  }
-
-  .about-content-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .about-text-column {
-    padding-right: 0;
-    margin-bottom: -1.5rem;
-  }
-
-  .about-metrics-column {
-    width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-left: none;
-    padding-left: 0;
-    padding-top: 25px;
-    border-top: 1px solid #adb5bd;
-    position: relative;
-    gap: 0;
-  }
-
-  .about-metrics-column::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 30px;
-    height: 70%;
-    width: 1px;
-    background-color: #adb5bd;
-  }
-
-  .metric-item {
-    width: 50%;
-  }
-
-  .metric-item:nth-child(2) {
-    padding-left: 20px;
-  }
-
-  .metric-item strong {
-    font-size: 1.5rem;
-  }
-
-  .metric-item .stat-description {
-    font-size: 14px;
-  }
-}
-
 .carousel-btn {
   position: absolute;
   top: 40%;
@@ -1079,7 +1026,11 @@ video {
 .carousel-btn.prev { left: 0; }
 .carousel-btn.next { right: 0; }
 
+/* =========================================
+   MEDIA QUERIES (TABLET & MOBILE)
+   ========================================= */
 @media (max-width: 770px) {
+
   .h1-index {
     font-size: 28px;
     max-width: 100%;
@@ -1113,15 +1064,6 @@ video {
     font-size: 27px;
     line-height: 1.2;
     max-width: 320px;
-  }
-
-  .slogan-home h2 span {
-    display: inline-block;
-    text-align: left;
-  }
-
-  .slogan-home h2 span br {
-    display: none;
   }
 
   .partner-content {
@@ -1217,9 +1159,60 @@ video {
     display: block;
     padding: 0px;
   }
-}
 
-@media (max-width: 768px) {
+  .carousel-track .card {
+    flex: 0 0 100%;
+  }
+
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-text-column {
+    padding-right: 0;
+    margin-bottom: -1.5rem;
+  }
+
+  .about-metrics-column {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-left: none;
+    padding-left: 0;
+    padding-top: 25px;
+    border-top: 1px solid #adb5bd;
+    position: relative;
+    gap: 0;
+  }
+
+  .about-metrics-column::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    height: 70%;
+    width: 1px;
+    background-color: #adb5bd;
+  }
+
+  .metric-item {
+    width: 50%;
+  }
+
+  .metric-item:nth-child(2) {
+    padding-left: 20px;
+  }
+
+  .metric-item strong {
+    font-size: 1.5rem;
+  }
+
+  .metric-item .stat-description {
+    font-size: 14px;
+  }
+
   .services .image-container {
     margin-top: 20px;
   }
@@ -1244,16 +1237,6 @@ video {
   .services .image-container img {
     width: 100%;
     height: auto;
-  }
-}
-
-@media (max-width: 992px) {
-  .slogan-home {
-    margin-top: 0;
-  }
-
-  .services-h6 {
-    scroll-margin-top: 100px;
   }
 }
 
@@ -1284,12 +1267,6 @@ video {
   padding-top: 0;
 }
 
-.service-column::before {
-  content: none;
-  
-}
-
-/* Estilo del título con la línea gris debajo */
 .service-column h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -1298,7 +1275,7 @@ video {
   padding-bottom: 12px;
   color: #000;
   line-height: 1.4;
-  border-bottom: 2px solid #adb5bd; /* Línea gris abajo del título */
+  border-bottom: 2px solid #adb5bd;
 }
 
 .service-column p {
