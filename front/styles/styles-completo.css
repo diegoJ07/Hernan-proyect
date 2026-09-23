@@ -356,9 +356,9 @@ body {
 
 /* CONTENEDOR UNIFICADO A 1200px */
 .container {
-  max-width: 1200px !important;
+  max-width: 1310px;
   margin: 0 auto;
-  padding: 0 20px !important;
+  padding: 0 20px;
 }
 
 main > .container {
@@ -638,6 +638,16 @@ main > .container {
   margin-bottom: 25px;
   scroll-margin-top: 110px;
   display: block;
+}
+
+/* AJUSTE ESPECÍFICO PARA VERSIÓN LAPTOP */
+@media (max-width: 1440px) and (min-width: 769px) {
+  .container {
+    /* 107px laterales (restando los 20px de padding interno = 87px de margen) */
+    max-width: calc(100% - 174px) !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+  }
 }
 
 /* =========================================
@@ -986,7 +996,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 1310px;
   margin: 0 auto 50px auto;
 }
 
