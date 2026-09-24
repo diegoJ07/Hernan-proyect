@@ -1201,7 +1201,7 @@ video {
   .about-metrics-column::before {
     content: "";
     position: absolute;
-    left: 50%;
+    left: 48.5%;
     top: 30px;
     height: 70%;
     width: 1px;
