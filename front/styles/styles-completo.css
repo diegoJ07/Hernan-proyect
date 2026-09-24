@@ -31,10 +31,6 @@ h1, h2, h3 {
   margin-bottom: 30px;
 }
 
-.about-us {
-  border-bottom: 1.5px solid #adb5bd;
-  padding-bottom: 40px;
-}
 
 .about-text-column {
   flex: 1;
