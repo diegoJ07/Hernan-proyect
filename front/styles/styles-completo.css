@@ -571,11 +571,14 @@ main > .container {
 }
 
 .about-text {
-  margin-top: 20px;
-  margin-bottom: 40px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
+  font-style: normal;
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 #our-values {
@@ -1088,7 +1091,7 @@ video {
   }
 
   .about-text {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
