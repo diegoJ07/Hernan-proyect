@@ -1091,11 +1091,12 @@ video {
   }
 
   .about-text {
-    font-size: 18px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    color: #333333; /* o el color exacto que tenga la clase del párrafo de Services */
-    font-weight: 400; /* para igualar también el grosor regular de la fuente */
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2b2e34;
   }
 
   .checkbtn {
