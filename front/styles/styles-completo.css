@@ -1094,7 +1094,8 @@ video {
     font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: inherit;
+    color: #333333; /* o el color exacto que tenga la clase del párrafo de Services */
+    font-weight: 400; /* para igualar también el grosor regular de la fuente */
   }
 
   .checkbtn {
