@@ -10,7 +10,9 @@ html {
   height: 100%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 500;
   line-height: 1.2;
 }
@@ -30,7 +32,6 @@ h1, h2, h3 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
 
 .about-text-column {
   flex: 1;
@@ -461,6 +462,66 @@ main > .container {
   padding: 0;
 }
 
+/* =========================================
+   BOTONES HERO (ABOUT US & CONTACT US)
+   ========================================= */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 50px; /* Nayuswat nga ad-adayo iti teksto tapno nababbaba */
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-pill span {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.btn-pill:hover span {
+  transform: translateX(4px);
+}
+
+.btn-pill-solid {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+}
+
+.btn-pill-solid:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000000;
+}
+
+.btn-pill-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-pill-outline:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .h2-home {
   margin-top: 100px;
   text-align: center;
@@ -644,7 +705,6 @@ main > .container {
 /* AJUSTE ESPECÍFICO PARA VERSIÓN LAPTOP */
 @media (max-width: 1440px) and (min-width: 769px) {
   .container {
-    /* 107px laterales (restando los 20px de padding interno = 87px de margen) */
     max-width: calc(100% - 174px) !important;
     margin: 0 auto !important;
     padding: 0 20px !important;
@@ -981,7 +1041,7 @@ video {
 }
 
 .accordion-item p {
-  margin-left: .3rem;
+  margin-left: 0.3rem;
 }
 
 .mobile-break {
@@ -1034,17 +1094,42 @@ video {
   padding: 10px 15px;
 }
 
-.carousel-btn.prev { left: 0; }
-.carousel-btn.next { right: 0; }
+.carousel-btn.prev {
+  left: 0;
+}
+.carousel-btn.next {
+  right: 0;
+}
 
 /* =========================================
    MEDIA QUERIES (TABLET & MOBILE)
    ========================================= */
 @media (max-width: 770px) {
-
   .h1-index {
     font-size: 28px;
     max-width: 100%;
+  }
+
+  /* Pagsasaayos ti botones para iti selpon (side-by-side / agsiping) */
+  .hero-actions {
+    flex-direction: row; /* Agtalinaed nga agsiping */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 35px; /* Nababa bassit manipud teksto ti slogan */
+    width: 100%;
+  }
+
+  .btn-pill {
+    width: auto;
+    max-width: none;
+    padding: 9px 15px; /* Nabassitan tapno sumurot iti akis ti screen */
+    font-size: 11px;    /* Bassit bassit a font tapno saan a maputed */
+    gap: 6px;
+  }
+
+  .btn-pill span {
+    font-size: 13px;
   }
 
   .card {
